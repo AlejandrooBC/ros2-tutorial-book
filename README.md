@@ -2,7 +2,7 @@
 A tutorial book developed by the fall 2024 RCOS group "Learn ROS through Python Turtle" to teach users ROS2 concepts and basics.
 
 ### Building the book
-If you'd like to develop and/or build the A Guide to ROS2 book, you should:
+If you'd like to develop and/or build the "A Guide to ROS2" book, you should:
 
 1. Clone this repository.
 2. Run `pip install -r requirements.txt` (it is recommended you do this within a virtual environment).
