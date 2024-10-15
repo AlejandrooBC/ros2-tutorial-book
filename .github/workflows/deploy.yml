@@ -6,7 +6,7 @@ on:
     branches:
       - main
 
-# This job installs dependencies, build the book, and pushes it to `gh-pages`
+# This job installs dependencies, builds the book, and pushes it to `gh-pages`
 jobs:
   build-and-deploy-book:
     runs-on: ${{ matrix.os }}
@@ -22,6 +22,7 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: ${{ matrix.python-version }}
+
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
@@ -30,6 +31,12 @@ jobs:
     - name: Build the book
       run: |
         jupyter-book build .
+
+    # Setup SSH for pushing to GitHub Pages
+    - name: Setup SSH
+      uses: webfactory/ssh-agent@v0.5.3
+      with:
+        ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
 
     # Deploy the book's HTML to gh-pages branch
     - name: GitHub Pages action
