@@ -1,0 +1,30 @@
+/* Ensure the logo and title are centered together */
+.header {
+    text-align: center;  /* Center both logo and title */
+    margin-bottom: 20px;  /* Add space below the logo and title */
+}
+
+/* Style the logo */
+img.logo__image {
+    max-height: 100px;  /* Adjust the size of the logo */
+    width: auto;
+    display: block;
+    margin: 0 auto 10px auto;  /* Add space below the logo */
+}
+
+/* Style the title */
+p.title {
+    font-size: 2rem;  /* Set the title size */
+    margin: 10px auto;  /* Add some space around the title */
+    color: #000;  /* Set the color of the title */
+    display: block;
+    position: relative;
+    z-index: 999;  /* Make sure the title stays visible */
+}
+
+/* Dark mode adjustments (optional) */
+@media (prefers-color-scheme: dark) {
+    p.title {
+        color: #fff;  /* Set the title color in dark mode */
+    }
+}
