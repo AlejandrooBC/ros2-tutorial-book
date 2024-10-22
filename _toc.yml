@@ -1,22 +1,20 @@
-# Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
-
 format: jb-book
 root: index
-chapters:
-  - file: book/markdown
-  - file: book/notebooks
-  - file: book/bibliography
 
-# Or you organize the TOC by parts
+parts:
+  # Introduction and Overview section
+  - caption: Introduction and Overview
+    chapters:
+      - file: book/INTRODUCTION/About_the_Authors
+      - file: book/INTRODUCTION/Preface
+      - file: book/INTRODUCTION/Table_of_Contents
 
-# parts:
-#   - caption: Chapters
-#     numbered: true
-#     maxdepth: 2
-#     chapters:
-#       - file: book/markdown
-#       - file: book/notebooks
-#   - caption: Appendices
-#     chapters:
-#       - file: book/bibliography
+  # Chapters section
+  - caption: Chapters
+    chapters:
+      - file: book/CHAPTERS/Introduction_to_ROS2
+
+# Appendices section
+  - caption: Appendices
+    chapters:
+      - file: book/APPENDICES/Bibliography
