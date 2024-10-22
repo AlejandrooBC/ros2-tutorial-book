@@ -170,7 +170,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../CHAPTERS/Introduction_to_ROS2.html">Introduction to ROS2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CHAPTERS/01_Introduction_to_ROS2.html">1. Introduction to ROS2</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
@@ -405,7 +405,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -421,6 +423,17 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#who-this-book-is-for">Who This Book is For</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-get-the-most-out-of-this-book">How to Get the Most Out of this Book</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-this-book-covers">What This Book Covers</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -432,6 +445,31 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="preface">
 <h1>Preface<a class="headerlink" href="#preface" title="Link to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>“A Guide to ROS2” is a book developed by the Fall 2024 Rensselaer Polytechnic Institute Center for Open Source (RCOS) Team “Learn ROS through Python Turtle.” This book serves as a practical guide to Robot Operating System 2 (ROS2), an open-source framework widely used for developing robotic systems. Whether you’re new to robotics or looking to deepen your knowledge of ROS2, this book provides a structured approach to learning the core concepts, tools, and applications of ROS2.<br><br>
+Throughout this book, you’ll learn how to set up a ROS2 environment, understand essential concepts like nodes, topics, and services, and work through hands-on exercises that teach the fundamentals of ROS2. With step-by-step tutorials and examples, this guide aims to help you understand the core concepts. These concepts can be expanded upon and developed to successfully build and deploy personal robotic projects.</p>
+</section>
+<section id="who-this-book-is-for">
+<h2>Who This Book is For<a class="headerlink" href="#who-this-book-is-for" title="Link to this heading">#</a></h2>
+<p>This book is for students, hobbyists, and professionals interested in robotics development using ROS2. Whether you’re a beginner just starting your journey in robotics or an experienced developer looking to deepen your knowledge of ROS2, this book provides practical, hands-on guidance tailored to your needs.<br><br>
+No prior experience with ROS is required, but familiarity with Python and Linux will help you get the most out of the tutorials. From setting up a development environment to building complex robotic systems, this book is ideal for anyone eager to learn the ins and outs of ROS2 and apply it to real-world projects.</p>
+</section>
+<section id="how-to-get-the-most-out-of-this-book">
+<h2>How to Get the Most Out of this Book<a class="headerlink" href="#how-to-get-the-most-out-of-this-book" title="Link to this heading">#</a></h2>
+<p>This book assumes that you are at least a Python novice. Readers should be comfortable with the basic Python syntax, such as variables, lists, dictionaries, loops, and functions. Furthermore, a basic understanding of how Python classes work is beneficial. As long as readers follow the examples carefully, they will be able to follow along with this book.</p>
+</section>
+<section id="what-this-book-covers">
+<h2>What This Book Covers<a class="headerlink" href="#what-this-book-covers" title="Link to this heading">#</a></h2>
+<p><strong>Chapter 1</strong> <em>Introduction to ROS2</em>: Introduces the basics of ROS2, including its purpose, differences from ROS1, and how it’s used in various fields like robotics and simulation.<br></p>
+<p><strong>Chapter 2</strong> <em>Setting Up a ROS2 Environment</em>: Explains how to set up your ROS2 development environment, including ROS2 distributions and installation instructions for Ubuntu, Windows, and macOS.<br></p>
+<p><strong>Chapter 3</strong> <em>Basic ROS2 Concepts</em>: Explains the foundational concepts of ROS2, such as nodes, topics, services, actions, parameters, and launch files, which form the core of any ROS2-based system.<br></p>
+<p><strong>Chapter 4</strong> <em>ROS2 Command-Line Tools</em>: Here, you’ll explore the key ROS2 command-line tools such as <strong>ros2 run</strong>, <strong>ros2 topic</strong>, <strong>ros2 service</strong>, and more. You’ll learn how to use these tools to interact with your ROS2 nodes and manage system parameters.<br></p>
+<p><strong>Chapter 5</strong> <em>Using Turtlesim - Practical Applications</em>: This chapter walks you through using <strong>Turtlesim</strong>, a simple ROS2 application. You’ll learn how to install it and use it for hands-on ROS2 practice.<br></p>
+<p><strong>Chapter 6</strong> <em>Writing a Simple ROS2 Node</em>: In this chapter, you’ll learn how to write your first ROS2 node, taking you step-by-step through the process of creating, running, and testing your node.<br></p>
+<p><strong>Chapter 7</strong> <em>Working with Launch Files</em>: Launch files are essential for running multiple nodes together in ROS2. This chapter will guide you on how to create and use launch files effectively.<br></p>
+<p><strong>Chapter 8</strong> <em>Debugging Tips</em>: Learn best practices for debugging ROS2 applications in this chapter, including tools and techniques to troubleshoot issues you may encounter while developing with ROS2.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -488,6 +526,25 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#who-this-book-is-for">Who This Book is For</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-get-the-most-out-of-this-book">How to Get the Most Out of this Book</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-this-book-covers">What This Book Covers</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
