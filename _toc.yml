@@ -11,8 +11,10 @@ parts:
 
   # Chapters section
   - caption: Chapters
+    numbered: true
+    maxdepth: 2
     chapters:
-      - file: book/CHAPTERS/Introduction_to_ROS2
+      - file: book/CHAPTERS/01_Introduction_to_ROS2
 
 # Appendices section
   - caption: Appendices
