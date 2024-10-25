@@ -429,6 +429,8 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-ros2">1.1. What is ROS2?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-between-ros1-and-ros2">1.2. Differences Between ROS1 and ROS2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-use-cases-for-ros2">1.3. Practical Use Cases for ROS2</a></li>
 </ul>
             </nav>
         </div>
@@ -446,6 +448,32 @@
 <h2><span class="section-number">1.1. </span>What is ROS2?<a class="headerlink" href="#what-is-ros2" title="Link to this heading">#</a></h2>
 <p>Unlike its name suggests, Robot Operating System 2 (ROS2), is an open-source middleware framework designed for the development of robotic systems. It is not actually an operating system. ROS2 builds on the concepts of ROS1, but also brings significant improvements in flexibility, performance, and security. This enables roboticists to design advanced and reliable robotics applications.<br></p>
 <p>ROS was invented in 2007 by a group of engineers and researchers at Stanford University and Willow Garage to address the challenges of modern robotics, such as scalability, real-time control, and multi-robot systems. ROS2 provides tools and libraries to help in building, testing, and deploying complex robotic systems.</p>
+</section>
+<section id="differences-between-ros1-and-ros2">
+<h2><span class="section-number">1.2. </span>Differences Between ROS1 and ROS2<a class="headerlink" href="#differences-between-ros1-and-ros2" title="Link to this heading">#</a></h2>
+<p>ROS2 introduces several enhancements to address some of the limitations of ROS1:</p>
+<ol class="arabic simple">
+<li><p><strong>Real-time support</strong>: ROS2 has real-time control mechanisms, making it ideal for robotics applications that require precise timing and performance guarantees.</p>
+<ul class="simple">
+<li><p><em>For example</em>, monitoring a drone’s altitude and position to land in a specific spot.<br><br></p></li>
+</ul>
+</li>
+<li><p><strong>Security</strong>: ROS2 comes with built-in support for security features, including secure communication channels and user authentication, a major improvement over ROS1.<br><br></p></li>
+<li><p><strong>Middleware (DDS)</strong>: ROS2 uses DDS (Data Distribution Service) as its communication backend, which enables seamless communication between nodes in distributed systems.<br><br></p></li>
+<li><p><strong>Multi-platform support</strong>: While ROS1 was primarily Linux-based, ROS2 is designed to work on multiple platforms (Linux, Windows, macOS) without relying on external dependencies. However, it seems Linux is the most commonly used and error-free platform.<br><br></p></li>
+<li><p><strong>Component lifecycle management</strong>: ROS2 introduces the concept of managed nodes, enabling better control over the lifecycle of system components, from startup to shutdown.<br><br></p></li>
+<li><p><strong>Multi-robot systems</strong>: ROS2’s architecture is more suitable for multi-robot coordination, making it easier to build systems with multiple robots collaborating.</p></li>
+</ol>
+</section>
+<section id="practical-use-cases-for-ros2">
+<h2><span class="section-number">1.3. </span>Practical Use Cases for ROS2<a class="headerlink" href="#practical-use-cases-for-ros2" title="Link to this heading">#</a></h2>
+<p>ROS2 has diverse applications in robotics and related fields, making it a powerful tool for building, testing, and deploying a wide range of systems. ROS2 is widely used in the development of autonomous vehicles, industrial robots, healthcare, etc. <br></p>
+<p>At Rensselaer Polytechnic Institute (RPI), ROS2 has been used in several projects. For example, one senior capstone team used ROS2 to <strong>develop their aircraft assembly robot</strong>. This project utilizes ROS2 nodes and other capabilities to enable functionalities such as arm control, LiDAR sensing, and remote controlled movement.</p>
+<p><img alt="Aircraft Robot" src="../../_images/Aircraft_Robot_Resized.jpg" /></p>
+<p><strong>Aircraft Assembly Robot - Spring 2024 RPI Capstone Team</strong><br><br></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7HU2VlFNIrY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p><strong>Aircraft Robot Arm Control Using ROS2 - Spring 2024 RPI Capstone Team</strong><br></p>
+<p>As seen from the examples above, learning ROS2 opens up a world of possibilities for anyone passionate about robotics. Now that we have a better idea of what ROS2 is and its capabilities, the remainder of the book will guide you step-by-step, starting from setting up a ROS2 environment up to using nodes and other ROS2 functionalities.</p>
 </section>
 </section>
 
@@ -515,6 +543,8 @@
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-ros2">1.1. What is ROS2?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-between-ros1-and-ros2">1.2. Differences Between ROS1 and ROS2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-use-cases-for-ros2">1.3. Practical Use Cases for ROS2</a></li>
 </ul>
   </nav></div>
 
