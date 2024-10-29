@@ -21,6 +21,7 @@ parts:
         - file: book/CHAPTERS/02_Setting_Up_an_Environment/ROS2VMInstall
         - file: book/CHAPTERS/02_Setting_Up_an_Environment/ROS2IronInstallationMacOS
         - file: book/CHAPTERS/02_Setting_Up_an_Environment/ROS2IronInstallationUbuntu
+        - file: book/CHAPTERS/02_Setting_Up_an_Environment/DockerInstallation
 
 # Appendices section
   - caption: Appendices
