@@ -16,6 +16,11 @@ parts:
     chapters:
       - file: book/CHAPTERS/01_Introduction_to_ROS2
       - file: book/CHAPTERS/02_Setting_Up_a_ROS2_Environment
+        sections:
+        - file: book/CHAPTERS/02_Setting_Up_an_Environment/ROS2IronInstallationWindows
+        - file: book/CHAPTERS/02_Setting_Up_an_Environment/ROS2VMInstall
+        - file: book/CHAPTERS/02_Setting_Up_an_Environment/ROS2IronInstallationMacOS
+        - file: book/CHAPTERS/02_Setting_Up_an_Environment/ROS2IronInstallationUbuntu
 
 # Appendices section
   - caption: Appendices
