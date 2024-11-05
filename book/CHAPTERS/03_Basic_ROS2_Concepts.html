@@ -65,7 +65,7 @@
     <link rel="icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Bibliography" href="../APPENDICES/Bibliography.html" />
+    <link rel="next" title="3.1. Nodes" href="03_Basic_Concepts/Nodes.html" />
     <link rel="prev" title="2.56. First Time Installation" href="02_Setting_Up_an_Environment/DockerInstallation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -227,7 +227,10 @@
 
 </ul>
 </details></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Basic ROS2 Concepts</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">3. Basic ROS2 Concepts</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="03_Basic_Concepts/Nodes.html">3.1. Nodes</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
@@ -490,6 +493,8 @@
   <section class="tex2jax_ignore mathjax_ignore" id="basic-ros2-concepts">
 <h1><span class="section-number">3. </span>Basic ROS2 Concepts<a class="headerlink" href="#basic-ros2-concepts" title="Link to this heading">#</a></h1>
 <p>This section will introduce basic ROS2 concepts and functionalities. These modular components allow roboticists to create and manage complex robotic systems. Some of the concepts that you will learn about include nodes, topics, services, actions, and more. Below are a few notes about each. You will dive deeper into each concept by exploring its corresponding subchapter.</p>
+<p><img alt="Hexapod Robot" src="../../_images/Hexapod_Robot.png" />
+<strong>Hexapod Robot Using ROS2 - Alejandro Begara Criado</strong></p>
 <p><strong>Nodes</strong> are independent processes that perform specific computations, allowing different parts of a robot to operate in parallel.</p>
 <p><strong>Topics</strong> are named channels that enable communication between nodes using a publish/subscribe model, where data flows asynchronously from publishers to subscribers.</p>
 <p><strong>Services</strong> allow for synchronous communication between nodes, enabling them to send a request and receive a response for operations requiring immediate feedback.</p>
@@ -497,6 +502,8 @@
 <p><strong>Parameters</strong> allow nodes to dynamically configure settings, enabling adaptive behaviors without modifying the code.</p>
 <p><strong>Launch Files</strong> help in organizing and managing multiple nodes by launching them simultaneously with a single command.</p>
 <p>This is a high-level overview of these fundamental concepts, which we will <strong>explore in greater detail in the following sections</strong>.</p>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -539,11 +546,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="../APPENDICES/Bibliography.html"
+       href="03_Basic_Concepts/Nodes.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Bibliography</p>
+        <p class="prev-next-title"><span class="section-number">3.1. </span>Nodes</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
