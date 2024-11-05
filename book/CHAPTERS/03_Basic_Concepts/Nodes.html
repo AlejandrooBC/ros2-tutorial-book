@@ -465,7 +465,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -481,6 +483,14 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-nodes-in-ros2">3.1.1. How to Use Nodes in ROS2</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -495,7 +505,12 @@
 <p>In the introduction to this chapter we stated that nodes are independent processes that perform specific computations.</p>
 <p>A more intuitive approach would be to think about ROS nodes as the <strong>individual members that make up a group working together to complete a task</strong>. In this case, the group is a robot.</p>
 <p>In this team, each member (node) has a specific job, such as driving, observing, or making decisions, just as <strong>each node</strong> in ROS has a specific task to handle.</p>
-<p>Each team member works <strong>independently</strong> but can communicate with others to share information or request help. Similarly, a <strong>node is an independent unit/process</strong> that runs separately from other nodes but can <strong>send and receive messages</strong>.</p>
+<p>Each team member works <strong>independently</strong> but can communicate with others to share information or request help. Similarly, a <strong>node is an independent unit/process/executable</strong> that runs separately from other nodes but can <strong>send and receive messages</strong>.</p>
+<section id="how-to-use-nodes-in-ros2">
+<h2><span class="section-number">3.1.1. </span>How to Use Nodes in ROS2<a class="headerlink" href="#how-to-use-nodes-in-ros2" title="Link to this heading">#</a></h2>
+<p>The official ROS2 site suggests that “each node should be responsible for a singular, modular purpose.” This makes the code for a robotic system more flexible, scalable, and easier to maintain and reuse.</p>
+<p>For example, one node could be responsible for collecting sensor data (such distance data from a LiDAR sensor), another node could be responsible for processing that data, and another node could be used for controlling the motors.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -552,6 +567,22 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-nodes-in-ros2">3.1.1. How to Use Nodes in ROS2</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
