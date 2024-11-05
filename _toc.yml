@@ -23,6 +23,8 @@ parts:
         - file: book/CHAPTERS/02_Setting_Up_an_Environment/ROS2IronInstallationUbuntu
         - file: book/CHAPTERS/02_Setting_Up_an_Environment/DockerInstallation
       - file: book/CHAPTERS/03_Basic_ROS2_Concepts
+        sections:
+          - file: book/CHAPTERS/03_Basic_Concepts/Nodes
 
 # Appendices section
   - caption: Appendices
