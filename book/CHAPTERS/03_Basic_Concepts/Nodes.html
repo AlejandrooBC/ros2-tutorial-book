@@ -488,7 +488,8 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-nodes-in-ros2">3.1.1. How to Use Nodes in ROS2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-and-why-to-use-nodes-in-ros2">3.1.1. How and Why to Use Nodes in ROS2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#communication-between-nodes">3.1.2. Communication Between Nodes</a></li>
 </ul>
             </nav>
         </div>
@@ -506,10 +507,17 @@
 <p>A more intuitive approach would be to think about ROS nodes as the <strong>individual members that make up a group working together to complete a task</strong>. In this case, the group is a robot.</p>
 <p>In this team, each member (node) has a specific job, such as driving, observing, or making decisions, just as <strong>each node</strong> in ROS has a specific task to handle.</p>
 <p>Each team member works <strong>independently</strong> but can communicate with others to share information or request help. Similarly, a <strong>node is an independent unit/process/executable</strong> that runs separately from other nodes but can <strong>send and receive messages</strong>.</p>
-<section id="how-to-use-nodes-in-ros2">
-<h2><span class="section-number">3.1.1. </span>How to Use Nodes in ROS2<a class="headerlink" href="#how-to-use-nodes-in-ros2" title="Link to this heading">#</a></h2>
+<section id="how-and-why-to-use-nodes-in-ros2">
+<h2><span class="section-number">3.1.1. </span>How and Why to Use Nodes in ROS2<a class="headerlink" href="#how-and-why-to-use-nodes-in-ros2" title="Link to this heading">#</a></h2>
 <p>The official ROS2 site suggests that “each node should be responsible for a singular, modular purpose.” This makes the code for a robotic system more flexible, scalable, and easier to maintain and reuse.</p>
 <p>For example, one node could be responsible for collecting sensor data (such distance data from a LiDAR sensor), another node could be responsible for processing that data, and another node could be used for controlling the motors.</p>
+<p><img alt="ROS2 Program Nodes" src="../../../_images/Nodes_Diagram.gif" />
+<strong>ROS2 Node Graph (Courtesy of ROS2 Documentation)</strong></p>
+<p>In this way, nodes enable <strong>parallel processing</strong>, allowing different tasks to run independently, promoting modularity and reusability in different projects.</p>
+</section>
+<section id="communication-between-nodes">
+<h2><span class="section-number">3.1.2. </span>Communication Between Nodes<a class="headerlink" href="#communication-between-nodes" title="Link to this heading">#</a></h2>
+<p>As you have seen in the example above, nodes do not operate in isolation. They communicate with each other using topics, services, and actions.</p>
 </section>
 </section>
 
@@ -578,7 +586,8 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-nodes-in-ros2">3.1.1. How to Use Nodes in ROS2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-and-why-to-use-nodes-in-ros2">3.1.1. How and Why to Use Nodes in ROS2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#communication-between-nodes">3.1.2. Communication Between Nodes</a></li>
 </ul>
   </nav></div>
 
