@@ -25,6 +25,12 @@ parts:
       - file: book/CHAPTERS/03_Basic_ROS2_Concepts
         sections:
           - file: book/CHAPTERS/03_Basic_Concepts/Nodes
+      - file: book/CHAPTERS/06_Writing_Nodes/WritingNodes
+        sections:
+          - file: book/CHAPTERS/06_Writing_Nodes/Packages
+          - file: book/CHAPTERS/06_Writing_Nodes/PackageCommands
+          - file: book/CHAPTERS/06_Writing_Nodes/BasicNodes
+          - file: book/CHAPTERS/06_Writing_Nodes/Services
 
 # Appendices section
   - caption: Appendices
