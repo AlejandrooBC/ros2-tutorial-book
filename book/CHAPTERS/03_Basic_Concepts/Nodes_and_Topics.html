@@ -499,6 +499,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-and-why-to-use-nodes-in-ros2">3.1.1. How and Why to Use Nodes in ROS2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#communication-between-nodes">3.1.2. Communication Between Nodes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topics-and-messages">3.1.3. Topics and Messages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices-for-nodes">3.1.4. Best Practices for Nodes</a></li>
 </ul>
             </nav>
         </div>
@@ -561,6 +562,18 @@ The <strong>SLLIDAR</strong> node interfaces directly with the physical LiDAR se
 The <strong>LIDAR NODE</strong> subscribes to the <strong>/scan topic</strong>, receiving the published scan messages. It further processes this information to interpret the scanned environment. Based on the analysis, the <strong>LIDAR node</strong> sends commands to another topic, enabling the robot to take specific actions or make decisions.</p></li>
 </ol>
 <p>As you have just seen, this communication structure facilitates a modular approach to robotics programming, where nodes operate independently while sharing information through topics.</p>
+</section>
+<section id="best-practices-for-nodes">
+<h2><span class="section-number">3.1.4. </span>Best Practices for Nodes<a class="headerlink" href="#best-practices-for-nodes" title="Link to this heading">#</a></h2>
+<p>Now that you have a fundamental understanding of nodes, topics, and messages, you can begin to explore how to structure and implement your own nodes effectively.</p>
+<p>It is important to keep in mind that writing nodes is more than just getting them to work; it’s about ensuring they are <strong>efficient</strong>, <strong>reliable</strong>, and <strong>easy to maintain</strong>. As you begin to create your own nodes, keeping a few best practices in mind will help you build scalable and modular systems. In the following sections of this book, you will be guided through writing ROS nodes. As you do so, it is best to keep in mind a few good practices that will help you build scalable and modular systems:</p>
+<ol class="arabic simple">
+<li><p><strong>Design Nodes with Clear Responsibilities</strong>: Avoid overloading a single node with too many tasks. If your program involves several functionalities working together (as most programs do), divide the subsections of the program into executable components that can be handled by separate nodes.</p></li>
+<li><p><strong>Write Reusable and Scalable Code</strong>: Ensure your nodes can be adapted to new features or systems.</p></li>
+<li><p><strong>Effective Debugging</strong>: Write your nodes to provide meaningful feedback during development and runtime.</p></li>
+<li><p><strong>Use Parameters and Configuration Files</strong>: Make your nodes flexible without modifying code for different use cases.</p></li>
+</ol>
+<p>By adhering to these principles, you will not only create functional nodes, but also build a foundation for robotic systems that are easier to troubleshoot, extend, and collaborate on with others.</p>
 </section>
 </section>
 
@@ -632,6 +645,7 @@ The <strong>LIDAR NODE</strong> subscribes to the <strong>/scan topic</strong>, 
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-and-why-to-use-nodes-in-ros2">3.1.1. How and Why to Use Nodes in ROS2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#communication-between-nodes">3.1.2. Communication Between Nodes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topics-and-messages">3.1.3. Topics and Messages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices-for-nodes">3.1.4. Best Practices for Nodes</a></li>
 </ul>
   </nav></div>
 
