@@ -549,9 +549,18 @@
 </section>
 <section id="topics-and-messages">
 <h2><span class="section-number">3.1.3. </span>Topics and Messages<a class="headerlink" href="#topics-and-messages" title="Link to this heading">#</a></h2>
-<p>When a node wants to send data, it <strong>publishes</strong> a message to a <strong>topic</strong>. Other nodes that need this data will <strong>subscribe</strong> to the same topic to receive the messages. For instance:</p>
-<p><img alt="LIDAR_NODES" src="../../../_images/LIDAR_Nodes.png" />
-<strong>Nodes Communicating via Messages and Topics - Spring 2024 Capstone Team</strong></p>
+<p>When a node wants to send data, it <strong>publishes</strong> a message to a <strong>topic</strong>. Other nodes that need this data will <strong>subscribe</strong> to the same topic to receive the messages.</p>
+<p><img alt="LIDAR NODES" src="../../../_images/LIDAR_Nodes.png" />
+<strong>Nodes Communicating via Topics - Spring 2024 Capstone Team</strong></p>
+<p>The example image above depicts the logical flow of a program designed to <strong>control a LiDAR sensor</strong>. The program executes three key tasks: scanning the environment to gather data, processing that data, and making decisions based on it.</p>
+<p>The process hinges on two primary nodes:</p>
+<ol class="arabic simple">
+<li><p><strong>SLLIDAR NODE</strong>
+The <strong>SLLIDAR</strong> node interfaces directly with the physical LiDAR sensor, collecting raw sensor data. It then processes this data into structured information formatted as <strong>scan messages</strong>. These messages are subsequently published to a topic named <strong>/scan</strong> (represented in the diagram as a rectangular block labeled “/scan”). This enables other nodes to access the processed scan data.</p></li>
+<li><p><strong>LIDAR NODE</strong>
+The <strong>LIDAR NODE</strong> subscribes to the <strong>/scan topic</strong>, receiving the published scan messages. It further processes this information to interpret the scanned environment. Based on the analysis, the <strong>LIDAR node</strong> sends commands to another topic, enabling the robot to take specific actions or make decisions.</p></li>
+</ol>
+<p>As you have just seen, this communication structure facilitates a modular approach to robotics programming, where nodes operate independently while sharing information through topics.</p>
 </section>
 </section>
 
