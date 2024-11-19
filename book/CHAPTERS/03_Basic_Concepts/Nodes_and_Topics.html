@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>3.1. Nodes &#8212; A Guide to ROS2</title>
+    <title>3.1. Nodes and Topics &#8212; A Guide to ROS2</title>
   
   
   
@@ -60,8 +60,8 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'book/CHAPTERS/03_Basic_Concepts/Nodes';</script>
-    <link rel="canonical" href="https://AlejandrooBC.github.io/ros2-tutorial-book/book/CHAPTERS/03_Basic_Concepts/Nodes.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/CHAPTERS/03_Basic_Concepts/Nodes_and_Topics';</script>
+    <link rel="canonical" href="https://AlejandrooBC.github.io/ros2-tutorial-book/book/CHAPTERS/03_Basic_Concepts/Nodes_and_Topics.html" />
     <link rel="icon" href="../../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -228,7 +228,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../03_Basic_ROS2_Concepts.html">3. Basic ROS2 Concepts</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.1. Nodes</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.1. Nodes and Topics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Services.html">3.2. Services</a></li>
 </ul>
 </details></li>
@@ -297,7 +297,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/AlejandrooBC/ros2-tutorial-book/master?urlpath=tree/book/CHAPTERS/03_Basic_Concepts/Nodes.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/AlejandrooBC/ros2-tutorial-book/master?urlpath=tree/book/CHAPTERS/03_Basic_Concepts/Nodes_and_Topics.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -315,7 +315,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/AlejandrooBC/ros2-tutorial-book/blob/master/book/CHAPTERS/03_Basic_Concepts/Nodes.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/AlejandrooBC/ros2-tutorial-book/blob/master/book/CHAPTERS/03_Basic_Concepts/Nodes_and_Topics.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -363,7 +363,7 @@
       
       
       
-      <li><a href="https://github.com/AlejandrooBC/ros2-tutorial-book/edit/main/book/CHAPTERS/03_Basic_Concepts/Nodes.ipynb" target="_blank"
+      <li><a href="https://github.com/AlejandrooBC/ros2-tutorial-book/edit/main/book/CHAPTERS/03_Basic_Concepts/Nodes_and_Topics.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -380,7 +380,7 @@
       
       
       
-      <li><a href="https://github.com/AlejandrooBC/ros2-tutorial-book/issues/new?title=Issue%20on%20page%20%2Fbook/CHAPTERS/03_Basic_Concepts/Nodes.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/AlejandrooBC/ros2-tutorial-book/issues/new?title=Issue%20on%20page%20%2Fbook/CHAPTERS/03_Basic_Concepts/Nodes_and_Topics.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -410,7 +410,7 @@
       
       
       
-      <li><a href="../../../_sources/book/CHAPTERS/03_Basic_Concepts/Nodes.ipynb" target="_blank"
+      <li><a href="../../../_sources/book/CHAPTERS/03_Basic_Concepts/Nodes_and_Topics.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -486,7 +486,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Nodes</h1>
+    <h1>Nodes and Topics</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -510,8 +510,8 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="nodes">
-<h1><span class="section-number">3.1. </span>Nodes<a class="headerlink" href="#nodes" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="nodes-and-topics">
+<h1><span class="section-number">3.1. </span>Nodes and Topics<a class="headerlink" href="#nodes-and-topics" title="Link to this heading">#</a></h1>
 <p>In the introduction to this chapter we stated that nodes are independent processes that perform specific computations.</p>
 <p>A more intuitive approach would be to think about ROS nodes as the <strong>individual members that make up a group working together to complete a task</strong>. In this case, the group is a robot.</p>
 <p>In this team, each member (node) has a specific job, such as driving, observing, or making decisions, just as <strong>each node</strong> in ROS has a specific task to handle.</p>
