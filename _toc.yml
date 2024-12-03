@@ -32,6 +32,7 @@ parts:
           - file: book/CHAPTERS/06_Writing_Nodes/PackageCommands
           - file: book/CHAPTERS/06_Writing_Nodes/BasicNodes
           - file: book/CHAPTERS/06_Writing_Nodes/Services
+          - file: book/CHAPTERS/06_Writing_Nodes/Actions
 
 # Appendices section
   - caption: Appendices
