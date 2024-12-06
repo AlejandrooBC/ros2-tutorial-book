@@ -25,9 +25,13 @@ parts:
       - file: book/CHAPTERS/03_Basic_ROS2_Concepts
         sections:
           - file: book/CHAPTERS/03_Basic_Concepts/Nodes_and_Topics
-          - file: book/CHAPTERS/03_Basic_Concepts/Services
+          - file: book/CHAPTERS/03_Basic_Concepts/ServicesBasicConcept
           - file: book/CHAPTERS/03_Basic_Concepts/Actions
           - file: book/CHAPTERS/03_Basic_Concepts/Parameters
+          - file: book/CHAPTERS/03_Basic_Concepts/Launch_Files
+          - file: book/CHAPTERS/03_Basic_Concepts/PublisherSubscriber
+          - file: book/CHAPTERS/03_Basic_Concepts/ROSBuildPkg
+          - file: book/CHAPTERS/03_Basic_Concepts/ROSPackageTutorial
       - file: book/CHAPTERS/06_Writing_Nodes/WritingNodes
         sections:
           - file: book/CHAPTERS/06_Writing_Nodes/Packages
