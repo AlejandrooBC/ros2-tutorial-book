@@ -563,6 +563,56 @@
 </pre></div>
 </div>
 <p>There should now be a new file called <code class="docutils literal notranslate"><span class="pre">publisher_member_function.cpp</span></code>, and within the above directory (<code class="docutils literal notranslate"><span class="pre">ros2_ws/src/cpp_pubsub</span></code>) there should be two new files <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> and <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>.</p>
+<p>If you open <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> using a text editor, you can see there is a section with the labels <code class="docutils literal notranslate"><span class="pre">&lt;description&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;maintainer&gt;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&lt;license&gt;</span></code>, which you should fill in with your own items by placing your information between the tags.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">description</span><span class="o">&gt;</span> <span class="n">Place</span> <span class="n">your</span> <span class="n">description</span> <span class="n">here</span> <span class="o">&lt;/</span><span class="n">description</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">maintainer</span> <span class="n">email</span><span class="o">=</span><span class="s2">&quot;your@email.com&quot;</span><span class="o">&gt;</span> <span class="n">Put</span> <span class="n">your</span> <span class="n">name</span> <span class="n">here</span> <span class="o">&lt;/</span><span class="n">maintainer</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">license</span><span class="o">&gt;</span> <span class="n">Put</span> <span class="n">your</span> <span class="n">license</span> <span class="n">here</span> <span class="o">&lt;/</span><span class="n">license</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>And for this tutorial, there should be a line with the <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> dependency. Below that line, put the following dependencies:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">depend</span><span class="o">&gt;</span><span class="n">rclcpp</span><span class="o">&lt;/</span><span class="n">depend</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">depend</span><span class="o">&gt;</span><span class="n">std_msgs</span><span class="o">&lt;/</span><span class="n">depend</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>As this package needs both to run. Save the file and exit.</p>
+<p>Next, open <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> and locate the line that says <code class="docutils literal notranslate"><span class="pre">find_package(ament_cmakeREQUIRED</span></code>). Below this line, add the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
+add_executable(talker src/publisher_member_function.cpp)
+ament_target_dependencies(talker rclcpp std_msgs)
+install(TARGETS
+  talker
+  DESTINATION lib/${PROJECT_NAME})
+</pre></div>
+</div>
+<p>So your total code should now look as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cmake_minimum_required(VERSION 3.5)
+project(cpp_pubsub)
+
+# Default to C++14
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
+
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES &quot;Clang&quot;)
+  add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
+
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
+
+add_executable(talker src/publisher_member_function.cpp)
+ament_target_dependencies(talker rclcpp std_msgs)
+
+install(TARGETS
+  talker
+  DESTINATION lib/${PROJECT_NAME})
+
+ament_package()
+</pre></div>
+</div>
+<p>At this point, you should be able to build and run the package, but it is recommended to make the subscriber node next.</p>
 </section>
 
     <script type="text/x-thebe-config">
