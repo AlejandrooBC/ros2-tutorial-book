@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>3.9. How to write a Publisher and Subscriber &#8212; A Guide to ROS2</title>
+    <title>3.10. How to write a Publisher and Subscriber &#8212; A Guide to ROS2</title>
   
   
   
@@ -65,7 +65,7 @@
     <link rel="icon" href="../../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="3.12. Building a Package" href="ROSBuildPkg.html" />
+    <link rel="next" title="3.13. Building a Package" href="ROSBuildPkg.html" />
     <link rel="prev" title="3.8. Launch Files" href="Launch_Files.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -236,13 +236,14 @@
 
 
 <li class="toctree-l2"><a class="reference internal" href="Launch_Files.html">3.8. Launch Files</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.9. How to write a Publisher and Subscriber</a></li>
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.10. How to write a Publisher and Subscriber</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="ROSBuildPkg.html">3.12. Building a Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ROSBuildPkg.html">3.13. Building a Package</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="ROSPackageTutorial.html">3.15. How to Develop a Package in ROS2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ROSPackageTutorial.html">3.16. How to Develop a Package in ROS2</a></li>
 
 
 
@@ -515,9 +516,9 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.9. How to write a Publisher and Subscriber</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-package">3.10. Create the Package</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-the-publisher-talker-node">3.11. Writing the publisher/talker node</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.10. How to write a Publisher and Subscriber</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-package">3.11. Create the Package</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-the-publisher-talker-node">3.12. Writing the publisher/talker node</a></li>
 </ul>
 
             </nav>
@@ -531,13 +532,13 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="how-to-write-a-publisher-and-subscriber">
-<h1><span class="section-number">3.9. </span>How to write a Publisher and Subscriber<a class="headerlink" href="#how-to-write-a-publisher-and-subscriber" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3.10. </span>How to write a Publisher and Subscriber<a class="headerlink" href="#how-to-write-a-publisher-and-subscriber" title="Link to this heading">#</a></h1>
 <p>This concept focuses around a Publisher and Subscriber model, which is essentially just 2 nodes communicating with each other. For more info about nodes, check out the section of the guide about nodes.</p>
 <p>The code and instructions used in this tutorial is adapted from the ROS2 documentation, and the code can be found <a class="reference external" href="https://github.com/ros2/examples/tree/iron/rclcpp/topics">at this link</a>.</p>
 <p>Before using this tutorial, please look into the tutorials for how to create a workspace and package found in our guides.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="create-the-package">
-<h1><span class="section-number">3.10. </span>Create the Package<a class="headerlink" href="#create-the-package" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3.11. </span>Create the Package<a class="headerlink" href="#create-the-package" title="Link to this heading">#</a></h1>
 <p>In a new terminal, source your ROS2 installation (<code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">install/local_setup.bash</span></code> or <code class="docutils literal notranslate"><span class="pre">call</span> <span class="pre">install/local_setup.bat</span></code>), and then navigate to your <code class="docutils literal notranslate"><span class="pre">ros2_ws</span></code> directory.</p>
 <p>After entering your workspace, navigate to (or create) your <code class="docutils literal notranslate"><span class="pre">src</span></code> directory within your workspace. Within this workspace, create a package using the following command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">pkg</span> <span class="n">create</span> <span class="o">--</span><span class="n">build</span><span class="o">-</span><span class="nb">type</span> <span class="n">ament_cmake</span> <span class="o">--</span><span class="n">license</span> <span class="n">Apache</span><span class="o">-</span><span class="mf">2.0</span> <span class="n">cpp_pubsub</span>
@@ -547,7 +548,7 @@
 <p>Next, enter the package you just created using <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">ros2_ws/src/cpp_pubsub/src</span></code></p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="writing-the-publisher-talker-node">
-<h1><span class="section-number">3.11. </span>Writing the publisher/talker node<a class="headerlink" href="#writing-the-publisher-talker-node" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3.12. </span>Writing the publisher/talker node<a class="headerlink" href="#writing-the-publisher-talker-node" title="Link to this heading">#</a></h1>
 <p>Recall from the installation tutorial we tested if ROS2 was installed through talker and listener nodes? This is the same concept.</p>
 <p>On Linux and macOS, use the following command to download the publisher code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">-</span><span class="n">O</span> <span class="n">publisher_member_function</span><span class="o">.</span><span class="n">cpp</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ros2</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">iron</span><span class="o">/</span><span class="n">rclcpp</span><span class="o">/</span><span class="n">topics</span><span class="o">/</span><span class="n">minimal_publisher</span><span class="o">/</span><span class="n">member_function</span><span class="o">.</span><span class="n">cpp</span>
@@ -608,7 +609,7 @@
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.12. </span>Building a Package</p>
+        <p class="prev-next-title"><span class="section-number">3.13. </span>Building a Package</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -629,9 +630,9 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.9. How to write a Publisher and Subscriber</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-package">3.10. Create the Package</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-the-publisher-talker-node">3.11. Writing the publisher/talker node</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.10. How to write a Publisher and Subscriber</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-package">3.11. Create the Package</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-the-publisher-talker-node">3.12. Writing the publisher/talker node</a></li>
 </ul>
 
   </nav></div>
