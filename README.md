@@ -1,5 +1,5 @@
 # A Guide to ROS2 (ros2-tutorial-book)
-A tutorial book developed by the Fall 2024 RCOS group "Learn ROS through Python Turtle" to teach users ROS2 concepts and basics.
+A tutorial book started by the Fall 2024 RCOS group "Learn ROS through Python Turtle" to teach users ROS2 concepts and basics.
 
 ### Building the book
 If you'd like to develop and/or build the "A Guide to ROS2" book, you should:
