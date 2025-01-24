@@ -66,13 +66,6 @@ sphinx:
         }
     bibtex_reference_style: author_year
 
-
-# Define the name of the latex output file for PDF builds
-# latex:
-#   latex_documents:
-#     targetname: book.tex
-
-
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
   - book/references.bib
