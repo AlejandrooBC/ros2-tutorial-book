@@ -14,7 +14,7 @@ A fully-rendered HTML version of the book will be built in `ros2-tutorial-book/_
 
 ### Hosting the book
 Please see the [Jupyter Book documentation](https://jupyterbook.org/publish/web.html) to discover options for deploying a book online using services such as GitHub, GitLab, or Netlify.
-You can see the website hosted as a Github Page by following this [link](https://alejandroobc.github.io/ros2-tutorial-book/)
+You can see the website hosted as a GitHub Page by following this [link](https://alejandroobc.github.io/ros2-tutorial-book/).
 
 For GitHub and GitLab deployment specifically, the [cookiecutter-jupyter-book](https://github.com/executablebooks/cookiecutter-jupyter-book) 
 includes templates for, and information about, optional continuous integration (CI) workflow files to help easily and 
