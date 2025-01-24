@@ -1,5 +1,5 @@
 format: jb-book
-root: book/INTRODUCTION/About_the_Authors
+root: index
 
 parts:
   # Introduction and Overview section
