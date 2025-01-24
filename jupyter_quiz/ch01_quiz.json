@@ -1,26 +1,26 @@
 [
   {
-    "question": "If <code>df</code> is a Pandas dataframe with a column named \"state\", which of these commands will return that column?",
+    "question": "What does ROS stand for?",
     "type": "multiple_choice",
     "answers": [
       {
-        "code": "df.loc['state']",
+        "code": "Radio Operating System",
         "correct": false,
-        "feedback": "<code>df.loc</code> is used to index into the rows. "
+        "feedback": "Incorrect."
       },
       {
-        "code": "df[state]",
+        "code": "Resistive Ohmic Standard",
         "correct": false,
-        "feedback": "Incorrect. The column name must be passes as a string."
+        "feedback": "Incorrect."
       },
       {
-        "code": "df['state']",
+        "code": "Robot Operating System",
         "correct": true
       },
       {
-        "code": "df('state')",
+        "code": "Robotics Operating Simulation",
         "correct": false,
-        "feedback": "Square brackets are used for indexing, not parentheses"
+        "feedback": "Incorrect."
       }
     ]
   }
