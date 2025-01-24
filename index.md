@@ -1,16 +1,4 @@
-# Welcome to your Jupyter Book
+# Welcome to A Guide to ROS2
 
-This is a small sample book to give you a feel for how book content is
-structured.
-
-:::{note}
-Here is a note!
-:::
-
-And here is a code block:
-
-```
-e = mc^2
-```
-
-Check out the content pages bundled with this sample book to see more.
+This book is a general guide for users to learn ROS2 concepts and fundamentals. Please explore the book and get in
+touch with any of our authors if you have questions or would like to contribute to the project.
