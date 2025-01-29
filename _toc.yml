@@ -10,47 +10,35 @@ parts:
       - file: book/INTRODUCTION/Table_of_Contents
 
   # Chapters section
-  - caption: ROS2 Iron
+  - caption: Chapters
     numbered: true
     maxdepth: 2
     chapters:
-      - file: book/CHAPTERS/ROS2_Iron/01_Introduction_to_ROS2
-      - file: book/CHAPTERS/ROS2_Iron/02_Setting_Up_a_ROS2_Environment
+      - file: book/CHAPTERS/01_Introduction_to_ROS2
+      - file: book/CHAPTERS/02_Setting_Up_a_ROS2_Environment
         sections:
-        - file: book/CHAPTERS/ROS2_Iron/02_Setting_Up_an_Environment/ROS2IronInstallationWindows
-        - file: book/CHAPTERS/ROS2_Iron/02_Setting_Up_an_Environment/ROS2VMInstall
-        - file: book/CHAPTERS/ROS2_Iron/02_Setting_Up_an_Environment/ROS2IronInstallationMacOS
-        - file: book/CHAPTERS/ROS2_Iron/02_Setting_Up_an_Environment/ROS2IronInstallationUbuntu
-        - file: book/CHAPTERS/ROS2_Iron/02_Setting_Up_an_Environment/DockerInstallation
-      - file: book/CHAPTERS/ROS2_Iron/03_Basic_ROS2_Concepts
+        - file: book/CHAPTERS/02_Setting_Up_an_Environment/ROS2IronInstallationWindows
+        - file: book/CHAPTERS/02_Setting_Up_an_Environment/ROS2VMInstall
+        - file: book/CHAPTERS/02_Setting_Up_an_Environment/ROS2IronInstallationMacOS
+        - file: book/CHAPTERS/02_Setting_Up_an_Environment/ROS2IronInstallationUbuntu
+        - file: book/CHAPTERS/02_Setting_Up_an_Environment/DockerInstallation
+      - file: book/CHAPTERS/03_Basic_ROS2_Concepts
         sections:
-          - file: book/CHAPTERS/ROS2_Iron/03_Basic_Concepts/Nodes_and_Topics
-          - file: book/CHAPTERS/ROS2_Iron/03_Basic_Concepts/ServicesBasicConcept
-          - file: book/CHAPTERS/ROS2_Iron/03_Basic_Concepts/Actions
-          - file: book/CHAPTERS/ROS2_Iron/03_Basic_Concepts/Parameters
-          - file: book/CHAPTERS/ROS2_Iron/03_Basic_Concepts/Launch_Files
-          - file: book/CHAPTERS/ROS2_Iron/03_Basic_Concepts/PublisherSubscriber
-          - file: book/CHAPTERS/ROS2_Iron/03_Basic_Concepts/ROSBuildPkg
-          - file: book/CHAPTERS/ROS2_Iron/03_Basic_Concepts/ROSPackageTutorial
-      - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/WritingNodes
+          - file: book/CHAPTERS/03_Basic_Concepts/Nodes_and_Topics
+          - file: book/CHAPTERS/03_Basic_Concepts/ServicesBasicConcept
+          - file: book/CHAPTERS/03_Basic_Concepts/Actions
+          - file: book/CHAPTERS/03_Basic_Concepts/Parameters
+          - file: book/CHAPTERS/03_Basic_Concepts/Launch_Files
+          - file: book/CHAPTERS/03_Basic_Concepts/PublisherSubscriber
+          - file: book/CHAPTERS/03_Basic_Concepts/ROSBuildPkg
+          - file: book/CHAPTERS/03_Basic_Concepts/ROSPackageTutorial
+      - file: book/CHAPTERS/06_Writing_Nodes/WritingNodes
         sections:
-          - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/Packages
-          - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/PackageCommands
-          - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/BasicNodes
-          - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/Services
-          - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/Actions
-  
-  - caption: ROS1 Noetic
-    numbered: true
-    maxdepth: 2
-    chapters:
-      - file: book/CHAPTERS/ROS1_Noetic/temp
-  
-  - caption: ROS1 Melodic
-    numbered: true
-    maxdepth: 2
-    chapters:
-      - file: book/CHAPTERS/ROS1_Melodic/temp
+          - file: book/CHAPTERS/06_Writing_Nodes/Packages
+          - file: book/CHAPTERS/06_Writing_Nodes/PackageCommands
+          - file: book/CHAPTERS/06_Writing_Nodes/BasicNodes
+          - file: book/CHAPTERS/06_Writing_Nodes/Services
+          - file: book/CHAPTERS/06_Writing_Nodes/Actions
 
 # Appendices section
   - caption: Appendices
