@@ -1,0 +1,1231 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>4.4. Services &#8212; A Guide to ROS2</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/Services';</script>
+    <link rel="canonical" href="https://AlejandrooBC.github.io/ros2-tutorial-book/book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/Services.html" />
+    <link rel="icon" href="../../../../_static/fav.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="4.6. Actions" href="Actions.html" />
+    <link rel="prev" title="4.3. Basic ROS Nodes" href="BasicNodes.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/A_Guide_to_ROS2_Transparent_Logo.png" class="logo__image only-light" alt="A Guide to ROS2 - Home"/>
+    <img src="../../../../_static/A_Guide_to_ROS2_Transparent_Logo.png" class="logo__image only-dark pst-js-only" alt="A Guide to ROS2 - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction and Overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../INTRODUCTION/About_the_Authors.html">About the Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../INTRODUCTION/Preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../INTRODUCTION/Table_of_Contents.html">Table of Contents</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ROS2 Iron</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01_Introduction_to_ROS2.html">1. Introduction to ROS2</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02_Setting_Up_a_ROS2_Environment.html">2. Setting Up a ROS2 Environment</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2IronInstallationWindows.html">2.6. Step 1: System Setup for Installing ROS2 Iron (Windows 10/11)</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2VMInstall.html">2.29. Windows 10/11 VM Instructions</a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2IronInstallationMacOS.html">2.41. Step 1: System Setup for ROS2 Iron on macOS</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2IronInstallationUbuntu.html">2.47. Step 1: System Setup for Installing ROS2 Iron (Ubuntu 22)</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/DockerInstallation.html">2.56. First Time Installation</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../03_Basic_ROS2_Concepts.html">3. Basic ROS2 Concepts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/Nodes_and_Topics.html">3.1. Nodes and Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/ServicesBasicConcept.html">3.2. Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/Actions.html">3.3. Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/Parameters.html">3.4. Parameters</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/Launch_Files.html">3.8. Launch Files</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/PublisherSubscriber.html">3.10. How to write a Publisher and Subscriber</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/ROSBuildPkg.html">3.13. Building a Package</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/ROSPackageTutorial.html">3.16. How to Develop a Package in ROS2</a></li>
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="WritingNodes.html">4. Writing Nodes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Packages.html">4.1. Creating Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PackageCommands.html">4.2. Package Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BasicNodes.html">4.3. Basic ROS Nodes</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.4. Services</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Actions.html">4.6. Actions</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ROS1 Noetic</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../ROS1_Noetic/temp.html">5. Temp</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ROS1 Melodic</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../ROS1_Melodic/temp.html">6. Temp</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../APPENDICES/Bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/AlejandrooBC/ros2-tutorial-book/master?urlpath=tree/book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/Services.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/AlejandrooBC/ros2-tutorial-book/blob/master/book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/Services.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/AlejandrooBC/ros2-tutorial-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/AlejandrooBC/ros2-tutorial-book/edit/main/book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/Services.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/AlejandrooBC/ros2-tutorial-book/issues/new?title=Issue%20on%20page%20%2Fbook/CHAPTERS/ROS2_Iron/06_Writing_Nodes/Services.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/Services.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Services</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4.4. Services</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#messages">4.4.1. Messages</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-a-server">4.5. Writing a Server</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#activity">4.5.1. Activity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#path-following">4.5.1.1. Path Following</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="services">
+<h1><span class="section-number">4.4. </span>Services<a class="headerlink" href="#services" title="Link to this heading">#</a></h1>
+<p>The second type of connections between nodes is a service.</p>
+<p>Nodes can run a server, which only serves data when it is requested to by a client. It’s similar to a regular function in programming, except it works across nodes.</p>
+<p>Let’s make a server that does the same thing as in our publisher/subscriber node, but only when requested. When you give the server a String, it will return a string with some punctuation added to the end.</p>
+<p>The first thing we have to do is define the data types, for input and output. Our inputs and outputs are both strings, so lets define a message that consists of an input and output string.</p>
+<section id="messages">
+<h2><span class="section-number">4.4.1. </span>Messages<a class="headerlink" href="#messages" title="Link to this heading">#</a></h2>
+<p>The way we can define what goes in our message is with <code class="docutils literal notranslate"><span class="pre">msg</span></code> and <code class="docutils literal notranslate"><span class="pre">srv</span></code> files. Message definitions must be in a CMake package and not a python package, so we’ll define our messages in another package, but we can use them anywhere as long as our workspace is loaded. Run the following commands to create a new package.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize your workspace variables</span>
+<span class="n">workspace</span> <span class="o">=</span> <span class="s1">&#39;/home/ubuntu/learn_ros_ws&#39;</span>
+<span class="o">%</span><span class="k">cd</span> $workspace
+<span class="n">package_name</span> <span class="o">=</span> <span class="s1">&#39;basic_nodes&#39;</span>
+<span class="n">interface_package_name</span> <span class="o">=</span> <span class="s1">&#39;learn_ros_interfaces&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/ubuntu/learn_ros_ws
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span> --no-raise-error -s &quot;$package_name&quot; &quot;$interface_package_name&quot;
+cd src
+
+# Create a package
+# ros2 pkg create --build-type ament_python $1 # Should already be created. Uncomment if you skipped the first tutorial.
+ros2 pkg create --build-type ament_cmake $2
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>going to create a new package
+package name: learn_ros_interfaces
+destination directory: /home/ubuntu/learn_ros_ws/src
+package format: 3
+version: 0.0.0
+description: TODO: Package description
+maintainer: [&#39;root &lt;87028711+jgoldberger26@users.noreply.github.com&gt;&#39;]
+licenses: [&#39;TODO: License declaration&#39;]
+build type: ament_cmake
+dependencies: []
+creating folder ./learn_ros_interfaces
+creating ./learn_ros_interfaces/package.xml
+creating source and include folder
+creating folder ./learn_ros_interfaces/src
+creating folder ./learn_ros_interfaces/include/learn_ros_interfaces
+creating ./learn_ros_interfaces/CMakeLists.txt
+
+[WARNING]: Unknown license &#39;TODO: License declaration&#39;.  This has been set in the package.xml, but no LICENSE file has been created.
+It is recommended to use one of the ament license identifiers:
+Apache-2.0
+BSL-1.0
+BSD-2.0
+BSD-2-Clause
+BSD-3-Clause
+GPL-3.0-only
+LGPL-3.0-only
+MIT
+MIT-0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, we need to create two directories in our package: <code class="docutils literal notranslate"><span class="pre">msg</span></code> and <code class="docutils literal notranslate"><span class="pre">srv</span></code>. This is where our message and service definitions will go.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span> --no-raise-error -s &quot;$interface_package_name&quot;
+
+mkdir src/$1/src/msg src/$1/src/srv
+</pre></div>
+</div>
+</div>
+</div>
+<p>So, what goes in these directiories? We need our message and service files.</p>
+<p>The name of the file is the name of your message or service, and the contents are defined as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">type1</span> <span class="n">part1</span>
+<span class="n">type2</span> <span class="n">part2</span>
+</pre></div>
+</div>
+<p>This is like a struct in programming.</p>
+<p>Service definitions are similar, and are defined as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">type1</span> <span class="n">input1</span>
+<span class="n">type2</span> <span class="n">input2</span>
+<span class="o">---</span>
+<span class="n">type3</span> <span class="n">output</span>
+</pre></div>
+</div>
+<p>A service actually consists of two messages: One above the line, and one below it. This means that you can have as many inputs or outputs as you want!</p>
+<p>For our service, lets define a service with one input string and one output string.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/$interface_package_name/src/srv/AddPunctuation.srv
+
+<span class="n">string</span> <span class="nb">input</span>
+<span class="o">---</span>
+<span class="n">string</span> <span class="n">output</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting src/learn_ros_interfaces/src/srv/AddPunctuation.srv
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we need to tell our package about our new service. We’re going to edit <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> and <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>, which are two files that tell the build system what other files should be used.</p>
+<p>Add these lines to the end of your CMakeLists.txt in the interfaces.</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">find_package</span><span class="p">(</span><span class="s">rosidl_default_generators</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
+
+<span class="nb">rosidl_generate_interfaces</span><span class="p">(</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span>
+<span class="w">  </span><span class="s2">&quot;srv/AddPunctuation.srv&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that we didn’t actually make any custom messages, since we don’t need them for this tutorial. If you did need to make a message, it would need to be added here as well.</p>
+<p>Your final CMakeLists.txt should look like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/$interface_package_name/CMakeLists.txt
+
+<span class="n">cmake_minimum_required</span><span class="p">(</span><span class="n">VERSION</span> <span class="mf">3.8</span><span class="p">)</span>
+<span class="n">project</span><span class="p">(</span><span class="n">learn_ros_interfaces</span><span class="p">)</span>
+
+<span class="k">if</span><span class="p">(</span><span class="n">CMAKE_COMPILER_IS_GNUCXX</span> <span class="n">OR</span> <span class="n">CMAKE_CXX_COMPILER_ID</span> <span class="n">MATCHES</span> <span class="s2">&quot;Clang&quot;</span><span class="p">)</span>
+  <span class="n">add_compile_options</span><span class="p">(</span><span class="o">-</span><span class="n">Wall</span> <span class="o">-</span><span class="n">Wextra</span> <span class="o">-</span><span class="n">Wpedantic</span><span class="p">)</span>
+<span class="n">endif</span><span class="p">()</span>
+
+<span class="c1"># find dependencies</span>
+<span class="n">find_package</span><span class="p">(</span><span class="n">ament_cmake</span> <span class="n">REQUIRED</span><span class="p">)</span>
+<span class="n">find_package</span><span class="p">(</span><span class="n">rosidl_default_generators</span> <span class="n">REQUIRED</span><span class="p">)</span>
+<span class="c1"># uncomment the following section in order to fill in</span>
+<span class="c1"># further dependencies manually.</span>
+<span class="c1"># find_package(&lt;dependency&gt; REQUIRED)</span>
+
+<span class="n">rosidl_generate_interfaces</span><span class="p">(</span><span class="err">$</span><span class="p">{</span><span class="n">PROJECT_NAME</span><span class="p">}</span>
+  <span class="s2">&quot;src/srv/AddPunctuation.srv&quot;</span>
+<span class="p">)</span>
+
+<span class="k">if</span><span class="p">(</span><span class="n">BUILD_TESTING</span><span class="p">)</span>
+  <span class="n">find_package</span><span class="p">(</span><span class="n">ament_lint_auto</span> <span class="n">REQUIRED</span><span class="p">)</span>
+  <span class="c1"># the following line skips the linter which checks for copyrights</span>
+  <span class="c1"># comment the line when a copyright and license is added to all source files</span>
+  <span class="nb">set</span><span class="p">(</span><span class="n">ament_cmake_copyright_FOUND</span> <span class="n">TRUE</span><span class="p">)</span>
+  <span class="c1"># the following line skips cpplint (only works in a git repo)</span>
+  <span class="c1"># comment the line when this package is in a git repo and when</span>
+  <span class="c1"># a copyright and license is added to all source files</span>
+  <span class="nb">set</span><span class="p">(</span><span class="n">ament_cmake_cpplint_FOUND</span> <span class="n">TRUE</span><span class="p">)</span>
+  <span class="n">ament_lint_auto_find_test_dependencies</span><span class="p">()</span>
+<span class="n">endif</span><span class="p">()</span>
+
+<span class="n">ament_package</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting src/learn_ros_interfaces/CMakeLists.txt
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’re also going to need to edit <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>, right next to <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>.</p>
+<p>Add these lines to <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="o">&lt;</span><span class="n">buildtool_depend</span><span class="o">&gt;</span><span class="n">rosidl_default_generators</span><span class="o">&lt;/</span><span class="n">buildtool_depend</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">exec_depend</span><span class="o">&gt;</span><span class="n">rosidl_default_runtime</span><span class="o">&lt;/</span><span class="n">exec_depend</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">member_of_group</span><span class="o">&gt;</span><span class="n">rosidl_interface_packages</span><span class="o">&lt;/</span><span class="n">member_of_group</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>So your final file should look like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/$interface_package_name/package.xml
+<span class="o">&lt;</span><span class="err">?</span><span class="n">xml</span> <span class="n">version</span><span class="o">=</span><span class="s2">&quot;1.0&quot;</span><span class="err">?</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="err">?</span><span class="n">xml</span><span class="o">-</span><span class="n">model</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;http://download.ros.org/schema/package_format3.xsd&quot;</span> <span class="n">schematypens</span><span class="o">=</span><span class="s2">&quot;http://www.w3.org/2001/XMLSchema&quot;</span><span class="err">?</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">package</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;3&quot;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="n">learn_ros_interfaces</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">0.0.0</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">description</span><span class="o">&gt;</span><span class="n">TODO</span><span class="p">:</span> <span class="n">Package</span> <span class="n">description</span><span class="o">&lt;/</span><span class="n">description</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">maintainer</span> <span class="n">email</span><span class="o">=</span><span class="s2">&quot;youremailhere@example.com&quot;</span><span class="o">&gt;</span><span class="n">root</span><span class="o">&lt;/</span><span class="n">maintainer</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">license</span><span class="o">&gt;</span><span class="n">TODO</span><span class="p">:</span> <span class="n">License</span> <span class="n">declaration</span><span class="o">&lt;/</span><span class="n">license</span><span class="o">&gt;</span>
+
+  <span class="o">&lt;</span><span class="n">buildtool_depend</span><span class="o">&gt;</span><span class="n">ament_cmake</span><span class="o">&lt;/</span><span class="n">buildtool_depend</span><span class="o">&gt;</span>
+
+  <span class="o">&lt;</span><span class="n">buildtool_depend</span><span class="o">&gt;</span><span class="n">rosidl_default_generators</span><span class="o">&lt;/</span><span class="n">buildtool_depend</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">exec_depend</span><span class="o">&gt;</span><span class="n">rosidl_default_runtime</span><span class="o">&lt;/</span><span class="n">exec_depend</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">member_of_group</span><span class="o">&gt;</span><span class="n">rosidl_interface_packages</span><span class="o">&lt;/</span><span class="n">member_of_group</span><span class="o">&gt;</span>
+
+  <span class="o">&lt;</span><span class="n">test_depend</span><span class="o">&gt;</span><span class="n">ament_lint_auto</span><span class="o">&lt;/</span><span class="n">test_depend</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">test_depend</span><span class="o">&gt;</span><span class="n">ament_lint_common</span><span class="o">&lt;/</span><span class="n">test_depend</span><span class="o">&gt;</span>
+
+  <span class="o">&lt;</span><span class="n">export</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">build_type</span><span class="o">&gt;</span><span class="n">ament_cmake</span><span class="o">&lt;/</span><span class="n">build_type</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">export</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">package</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting src/learn_ros_interfaces/package.xml
+</pre></div>
+</div>
+</div>
+</div>
+<p>And now build! Once you reload your terminal, you should see your new service interface in the ros2 list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span> --no-raise-error -s &quot;$interface_package_name&quot;
+
+colcon build --packages-select $1
+source install/local_setup.bash
+ros2 interface list | grep AddPunctuation
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Starting &gt;&gt;&gt; learn_ros_interfaces
+Finished &lt;&lt;&lt; learn_ros_interfaces [0.46s]
+
+Summary: 1 package finished [0.54s]
+    learn_ros_interfaces/srv/AddPunctuation
+</pre></div>
+</div>
+</div>
+</div>
+<p>Your output should look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Starting</span> <span class="o">&gt;&gt;&gt;</span> <span class="n">learn_ros_interfaces</span>
+<span class="n">Finished</span> <span class="o">&lt;&lt;&lt;</span> <span class="n">learn_ros_interfaces</span> <span class="p">[</span><span class="mf">0.45</span><span class="n">s</span><span class="p">]</span>
+
+<span class="n">Summary</span><span class="p">:</span> <span class="mi">1</span> <span class="n">package</span> <span class="n">finished</span> <span class="p">[</span><span class="mf">0.54</span><span class="n">s</span><span class="p">]</span>
+    <span class="n">learn_ros_interfaces</span><span class="o">/</span><span class="n">srv</span><span class="o">/</span><span class="n">AddPunctuation</span>
+</pre></div>
+</div>
+<p>If you don’t see the last line, go back and make sure you followed all the steps.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="writing-a-server">
+<h1><span class="section-number">4.5. </span>Writing a Server<a class="headerlink" href="#writing-a-server" title="Link to this heading">#</a></h1>
+<p>To use make use of our service, we need to write a server! This will actually read the request message, generate the response, and send it back to the client.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/$package_name/$package_name/server_node.py
+<span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">learn_ros_interfaces.srv</span><span class="w"> </span><span class="kn">import</span> <span class="n">AddPunctuation</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">MyServer</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;server_node&#39;</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">my_server</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_service</span><span class="p">(</span><span class="n">AddPunctuation</span><span class="p">,</span> <span class="s1">&#39;boring_strings_srv&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_punctuation</span><span class="p">)</span>
+        
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_punctuation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+        <span class="n">response</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">input</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span>
+        <span class="k">return</span> <span class="n">response</span>
+    
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Starting server node...&#39;</span><span class="p">)</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">server</span> <span class="o">=</span> <span class="n">MyServer</span><span class="p">()</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">server</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting src/basic_nodes/basic_nodes/server_node.py
+</pre></div>
+</div>
+</div>
+</div>
+<p>Don’t forget to add the new entrypoint to your <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;console_scripts&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="c1"># other nodes,</span>
+            <span class="s1">&#39;server_node = basic_nodes.server_node:main&#39;</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+<p>It’s pretty similar to our subscriber from before! Notice the first argument of create_service; it’s the <code class="docutils literal notranslate"><span class="pre">.srv</span></code> type we just created! We also had to import it from our other package, <code class="docutils literal notranslate"><span class="pre">learn_ros_interfaces</span></code>.</p>
+<p>Once we build and spin up our server, we can send a request to our server with the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>run<span class="w"> </span>basic_nodes<span class="w"> </span>server_node
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span> --no-raise-error -s &quot;$package_name&quot;
+colcon build --packages-select $1
+source install/local_setup.bash
+ros2 run basic_nodes server_node
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Starting &gt;&gt;&gt; basic_nodes
+Finished &lt;&lt;&lt; basic_nodes [1.06s]
+
+Summary: 1 package finished [1.14s]
+Starting server node...
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can send a request to our server from the command line. Try it out!</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>service<span class="w"> </span>call<span class="w"> </span>/boring_strings_srv<span class="w"> </span>learn_ros_interfaces/srv/AddPunctuation<span class="w"> </span><span class="s2">&quot;{input: Hello}&quot;</span>
+</pre></div>
+</div>
+<p>You should get a response with some exciting punctuation added to the end of it!</p>
+<p>As with the publisher, we don’t want to call the service from the command line every time. Instead, we want to write another node that can call the service by itself. Let’s write a client node to use our server node.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/$package_name/$package_name/client_node.py
+
+<span class="c1"># https://docs.ros.org/en/jazzy/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Service-And-Client.html#write-the-client-node</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">learn_ros_interfaces.srv</span><span class="w"> </span><span class="kn">import</span> <span class="n">AddPunctuation</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">MyClient</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;client_node&#39;</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_client</span><span class="p">(</span><span class="n">AddPunctuation</span><span class="p">,</span> <span class="s1">&#39;boring_strings_cli&#39;</span><span class="p">)</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">cli</span><span class="o">.</span><span class="n">wait_for_service</span><span class="p">(</span><span class="n">timeout_sec</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;service not available, waiting again...&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">req</span> <span class="o">=</span> <span class="n">AddPunctuation</span><span class="o">.</span><span class="n">Request</span><span class="p">()</span>
+        
+    <span class="k">def</span><span class="w"> </span><span class="nf">send_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">req</span><span class="o">.</span><span class="n">input</span> <span class="o">=</span> <span class="nb">input</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">call_async</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">req</span><span class="p">)</span>
+        
+    
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Starting client node...&#39;</span><span class="p">)</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">MyClient</span><span class="p">()</span>
+    <span class="n">future</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">send_request</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin_until_future_complete</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="n">future</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">future</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+    <span class="n">client</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Boring string:</span><span class="se">\t</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span>
+                             <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Exciting String:</span><span class="se">\t</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">response</span><span class="o">.</span><span class="n">output</span><span class="p">)</span>
+    
+    <span class="n">client</span><span class="o">.</span><span class="n">destroy_node</span><span class="p">()</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting src/basic_nodes/basic_nodes/client_node.py
+</pre></div>
+</div>
+</div>
+</div>
+<p>Update your <code class="docutils literal notranslate"><span class="pre">setup.py</span> <span class="pre">again</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;console_scripts&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="c1"># Other nodes</span>
+            <span class="s1">&#39;server_node = basic_nodes.server_node:main&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;client_node = basic_nodes.client_node:main&#39;</span>
+        <span class="p">],</span>
+    <span class="p">},</span>
+</pre></div>
+</div>
+<p>And run your <code class="docutils literal notranslate"><span class="pre">client_node</span></code>! Remember to build and re-source.</p>
+<p>Note that it takes in a commandline parameter, so make sure you call it with one.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>basic_nodes<span class="w"> </span>client_node<span class="w"> </span><span class="s2">&quot;Hello from the client&quot;</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span> --no-raise-error -s &quot;$package_name&quot;
+
+colcon build --packages-select $1
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Starting &gt;&gt;&gt; basic_nodes
+Finished &lt;&lt;&lt; basic_nodes [1.07s]
+
+Summary: 1 package finished [1.18s]
+</pre></div>
+</div>
+</div>
+</div>
+<section id="activity">
+<h2><span class="section-number">4.5.1. </span>Activity<a class="headerlink" href="#activity" title="Link to this heading">#</a></h2>
+<p>For this activity, we’re going to edit our activity from BasicNodes to follow a path. We’re going to use the teleport and set_pen service calls to set the turtle to specific places, use topics from before to move the robot along a path.</p>
+<p>TODO GIF
+TODO colcon/workspace setup for activity</p>
+<section id="path-following">
+<h3><span class="section-number">4.5.1.1. </span>Path Following<a class="headerlink" href="#path-following" title="Link to this heading">#</a></h3>
+<p>Set the robot to follow a path. Use topics to monitor when the turtle reaches a point, and when it does, set a new pen color with a service call, and use topics to set a new direction until the turtle reaches the next point. We’re going to make a rainbow shape! Copy the template code below to begin.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/$package_name/$package_name/draw_node.py
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geometry_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">Twist</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">turtlesim.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pose</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">turtlesim.srv</span><span class="w"> </span><span class="kn">import</span> <span class="n">SetPen</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">turtlesim.srv</span><span class="w"> </span><span class="kn">import</span> <span class="n">TeleportAbsolute</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">colorsys</span>
+
+<span class="n">star</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">7.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">9.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">)]</span>
+<span class="n">zigzag</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)]</span>
+<span class="c1"># Make your own path!</span>
+
+<span class="n">goals</span> <span class="o">=</span> <span class="n">zigzag</span> <span class="c1"># Replace with star or your own path once zigzag works.</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">DrawNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;draw_node&#39;</span><span class="p">)</span>        
+        <span class="bp">self</span><span class="o">.</span><span class="n">next_goal</span> <span class="o">=</span> <span class="mi">0</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">pose_subscriber</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># TODO create a subscriber. You&#39;ve already done this!</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">velocity_publisher</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># TODO create a publisher. You&#39;ve already done this!</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">teleport_client</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># TODO create a teleport client!</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_pen_client</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_client</span><span class="p">(</span><span class="n">SetPen</span><span class="p">,</span> <span class="s1">&#39;/turtle1/set_pen&#39;</span><span class="p">)</span>
+        
+        <span class="c1"># TODO teleport to the first goal position</span>
+        
+    <span class="k">def</span><span class="w"> </span><span class="nf">teleport</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">):</span>
+        <span class="c1"># TODO Write the teleport function. Position is a tuple of size 2,</span>
+        <span class="c1"># with x being position[0] and y being position[1]. See the tuples in</span>
+        <span class="c1"># zigzag and star.</span>
+        <span class="k">pass</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_pen</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="n">req</span> <span class="o">=</span> <span class="n">SetPen</span><span class="o">.</span><span class="n">Request</span><span class="p">()</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">r</span> <span class="o">=</span> <span class="n">r</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="n">g</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_pen_client</span><span class="o">.</span><span class="n">call_async</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+        <span class="c1"># We don&#39;t care what the result is, so don&#39;t return it</span>
+<span class="w">        </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function should run every time self.pose_subscriber gets a new pose.</span>
+<span class="sd">    It will also handle publishing: Every time we get a new position, we should</span>
+<span class="sd">    publish a velocity for that position.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pose_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">:</span> <span class="n">Pose</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">close_to_pos</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">goals</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">next_goal</span><span class="p">]):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">next_goal</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">next_goal</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">goals</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">=</span> <span class="n">generate_rgb</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">next_goal</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">goals</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_pen</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+        
+        <span class="n">x_dist</span> <span class="o">=</span> <span class="n">goals</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">next_goal</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">pos</span><span class="o">.</span><span class="n">x</span>
+        <span class="n">y_dist</span> <span class="o">=</span> <span class="n">goals</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">next_goal</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">pos</span><span class="o">.</span><span class="n">y</span>
+        
+        <span class="c1"># We can use atan2 to get the angle of a vector. Here, the vector points</span>
+        <span class="c1"># from our robot to the goal position</span>
+        <span class="n">desired_angle</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">atan2</span><span class="p">(</span><span class="n">y_dist</span><span class="p">,</span> <span class="n">x_dist</span><span class="p">)</span>
+        
+        <span class="c1"># The angle error is the difference between the angle we want to face,</span>
+        <span class="c1"># and the angle that we are facing. But what if the goal is, say, -pi</span>
+        <span class="c1"># (directly left) and we are currently facing pi/2? (directly up)</span>
+        <span class="c1"># This will give a negative angle error of -3pi/2, causing us to turn</span>
+        <span class="c1"># clockwise, even though the fastest way to turn would be counter-clockwise.</span>
+        <span class="c1"># By bounding the angle_error between -pi and pi, we get a positive angle</span>
+        <span class="c1"># of pi/2, causing us to turn counter-clockwise.</span>
+        <span class="n">angle_error</span> <span class="o">=</span> <span class="n">normalize_angle</span><span class="p">(</span><span class="n">desired_angle</span> <span class="o">-</span> <span class="n">pos</span><span class="o">.</span><span class="n">theta</span><span class="p">)</span>
+        
+        <span class="c1"># Publish a new velocity twist whenever we recieve a new pose.</span>
+        <span class="c1"># Since the turtle can only move forwards (linear.x), you&#39;ll have to</span>
+        <span class="c1"># make use of its rotation (angular.z). Setting linear.y won&#39;t do</span>
+        <span class="c1"># anything.</span>
+        <span class="c1"># The robot can be set to always move forward. The angle should be</span>
+        <span class="c1"># related to the angle_error we calculated before.</span>
+        <span class="c1"># TODO publish new velocity</span>
+<span class="w">        </span>
+
+<span class="w">    </span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">close_to_pos returns true if we are close to a given position, and false</span>
+<span class="sd">if we are not close. Close is defined here as within 0.01 of the x and y</span>
+<span class="sd">coordinates. With floating point values as used here, and in the real world,</span>
+<span class="sd">we are never going to be exactly where we want, so we need to define an</span>
+<span class="sd">acceptable error bound.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">close_to_pos</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cur_pos</span><span class="p">,</span> <span class="n">next_pos</span><span class="p">):</span>
+    <span class="n">epsilon</span> <span class="o">=</span> <span class="mf">0.01</span>
+    <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="n">next_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">cur_pos</span><span class="o">.</span><span class="n">x</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">epsilon</span> <span class="ow">and</span> <span class="nb">abs</span><span class="p">(</span><span class="n">next_pos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">cur_pos</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">epsilon</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">normalize_angle takes any value in radians and returns its equivalent from</span>
+<span class="sd">-PI to PI. For example, if you give it 5pi/2, it will return pi/2.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">normalize_angle</span><span class="p">(</span><span class="n">angle</span><span class="p">):</span>
+    <span class="k">while</span> <span class="n">angle</span> <span class="o">&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">:</span>
+        <span class="n">angle</span> <span class="o">-=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+    <span class="k">while</span> <span class="n">angle</span> <span class="o">&lt;</span> <span class="o">-</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">:</span>
+        <span class="n">angle</span> <span class="o">+=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+    <span class="k">return</span> <span class="n">angle</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">generate_rrgb takes a value between 0 and 1 (inclusive), and returns R, G, and B</span>
+<span class="sd">values from 0 to 255. 0 and 1 will return (255, 0, 0) (red), and values in</span>
+<span class="sd">between will return hues in between. See HSL color strips for a visual.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_rgb</span><span class="p">(</span><span class="n">percent</span><span class="p">):</span>
+    <span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">=</span> <span class="n">colorsys</span><span class="o">.</span><span class="n">hsv_to_rgb</span><span class="p">(</span><span class="n">percent</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">r</span> <span class="o">*</span> <span class="mi">255</span><span class="p">)</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">g</span> <span class="o">*</span> <span class="mi">255</span><span class="p">)</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="mi">255</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Starting draw node...&#39;</span><span class="p">)</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">draw_node</span> <span class="o">=</span> <span class="n">DrawNode</span><span class="p">()</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">draw_node</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./book/CHAPTERS/ROS2_Iron/06_Writing_Nodes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="BasicNodes.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">4.3. </span>Basic ROS Nodes</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Actions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4.6. </span>Actions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4.4. Services</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#messages">4.4.1. Messages</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-a-server">4.5. Writing a Server</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#activity">4.5.1. Activity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#path-following">4.5.1.1. Path Following</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By <br>Advisor - Dr. Kimberly Oakes<br>Semester - RCOS Fall 2024<br>Team - Learn ROS Through Python Turtle<br> Alejandro Begara Criado<br>Luca Vitti<br>Niko Baletin<br>Jeremy Goldberger
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
