@@ -1,0 +1,113 @@
+[
+    {
+        "question": "What topic did you subscribe to?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "/turtle1/cmd_vel",
+                "correct": false,
+                "feedback": "cmd_vel is where we send messages to make the turtle move. Subscribers can only read data, so this doesn't make sense."
+            },
+            {
+                "code": "/turtle1/color_sensor",
+                "correct": false,
+                "feedback": "color_sensor is an output, but we aren't using it for this activity. It can't tell you anything about the position of the turtle."
+            },
+            {
+                "code": "/turtle1/pose",
+                "correct": true,
+                "feedback": "Turtlesim will constantly publish the pose of all of its turtles over this topic, so we use the subscriber to listen in!"
+            }
+        ]
+    },
+    {
+        "question": "What message type did the subscription receive?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "geometry_msgs/msg/Point",
+                "correct": false,
+                "feedback": "The Point message doesn't contain any information about the rotation of our turtle. Look carefully at the `create_subscription` line. What is the first parameter?"
+            },
+            {
+                "code": "geometry_msg/msg/Pose",
+                "correct": false,
+                "feedback": "Look carefully at the import statements at the top of the file. Where do we import Pose from?"
+            },
+            {
+                "code": "geometry_msgs/msg/Transform",
+                "correct": false,
+                "feedback": "The Transform message is often used for representing a distance between two points. Look carefully at the `create_subscription` line. What is the first parameter?"
+            },
+            {
+                "code": "turtlesim/msg/Pose",
+                "correct": true,
+                "feedback": "This is the type that we imported and used in our `create_subscription` line. Often, you will use the basic messages in geometry_msgs/msg because they are general and ensure compatibility between nodes from different places, but turtlesim uses its own Pose to simplify things. You can always check what message a topic has by running `ros2 topic type full_topic_path`, and you can see more info about a message by running `ros2 interface show <full_msg_name>`."
+            }
+        ]
+    },
+    {
+        "question": "What topic did you publish to?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "/turtle1/cmd_vel",
+                "correct": true,
+                "feedback": "cmd_vel is where we send messages, or velocity commands, to make the turtle move."
+            },
+            {
+                "code": "/turtle1/color_sensor",
+                "correct": false
+            },
+            {
+                "code": "/turtle1/pose",
+                "correct": false
+            }
+        ]
+    },
+    {
+        "question": "What message type did the publisher send out?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "turtlesim/msg/Pose",
+                "correct": false,
+                "feedback": "Turtlesim doesn't accept Poses as an input. Look carefully at the `create_publisher` line. What is the first parameter?"
+            },
+            {
+                "code": "geometry_msgs/msg/Accel",
+                "correct": false,
+                "feedback": "Look carefully at the `create_publisher` line. What is the first parameter?"
+            },
+            {
+                "code": "geometry_msgs/msg/Twist",
+                "correct": true,
+                "feedback": "A Twist is the standard way of representing velocity, including both linear and angular velocity."
+            },
+            {
+                "code": "geometry_msgs/msg/Transform",
+                "correct": false,
+                "feedback": "Look carefully at the `create_publisher` line. What is the first parameter?"
+            }
+        ]
+    },
+    {
+        "question": "What does the `create_timer` function do?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "After 1 second, run the `publish_velocity` callback",
+                "correct": false
+            },
+            {
+                "answer": "Every 1 second, run the `publish_velocity` callback",
+                "correct": true
+            },
+            {
+                "answer": "Nothing; the node will finish running and quit before the timer runs",
+                "correct": false,
+                "feedback": "The `spin` function you see in the main function will keep the node running until we tell it to stop! Callbacks like `pose_callback` and `publish_velocity` are used so that we can run them after specific events, like the timer going off, without using an infinite loop."
+            }
+        ]
+    }
+]
