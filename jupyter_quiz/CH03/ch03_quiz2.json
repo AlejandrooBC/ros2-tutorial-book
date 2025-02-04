@@ -1,0 +1,27 @@
+[
+    {
+        "question": "A service client sends a call to a service server through a service. What happens next?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "The service server sends a response to the service client directly.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "code": "The service server sends a response to the service client through a service.",
+                "correct": true,
+            },
+            {
+                "code": "The service server sends a response to the service client through a topic.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "code": "The service server sends a response to the service client through another client.",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    }
+]
