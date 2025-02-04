@@ -1,0 +1,28 @@
+[
+  {
+    "question": "What is a ROS node?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "code": "An independent executable (or process) for performing specific computations",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "code": "A discrete mass of one kind of tissue enclosed in tissue of a different kind",
+        "correct": false,
+        "feedback": "Incorrect."
+      },
+      {
+        "code": "A small, bean-shaped structure that is part of the body's immune system",
+        "correct": false,
+        "feedback": "Incorrect."
+      },
+      {
+        "code": "A special group of cells that generate electrical signals",
+        "correct": false,
+        "feedback": "Incorrect."
+      }
+    ]
+  }
+]
