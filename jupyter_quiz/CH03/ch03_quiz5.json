@@ -1,0 +1,51 @@
+[
+    {
+        "question": "Which of the following should launch files do?",
+        "type": "multiple_choice",
+        "answers": [
+
+            {
+                "code": "Monitor processes.",
+                "correct": true,
+            },
+            {
+                "code": "Run programs.",
+                "correct": true,
+            },
+            {
+                "code": "Store the programs' code.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "code": "Pass parameters to nodes.",
+                "correct": true,
+            }
+        ]
+    },
+    {
+        "question": "In generate_launch_description, what is the data type of the 'remappings' parameter in the third node?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "int",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "code": "List",
+                "correct": true,
+            },
+            {
+                "code": "String",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "code": "float64",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    }
+]

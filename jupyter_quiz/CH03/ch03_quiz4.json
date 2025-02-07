@@ -1,0 +1,37 @@
+[
+    {
+        "question": "True or False: The answer to this question is a boolean value.",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "True",
+                "correct": true,
+            },
+            {
+                "code": "False",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "When are parameter values known by each node?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "Upon and/or while running",
+                "correct": true,
+            },
+            {
+                "code": "Upon compiling.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "code": "Never.",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    }
+]
