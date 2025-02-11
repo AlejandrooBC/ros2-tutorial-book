@@ -1,0 +1,26 @@
+[
+    {
+        "question": "What is a package?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "A structured container that holds all necessary code, configuration files, and metadata to accomplish the intended function.",
+                "correct": true,
+            },
+            {
+                "code": "A container that makes code easy to share and use.",
+                "correct": true,
+            },
+            {
+                "code": "A normal folder with code and configuration files.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "code": "An unstructured container that holds all necessary code, configuration files, and metadata to accomplish the intended function.",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    }
+]

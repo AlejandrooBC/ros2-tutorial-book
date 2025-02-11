@@ -1,0 +1,88 @@
+[
+    {
+        "question": "What does 'colcon build' do?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "Builds a set of packages",
+                "correct": true,
+            },
+            {
+                "code": "Sets a directory as the source directory",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "code": "Makes a new project",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "code": "Uploads a set of packages to a web server",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "What does it mean to 'build' a package?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "To compile all source files, resolve all dependencies, and then package everything into one container.",
+                "correct": true,
+            },
+            {
+                "code": "To resolve all dependencies and package everything into one container.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "code": "To compile all source files and then package them into one container.",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "What does it mean to 'resolve' a dependency?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "To identify all project dependencies and then include them in the package somehow (i.e. list them in an XML file).",
+                "correct": true,
+            },
+            {
+                "code": "To solve an overdependency on a specific library or framework.",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "Which of the following is an example of a dependency?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "Library",
+                "correct": true,
+            },
+            {
+                "code": "API",
+                "correct": true,
+            },
+            {
+                "code": "Framework",
+                "correct": true,
+            },
+            {
+                "code": "Specific operating system",
+                "correct": true,
+            },
+            {
+                "code": "A class within the project",
+                "correct": true,
+            }
+        ]
+    }
+]
