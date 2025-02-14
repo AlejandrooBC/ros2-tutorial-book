@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Services &#8212; A Guide to ROS2</title>
+    <title>4.4. Services &#8212; A Guide to ROS2</title>
   
   
   
@@ -65,6 +65,8 @@
     <link rel="icon" href="../../../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="4.6. Actions" href="Actions.html" />
+    <link rel="prev" title="4.3. Basic ROS Nodes" href="BasicNodes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -115,8 +117,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
@@ -169,7 +169,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../INTRODUCTION/Table_of_Contents.html">Table of Contents</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ROS2 Iron</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../01_Introduction_to_ROS2.html">1. Introduction to ROS2</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../02_Setting_Up_a_ROS2_Environment.html">2. Setting Up a ROS2 Environment</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2IronInstallationWindows.html">2.6. Step 1: System Setup for Installing ROS2 Iron (Windows 10/11)</a></li>
@@ -248,6 +248,15 @@
 
 
 
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="WritingNodes.html">4. Writing Nodes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Packages.html">4.1. Creating Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PackageCommands.html">4.2. Package Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BasicNodes.html">4.3. Basic ROS Nodes</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.4. Services</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Actions.html">4.6. Actions</a></li>
 </ul>
 </details></li>
 </ul>
@@ -520,13 +529,13 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Services</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#messages">Messages</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4.4. Services</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#messages">4.4.1. Messages</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-a-server">Writing a Server</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#activity">Activity</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#path-following">Path Following</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-a-server">4.5. Writing a Server</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#activity">4.5.1. Activity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#path-following">4.5.1.1. Path Following</a></li>
 </ul>
 </li>
 </ul>
@@ -544,13 +553,13 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="services">
-<h1>Services<a class="headerlink" href="#services" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">4.4. </span>Services<a class="headerlink" href="#services" title="Link to this heading">#</a></h1>
 <p>The second type of connections between nodes is a service.</p>
 <p>Nodes can run a server, which only serves data when it is requested to by a client. It’s similar to a regular function in programming, except it works across nodes.</p>
 <p>Let’s make a server that does the same thing as in our publisher/subscriber node, but only when requested. When you give the server a String, it will return a string with some punctuation added to the end.</p>
 <p>The first thing we have to do is define the data types, for input and output. Our inputs and outputs are both strings, so lets define a message that consists of an input and output string.</p>
 <section id="messages">
-<h2>Messages<a class="headerlink" href="#messages" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.4.1. </span>Messages<a class="headerlink" href="#messages" title="Link to this heading">#</a></h2>
 <p>The way we can define what goes in our message is with <code class="docutils literal notranslate"><span class="pre">msg</span></code> and <code class="docutils literal notranslate"><span class="pre">srv</span></code> files. Message definitions must be in a CMake package and not a python package, so we’ll define our messages in another package, but we can use them anywhere as long as our workspace is loaded. Run the following commands to create a new package.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -784,7 +793,7 @@ Summary: 1 package finished [0.54s]
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="writing-a-server">
-<h1>Writing a Server<a class="headerlink" href="#writing-a-server" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">4.5. </span>Writing a Server<a class="headerlink" href="#writing-a-server" title="Link to this heading">#</a></h1>
 <p>To use make use of our service, we need to write a server! This will actually read the request message, generate the response, and send it back to the client.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -947,12 +956,12 @@ Summary: 1 package finished [1.18s]
 </div>
 </div>
 <section id="activity">
-<h2>Activity<a class="headerlink" href="#activity" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.5.1. </span>Activity<a class="headerlink" href="#activity" title="Link to this heading">#</a></h2>
 <p>For this activity, we’re going to edit our activity from BasicNodes to follow a path. We’re going to use the teleport and set_pen service calls to set the turtle to specific places, use topics from before to move the robot along a path.</p>
 <p>TODO GIF
 TODO colcon/workspace setup for activity</p>
 <section id="path-following">
-<h3>Path Following<a class="headerlink" href="#path-following" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">4.5.1.1. </span>Path Following<a class="headerlink" href="#path-following" title="Link to this heading">#</a></h3>
 <p>Set the robot to follow a path. Use topics to monitor when the turtle reaches a point, and when it does, set a new pen color with a service call, and use topics to set a new direction until the turtle reaches the next point. We’re going to make a rainbow shape! Copy the template code below to begin.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1118,6 +1127,24 @@ TODO colcon/workspace setup for activity</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="BasicNodes.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">4.3. </span>Basic ROS Nodes</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Actions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4.6. </span>Actions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -1135,13 +1162,13 @@ TODO colcon/workspace setup for activity</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Services</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#messages">Messages</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4.4. Services</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#messages">4.4.1. Messages</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-a-server">Writing a Server</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#activity">Activity</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#path-following">Path Following</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-a-server">4.5. Writing a Server</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#activity">4.5.1. Activity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#path-following">4.5.1.1. Path Following</a></li>
 </ul>
 </li>
 </ul>
