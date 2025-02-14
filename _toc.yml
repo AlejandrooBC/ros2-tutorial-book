@@ -32,6 +32,7 @@ parts:
           - file: book/CHAPTERS/ROS2_Iron/03_Basic_Concepts/PublisherSubscriber
           - file: book/CHAPTERS/ROS2_Iron/03_Basic_Concepts/ROSBuildPkg
           - file: book/CHAPTERS/ROS2_Iron/03_Basic_Concepts/ROSPackageTutorial
+      - file: book/CHAPTERS/ROS2_Iron/04_Command_Line_Tools/Commands
       - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/WritingNodes
         sections:
           - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/Packages
