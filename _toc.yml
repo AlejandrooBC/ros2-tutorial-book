@@ -10,9 +10,9 @@ parts:
       - file: book/INTRODUCTION/Table_of_Contents
 
   # Chapters section
-  - caption: ROS 2 Iron
+  - caption: ROS2 Iron
     numbered: true
-    maxdepth: 2
+    maxdepth: 3
     chapters:
       - file: book/CHAPTERS/ROS2_Iron/01_Introduction_to_ROS2
       - file: book/CHAPTERS/ROS2_Iron/02_Setting_Up_a_ROS2_Environment
@@ -40,18 +40,17 @@ parts:
           - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/Services
           - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/Actions
 
-  - caption: ROS 1 Noetic
+  - caption: ROS1 Noetic
     numbered: false
     maxdepth: 2
     chapters:
       - file: book/CHAPTERS/ROS1_Noetic/temp
 
-  - caption: ROS 1 Melodic
+  - caption: ROS1 Melodic
     numbered: false
     maxdepth: 2
     chapters:
       - file: book/CHAPTERS/ROS1_Melodic/temp
-
 
 # Appendices section
   - caption: Appendices
