@@ -6,6 +6,7 @@
       {
         "code": "Nodes are independent processes",
         "correct": true,
+        "feedback": "Correct."
       },
       {
         "code": "Node messages can only contain simple variable types, such as int64",
@@ -15,6 +16,7 @@
       {
         "code": "Nodes can send and receive messages",
         "correct": true,
+        "feedback": "Correct."
       },
       {
         "code": "Nodes should always have more than one purpose",
@@ -30,6 +32,7 @@
       {
         "code": "True",
         "correct": true,
+        "feedback": "Correct."
       },
       {
         "code": "False",
@@ -55,6 +58,7 @@
       {
         "code": "By subscribing to the /scan topic",
         "correct": true,
+        "feedback": "Correct."
       },
       {
         "code": "By publishing to the /scan topic",

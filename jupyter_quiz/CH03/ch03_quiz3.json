@@ -11,6 +11,7 @@
             {
                 "code": "Feedback",
                 "correct": true,
+                "feedback": "Correct."
             },
             {
                 "code": "Result",
@@ -36,6 +37,7 @@
             {
                 "code": "The action client's result service sends a call to the action server's result service.",
                 "correct": true,
+                "feedback": "Correct."
             },
             {
                 "code": "The action server creates a new feedback topic for this goal.",

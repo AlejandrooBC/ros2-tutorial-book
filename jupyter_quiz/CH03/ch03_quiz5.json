@@ -7,10 +7,12 @@
             {
                 "code": "Monitor processes.",
                 "correct": true,
+                "feedback": "Correct."
             },
             {
                 "code": "Run programs.",
                 "correct": true,
+                "feedback": "Correct."
             },
             {
                 "code": "Store the programs' code.",
@@ -20,6 +22,7 @@
             {
                 "code": "Pass parameters to nodes.",
                 "correct": true,
+                "feedback": "Correct."
             }
         ]
     },
@@ -35,6 +38,7 @@
             {
                 "code": "List",
                 "correct": true,
+                "feedback": "Correct."
             },
             {
                 "code": "String",

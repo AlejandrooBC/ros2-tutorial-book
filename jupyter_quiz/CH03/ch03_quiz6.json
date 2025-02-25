@@ -11,6 +11,7 @@
             {
                 "code": "To download content from web servers.",
                 "correct": true,
+                "feedback": "Correct."
             },
             {
                 "code": "To publish a topic.",
@@ -31,6 +32,7 @@
             {
                 "code": "Defines an executable named 'talker' that is built from file 'src/publisher_member_function.cpp'.",
                 "correct": true,
+                "feedback": "Correct."
             },
             {
                 "code": "Runs the code in the source file at 'src/publisher_member_function.cpp'.",
