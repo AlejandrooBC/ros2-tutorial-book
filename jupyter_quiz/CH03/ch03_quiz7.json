@@ -6,6 +6,7 @@
             {
                 "code": "Builds a set of packages",
                 "correct": true,
+                "feedback": "Correct."
             },
             {
                 "code": "Sets a directory as the source directory",
@@ -31,6 +32,7 @@
             {
                 "code": "To compile all source files, resolve all dependencies, and then package everything into one container.",
                 "correct": true,
+                "feedback": "Correct."
             },
             {
                 "code": "To resolve all dependencies and package everything into one container.",
@@ -51,6 +53,7 @@
             {
                 "code": "To identify all project dependencies and then include them in the package somehow (i.e. list them in an XML file).",
                 "correct": true,
+                "feedback": "Correct."
             },
             {
                 "code": "To solve an overdependency on a specific library or framework.",
@@ -66,22 +69,27 @@
             {
                 "code": "Library",
                 "correct": true,
+                "feedback": "Correct."
             },
             {
                 "code": "API",
                 "correct": true,
+                "feedback": "Correct."
             },
             {
                 "code": "Framework",
                 "correct": true,
+                "feedback": "Correct."
             },
             {
                 "code": "Specific operating system",
                 "correct": true,
+                "feedback": "Correct."
             },
             {
                 "code": "A class within the project",
                 "correct": true,
+                "feedback": "Correct."
             }
         ]
     }

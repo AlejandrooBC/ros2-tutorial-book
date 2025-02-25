@@ -11,6 +11,7 @@
             {
                 "code": "The service server sends a response to the service client through a service.",
                 "correct": true,
+                "feedback": "Correct."
             },
             {
                 "code": "The service server sends a response to the service client through a topic.",

@@ -6,10 +6,12 @@
             {
                 "code": "A structured container that holds all necessary code, configuration files, and metadata to accomplish the intended function.",
                 "correct": true,
+                "feedback": "Correct."
             },
             {
                 "code": "A container that makes code easy to share and use.",
                 "correct": true,
+                "feedback": "Correct."
             },
             {
                 "code": "A normal folder with code and configuration files.",
