@@ -1,0 +1,47 @@
+[
+  {
+    "question": "Which command is used to launch a ROS2 node?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "code": "ros2 launch",
+        "correct": false,
+        "feedback": "Incorrect."
+      },
+      {
+        "code": "ros2 run",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "code": "ros2 topic",
+        "correct": false,
+        "feedback": "Incorrect."
+      },
+      {
+        "code": "ros2 doctor",
+        "correct": false,
+        "feedback": "Incorrect."
+      }
+    ]
+  },
+  {
+    "question": "What does the command ROS2 service do?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "code": "Calls or lists available services",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "code": "Creates new services",
+        "correct": false,
+        "feedback": "Incorrect."
+      }
+    ]
+  },
+  {
+    "question": "What does the "
+  }
+]
