@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>6.6. Actions &#8212; A Guide to ROS2</title>
+    <title>5.6. Actions &#8212; A Guide to ROS2</title>
   
   
   
@@ -63,7 +63,7 @@
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Temp" href="../../ROS1_Noetic/temp.html" />
-    <link rel="prev" title="6.4. Services" href="Services.html" />
+    <link rel="prev" title="5.4. Services" href="Services.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -262,14 +262,13 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../04_Command_Line_Tools/Commands.html">4. ROS2 Command-Line Tools</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="WritingNodes.html">5. Writing Nodes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Packages.html">5.1. Creating Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PackageCommands.html">5.2. Package Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BasicNodes.html">5.3. Basic ROS Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Services.html">5.4. Services</a></li>
 
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="WritingNodes.html">6. Writing Nodes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Packages.html">6.1. Creating Packages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PackageCommands.html">6.2. Package Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="BasicNodes.html">6.3. Basic ROS Nodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Services.html">6.4. Services</a></li>
-
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.6. Actions</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.6. Actions</a></li>
 </ul>
 </details></li>
 </ul>
@@ -545,21 +544,21 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topics-vs-services-vs-actions">6.6.1. Topics vs Services vs Actions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asynchronous-programming">6.6.2. Asynchronous Programming</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#async-methods">6.6.2.1. Async Methods</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#futures">6.6.2.2. Futures</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topics-vs-services-vs-actions">5.6.1. Topics vs Services vs Actions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asynchronous-programming">5.6.2. Asynchronous Programming</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#async-methods">5.6.2.1. Async Methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#futures">5.6.2.2. Futures</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programming-with-client-actions">6.6.3. Programming with Client Actions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#send-goal">6.6.3.1. Send Goal</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#goal-handles">6.6.3.2. Goal Handles</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#status">6.6.3.2.1. Status</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#get-result">6.6.3.2.2. Get Result</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cancel-goal">6.6.3.2.3. Cancel Goal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programming-with-client-actions">5.6.3. Programming with Client Actions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#send-goal">5.6.3.1. Send Goal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#goal-handles">5.6.3.2. Goal Handles</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#status">5.6.3.2.1. Status</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#get-result">5.6.3.2.2. Get Result</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cancel-goal">5.6.3.2.3. Cancel Goal</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback">6.6.3.3. Feedback</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback">5.6.3.3. Feedback</a></li>
 </ul>
 </li>
 </ul>
@@ -574,11 +573,11 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="actions">
-<h1><span class="section-number">6.6. </span>Actions<a class="headerlink" href="#actions" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">5.6. </span>Actions<a class="headerlink" href="#actions" title="Link to this heading">#</a></h1>
 <p>The last type of connection that we are going to cover are Actions.</p>
 <p>Actions are a combination of Services and Topics. They are initiated by calls to an action server, just like services are initiated by calls to a regular server. However, action services provide intermittent feedback by publishing to a topic that the action client can subscribe to. So, when should you use each?</p>
 <section id="topics-vs-services-vs-actions">
-<h2><span class="section-number">6.6.1. </span>Topics vs Services vs Actions<a class="headerlink" href="#topics-vs-services-vs-actions" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">5.6.1. </span>Topics vs Services vs Actions<a class="headerlink" href="#topics-vs-services-vs-actions" title="Link to this heading">#</a></h2>
 <p>Topics, services, and actions can all be used to transfer information between nodes, but they have different use cases.</p>
 <p>Topics should be used for passing streams of information that are always relevant. For example, when a turtle exists in turtlesim, it is constantly publishing its current position over the <code class="docutils literal notranslate"><span class="pre">/turtle1/pose</span></code> topic, and is constantly reading a desired velocity over the <code class="docutils literal notranslate"><span class="pre">/turtle1/cmd_vel</span></code>. These topics constantly accepting and publishing data, and are valid as long as <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> exists. Note that publishing to <code class="docutils literal notranslate"><span class="pre">cmd_vel</span></code>, despite only representing information, still causes the turtle to move. Topics can be used to cause something to happen.</p>
 <p>Services should be used for requesting something quick to happen. The <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> node exposes several services that can be requested through service calls, like <code class="docutils literal notranslate"><span class="pre">/spawn</span></code> to spawn a turtle, or <code class="docutils literal notranslate"><span class="pre">/reset</span></code> to reset the simulation. These happen almost instantaneously, and there is no need for feedback while the server is executing the action. Services can return info, like in the case of <code class="docutils literal notranslate"><span class="pre">/spawn</span></code>, which returns the name of the created turtle.</p>
@@ -586,9 +585,9 @@ document.write(`
 <p>Actions should be used for requesting something that might take a while, that would require feedback. <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> exposes one action, <code class="docutils literal notranslate"><span class="pre">turtle1/rotate_absolute</span></code>. This causes the turtle to turn to a position, but since the turtle can’t turn instantaneously, an action is used to keep the client updated on the turning progress.</p>
 </section>
 <section id="asynchronous-programming">
-<h2><span class="section-number">6.6.2. </span>Asynchronous Programming<a class="headerlink" href="#asynchronous-programming" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">5.6.2. </span>Asynchronous Programming<a class="headerlink" href="#asynchronous-programming" title="Link to this heading">#</a></h2>
 <section id="async-methods">
-<h3><span class="section-number">6.6.2.1. </span>Async Methods<a class="headerlink" href="#async-methods" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">5.6.2.1. </span>Async Methods<a class="headerlink" href="#async-methods" title="Link to this heading">#</a></h3>
 <p>In the services tutorial, we glossed over an important method call: <code class="docutils literal notranslate"><span class="pre">call_async()</span></code>. We used that method to <em>asynchronously</em> call our services, as opposed to using <em>synchronous</em> calls via <code class="docutils literal notranslate"><span class="pre">call()</span></code>.</p>
 <p>A synchronous call is like a regular function call, where everything happens in the order you expect it to. Take this modified function from the services activity:</p>
 <!-- TODO I need a better example for async vs sync calls. This one was easy to grab, but it doesn't actually illustrate anything. -->
@@ -610,7 +609,7 @@ document.write(`
 <p>Asynchronous calls are usually good to use, but they introduce some complexity into your program. If you need to get the result of a call, you can’t be sure that the call has actually been completed yet! This is where futures come in.</p>
 </section>
 <section id="futures">
-<h3><span class="section-number">6.6.2.2. </span>Futures<a class="headerlink" href="#futures" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">5.6.2.2. </span>Futures<a class="headerlink" href="#futures" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">Future</span></code>s in <code class="docutils literal notranslate"><span class="pre">rclpy</span></code> represent the outcome of some task. Usually when you create or recieve a <code class="docutils literal notranslate"><span class="pre">Future</span></code>, that task is not yet done. Futures allow you to check if a task is done by calling the <code class="docutils literal notranslate"><span class="pre">done()</span></code> method, and get the result of the task using the <code class="docutils literal notranslate"><span class="pre">result()</span></code> method.</p>
 <p>For services, futures will resolve to the result of the service. So, if a service called <code class="docutils literal notranslate"><span class="pre">/spawn</span></code> returns a response with<code class="docutils literal notranslate"><span class="pre">string</span> <span class="pre">name</span></code>, you can get <code class="docutils literal notranslate"><span class="pre">name</span></code> with the following line:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">spawn_client</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_client</span><span class="p">(</span><span class="n">Spawn</span><span class="p">,</span> <span class="s1">&#39;/spawn&#39;</span><span class="p">)</span>
@@ -634,9 +633,9 @@ document.write(`
 </section>
 </section>
 <section id="programming-with-client-actions">
-<h2><span class="section-number">6.6.3. </span>Programming with Client Actions<a class="headerlink" href="#programming-with-client-actions" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">5.6.3. </span>Programming with Client Actions<a class="headerlink" href="#programming-with-client-actions" title="Link to this heading">#</a></h2>
 <section id="send-goal">
-<h3><span class="section-number">6.6.3.1. </span>Send Goal<a class="headerlink" href="#send-goal" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">5.6.3.1. </span>Send Goal<a class="headerlink" href="#send-goal" title="Link to this heading">#</a></h3>
 <p>Like services, actions can be called both synchronously and asynchronously. However, for purposes of this tutorial, <strong>actions should almost never be called synchronously</strong>. We have established that actions are a good fit for long-running actions, and we also saw how synchronous calls were blocking calls. If we make a blocking call that takes a long time in the main loop of the node, we’re going to run into unexpected behavior! Additionally, synchronous action calls function almost identically to service calls, in that we aren’t able to make use of the feedback part of actions. We will simply have a service that takes a long time to execute. Still, for completeness, calling actions synchronously can be done like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">rotate_client</span> <span class="o">=</span> <span class="n">ActionClient</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">RotateAbsolute</span><span class="p">,</span> <span class="s1">&#39;/turtle1/rotate_absolute&#39;</span><span class="p">)</span>
     
@@ -664,10 +663,10 @@ document.write(`
 <p>You may have noticed that the future finished at step 2! As a reminder, with services we were able to use the results right after our future finished. With actions, the future only tells us whether or not the server has accepted our request, not if it is done or not. That means once we have our <code class="docutils literal notranslate"><span class="pre">GoalHandle</span></code>, we need to use that to determine if our action has finished or not.</p>
 </section>
 <section id="goal-handles">
-<h3><span class="section-number">6.6.3.2. </span>Goal Handles<a class="headerlink" href="#goal-handles" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">5.6.3.2. </span>Goal Handles<a class="headerlink" href="#goal-handles" title="Link to this heading">#</a></h3>
 <p>Goal handles are resources we can use to interact with the action while it is executing. Goal handles have the following important properties:</p>
 <section id="status">
-<h4><span class="section-number">6.6.3.2.1. </span>Status<a class="headerlink" href="#status" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">5.6.3.2.1. </span>Status<a class="headerlink" href="#status" title="Link to this heading">#</a></h4>
 <p>Access with: <code class="docutils literal notranslate"><span class="pre">my_goal_handle</span></code>.status</p>
 <p><code class="docutils literal notranslate"><span class="pre">status</span></code>. Status tells you important information about the progress of your goal. The valid states are:</p>
 <ol class="arabic simple" start="0">
@@ -690,19 +689,19 @@ document.write(`
 </div>
 </section>
 <section id="get-result">
-<h4><span class="section-number">6.6.3.2.2. </span>Get Result<a class="headerlink" href="#get-result" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">5.6.3.2.2. </span>Get Result<a class="headerlink" href="#get-result" title="Link to this heading">#</a></h4>
 <p>Access with <code class="docutils literal notranslate"><span class="pre">my_goal_handle.get_result()</span></code> or <code class="docutils literal notranslate"><span class="pre">my_goal_handle.get_result_async()</span></code>. For reasons discussed <a class="reference internal" href="#asynchronous-programming"><span class="xref myst">before</span></a> you should almost always use <code class="docutils literal notranslate"><span class="pre">my_goal_handle.get_result_async()</span></code>.</p>
 <p>Calling <code class="docutils literal notranslate"><span class="pre">get_result()</span></code> will stop the node from doing anything until the action completes, and then will return the final result, just like calling <code class="docutils literal notranslate"><span class="pre">result</span></code> on a <code class="docutils literal notranslate"><span class="pre">Future</span></code>.</p>
 <p>Calling <code class="docutils literal notranslate"><span class="pre">get_result_async()</span></code> will return a future. This means that, over the course of an action call, you will deal with 2 futures: On <code class="docutils literal notranslate"><span class="pre">send_goal_async</span></code> which finishes when the action server accepts the request, and on <code class="docutils literal notranslate"><span class="pre">get_result_async</span></code> which finishes when the action server finishes the action. Don’t get confused, the future returned by <code class="docutils literal notranslate"><span class="pre">send_goal_async</span></code> won’t tell you nearly enough information about the status of your goal! The result of this new future will be the final ROS2 result message from the server.</p>
 </section>
 <section id="cancel-goal">
-<h4><span class="section-number">6.6.3.2.3. </span>Cancel Goal<a class="headerlink" href="#cancel-goal" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">5.6.3.2.3. </span>Cancel Goal<a class="headerlink" href="#cancel-goal" title="Link to this heading">#</a></h4>
 <p>Access with <code class="docutils literal notranslate"><span class="pre">my_goal_handle.cancel_goal()</span></code> or <code class="docutils literal notranslate"><span class="pre">my_goal_handle.cancel_goal_async()</span></code>. Prefer the async version of the method.</p>
 <p>Canceling the goal will cause the action server to stop executing the goal the client asked it to execute. This will result in the <code class="docutils literal notranslate"><span class="pre">canceling</span></code> or <code class="docutils literal notranslate"><span class="pre">canceled</span></code> status.</p>
 </section>
 </section>
 <section id="feedback">
-<h3><span class="section-number">6.6.3.3. </span>Feedback<a class="headerlink" href="#feedback" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">5.6.3.3. </span>Feedback<a class="headerlink" href="#feedback" title="Link to this heading">#</a></h3>
 <p>The main advantage actions have over services is their ability to send a stream of feedback while the server is executing the goal. You can define a feedback with <code class="docutils literal notranslate"><span class="pre">send_goal_async()</span></code>, but not with <code class="docutils literal notranslate"><span class="pre">send_goal()</span></code>. That’s because if you use the synchronous method <code class="docutils literal notranslate"><span class="pre">send_goal()</span></code>, your node can’t do anything else until the goal has finished, including process any feedback!</p>
 <p>You can define a function to process feedback as soon as it arrives by specifying the feedback function as the second parameter to <code class="docutils literal notranslate"><span class="pre">send_goal_async</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">feedback_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feedback_msg</span><span class="p">):</span>
@@ -754,7 +753,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">6.4. </span>Services</p>
+        <p class="prev-next-title"><span class="section-number">5.4. </span>Services</p>
       </div>
     </a>
     <a class="right-next"
@@ -782,21 +781,21 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topics-vs-services-vs-actions">6.6.1. Topics vs Services vs Actions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asynchronous-programming">6.6.2. Asynchronous Programming</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#async-methods">6.6.2.1. Async Methods</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#futures">6.6.2.2. Futures</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topics-vs-services-vs-actions">5.6.1. Topics vs Services vs Actions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asynchronous-programming">5.6.2. Asynchronous Programming</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#async-methods">5.6.2.1. Async Methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#futures">5.6.2.2. Futures</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programming-with-client-actions">6.6.3. Programming with Client Actions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#send-goal">6.6.3.1. Send Goal</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#goal-handles">6.6.3.2. Goal Handles</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#status">6.6.3.2.1. Status</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#get-result">6.6.3.2.2. Get Result</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cancel-goal">6.6.3.2.3. Cancel Goal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programming-with-client-actions">5.6.3. Programming with Client Actions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#send-goal">5.6.3.1. Send Goal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#goal-handles">5.6.3.2. Goal Handles</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#status">5.6.3.2.1. Status</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#get-result">5.6.3.2.2. Get Result</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cancel-goal">5.6.3.2.3. Cancel Goal</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback">6.6.3.3. Feedback</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback">5.6.3.3. Feedback</a></li>
 </ul>
 </li>
 </ul>
