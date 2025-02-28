@@ -763,22 +763,15 @@ ros2 doctor –report</p>
 </section>
 <section id="quiz">
 <h2><span class="section-number">4.12. </span>Quiz<a class="headerlink" href="#quiz" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">jupyterquiz</span><span class="w"> </span><span class="kn">import</span> <span class="n">display_quiz</span>
-<span class="n">quiz_file</span> <span class="o">=</span> <span class="s2">&quot;ch04_quiz.json&quot;</span>
-<span class="n">display_quiz</span><span class="p">(</span><span class="s2">&quot;../../../../jupyter_quiz/CH04/&quot;</span> <span class="o">+</span> <span class="n">quiz_file</span><span class="p">,</span> <span class="n">colors</span> <span class="o">=</span> <span class="s2">&quot;fdsp&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="bUCtSxMAfEaP" data-shufflequestions="False"
+<div class="output text_html"><div id="MzXUrsxObIVI" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#bUCtSxMAfEaP {
+#MzXUrsxObIVI {
    --jq-multiple-choice-bg: #345995;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -979,7 +972,7 @@ ros2 doctor –report</p>
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsbUCtSxMAfEaP=[
+</style></div><script type="application/javascript">var questionsMzXUrsxObIVI=[
   {
     "question": "Which command is used to launch a ROS2 node?",
     "type": "multiple_choice",
@@ -1021,7 +1014,96 @@ ros2 doctor –report</p>
         "feedback": "Incorrect."
       }
     ]
-  }
+  },
+  {
+        "question": "What does the following command do?\nros2 run aabbbcc quack",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "It runs the \"quack\" node from the \"aabbbcc\" package.",
+                "correct": true,
+            },
+            {
+                "code": "It runs the \"aabbbcc\" node from the \"quack\" package.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "code": "It builds the package \"aabbbcc\" with dependencies listed in \"quack\".",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "code": "It builds the package \"quack\" with dependencies listed in \"aabbbcc\".",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "The topic /say_hello/friends does not exist. What is the result of the following command?\nros2 topic pub /say_hello/friends std_msgs/msg/String \"hello friends\"",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "The topic /say_hello/friends is created and the message \"hello friends\" is published to it.",
+                "correct": true,
+            },
+            {
+                "code": "The topic /say_hello/friends does not exist, so the message is not published.",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "What does 'ros2 launch aabbbcc boom.py' do?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "It runs the launch file boom.py, which launches nodes in the package aabbbcc.",
+                "correct": true
+            },
+            {
+                "code": "It launches the node boom.py in the package aabbbcc.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "code": "It uploads the package aabbbcc using the launch file boom.py.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "code": "It runs the nodes in aabbbcc in sequence, for an amount of time specified by boom.py.",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "What kind of information does the command, 'ros2 doctor' give you?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "Whether or not your system passed all checks.",
+                "correct": true
+            },
+            {
+                "code": "Information on your network configuration, platform, information, RMW middleware, ROS2 Info, and topic list.",
+                "correct": false,
+                "feedback": "This information is given for 'ros2 doctor --report'."
+            },
+            {
+                "code": "Warning and error information, if there are warnings and errors.",
+                "correct": true
+            },
+            {
+                "code": "A list of tests run on your system and their status (pass or error).",
+                "correct": false,
+                "feedback": "It only outputs 'All checks passed' or a list of errors (both could come with warnings)."
+            }
+        ]
+    }
 ];
     // Make a random ID
 function makeid(length) {
@@ -1829,8 +1911,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("bUCtSxMAfEaP")) {
-            show_questions(questionsbUCtSxMAfEaP,  bUCtSxMAfEaP); 
+          if(document.getElementById("MzXUrsxObIVI")) {
+            show_questions(questionsMzXUrsxObIVI,  MzXUrsxObIVI); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1839,8 +1921,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("bUCtSxMAfEaP");
-        // console.log(document.getElementById("bUCtSxMAfEaP"));
+        //console.log("MzXUrsxObIVI");
+        // console.log(document.getElementById("MzXUrsxObIVI"));
 
         try_show();
         }
