@@ -42,6 +42,92 @@
     ]
   },
   {
-    "question": "What does the "
-  }
+        "question": "What does the following command do?\nros2 run aabbbcc quack",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "It runs the \"quack\" node from the \"aabbbcc\" package.",
+                "correct": true,
+            },
+            {
+                "code": "It runs the \"aabbbcc\" node from the \"quack\" package.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "code": "It builds the package \"aabbbcc\" with dependencies listed in \"quack\".",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "code": "It builds the package \"quack\" with dependencies listed in \"aabbbcc\".",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "The topic /say_hello/friends does not exist. What is the result of the following command?\nros2 topic pub /say_hello/friends std_msgs/msg/String \"hello friends\"",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "The topic /say_hello/friends is created and the message \"hello friends\" is published to it.",
+                "correct": true,
+            },
+            {
+                "code": "The topic /say_hello/friends does not exist, so the message is not published.",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "What does 'ros2 launch aabbbcc boom.py' do?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "It runs the launch file boom.py, which launches nodes in the package aabbbcc.",
+                "correct": true
+            },
+            {
+                "code": "It launches the node boom.py in the package aabbbcc.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "code": "It uploads the package aabbbcc using the launch file boom.py.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "code": "It runs the nodes in aabbbcc in sequence, for an amount of time specified by boom.py.",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "What kind of information does the command, 'ros2 doctor' give you?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "Whether or not your system passed all checks.",
+                "correct": true
+            },
+            {
+                "code": "Information on your network configuration, platform, information, RMW middleware, ROS2 Info, and topic list.",
+                "correct": false,
+                "feedback": "This information is given for 'ros2 doctor --report'."
+            },
+            {
+                "code": "Warning and error information, if there are warnings and errors.",
+                "correct": true
+            },
+            {
+                "code": "A list of tests run on your system and their status (pass or error).",
+                "correct": false,
+                "feedback": "It only outputs 'All checks passed' or a list of errors (both could come with warnings)."
+            }
+        ]
+    }
 ]
