@@ -1,0 +1,77 @@
+[
+  {
+    "question": "What command is used to create a new package in ROS2?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "code": "ros2 pkg create <package_name>",
+        "correct": true
+      },
+      {
+        "code": "ros2 new <package_name>",
+        "correct": false,
+        "feedback": "Incorrect. The correct command is 'ros2 pkg create <package_name>'."
+      },
+      {
+        "code": "mkdir <package_name>",
+        "correct": false,
+        "feedback": "Incorrect. 'mkdir' creates a directory but does not set up a ROS2 package."
+      },
+      {
+        "code": "ros2 package new <package_name>",
+        "correct": false,
+        "feedback": "Incorrect. 'ros2 package new' is not a valid ROS2 command."
+      }
+    ]
+  },
+  {
+    "question": "Which command is used to list active ROS2 topics?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "code": "ros2 topic list",
+        "correct": true
+      },
+      {
+        "code": "ros2 node list",
+        "correct": false,
+        "feedback": "Incorrect. This command lists active ROS2 nodes, not topics."
+      },
+      {
+        "code": "ros2 topic echo",
+        "correct": false,
+        "feedback": "Incorrect. This command displays messages from a specific topic."
+      },
+      {
+        "code": "ros2 info topics",
+        "correct": false,
+        "feedback": "Incorrect. This is not a valid ROS2 command."
+      }
+    ]
+  },
+  {
+    "question": "What is the purpose of the 'colcon build' command in a ROS2 workspace?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "code": "To build all packages in the workspace.",
+        "correct": true
+      },
+      {
+        "code": "To install new ROS2 packages.",
+        "correct": false,
+        "feedback": "Incorrect. 'colcon build' compiles packages; it does not install new ones."
+      },
+      {
+        "code": "To clean the workspace.",
+        "correct": false,
+        "feedback": "Incorrect. 'colcon build' does not remove any built files."
+      },
+      {
+        "code": "To start running ROS2 nodes.",
+        "correct": false,
+        "feedback": "Incorrect. Nodes are started using 'ros2 run' or 'ros2 launch'."
+      }
+    ]
+  }
+]

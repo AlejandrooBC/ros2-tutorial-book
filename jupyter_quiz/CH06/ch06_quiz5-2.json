@@ -1,0 +1,47 @@
+[    
+    {
+        "question": "Where does 'What directory does 'cd $workspace' bring you to when used above?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "/home/ubuntu/learn_ros_ws",
+                "correct": true,
+            },
+            {
+                "code": "~",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "code": "/home/ubuntu",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "code": "/home/ubuntu/learn_ros_ws/bin",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "What does the 'source install/setup.bash' command above do?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "Runs the install/setup.bash file.",
+                "correct": true,
+            },
+            {
+                "code": "Sets setup.bash as the source.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "code": "Sets the install directory as the source.",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    }
+]
