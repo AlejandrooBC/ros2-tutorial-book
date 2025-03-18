@@ -14,7 +14,10 @@ parts:
     numbered: true
     maxdepth: 2
     chapters:
+      # Chapter 1: Introduction to ROS2
       - file: book/CHAPTERS/ROS2_Iron/01_Introduction_to_ROS2/01_Introduction_to_ROS2
+
+      # Chapter 2: Setting Up a ROS2 Environment
       - file: book/CHAPTERS/ROS2_Iron/02_Setting_Up_an_Environment/02_Setting_Up_a_ROS2_Environment
         sections:
         - file: book/CHAPTERS/ROS2_Iron/02_Setting_Up_an_Environment/ROS2IronInstallationWindows
@@ -22,6 +25,8 @@ parts:
         - file: book/CHAPTERS/ROS2_Iron/02_Setting_Up_an_Environment/ROS2IronInstallationMacOS
         - file: book/CHAPTERS/ROS2_Iron/02_Setting_Up_an_Environment/ROS2IronInstallationUbuntu
         - file: book/CHAPTERS/ROS2_Iron/02_Setting_Up_an_Environment/DockerInstallation
+
+      # Chapter 3: Basic ROS2 Concepts
       - file: book/CHAPTERS/ROS2_Iron/03_Basic_Concepts/03_Basic_ROS2_Concepts
         sections:
           - file: book/CHAPTERS/ROS2_Iron/03_Basic_Concepts/Nodes_and_Topics
@@ -32,7 +37,13 @@ parts:
           - file: book/CHAPTERS/ROS2_Iron/03_Basic_Concepts/PublisherSubscriber
           - file: book/CHAPTERS/ROS2_Iron/03_Basic_Concepts/ROSBuildPkg
           - file: book/CHAPTERS/ROS2_Iron/03_Basic_Concepts/ROSPackageTutorial
+
+      # Chapter 4: Command Line Tools
       - file: book/CHAPTERS/ROS2_Iron/04_Command_Line_Tools/Commands
+
+      # Chapter 5: Using Turtlesim - Practical Applications
+
+      # Chapter 6: Writing ROS2 Nodes
       - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/WritingNodes
         sections:
           - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/Packages
@@ -40,6 +51,8 @@ parts:
           - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/BasicNodes
           - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/Services
           - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/Actions
+
+      # Chapter 7: Launch Files
       - file: book/CHAPTERS/ROS2_Iron/07_Launch_Files/Launch_Files
 
   - caption: ROS1 Noetic
