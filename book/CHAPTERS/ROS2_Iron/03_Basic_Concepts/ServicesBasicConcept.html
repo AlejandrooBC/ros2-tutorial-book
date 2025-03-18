@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>3.2. Services &#8212; A Guide to ROS2</title>
+    <title>3.3. Services &#8212; A Guide to ROS2</title>
   
   
   
@@ -62,7 +62,7 @@
     <link rel="icon" href="../../../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="3.3. Actions" href="Actions.html" />
+    <link rel="next" title="3.5. Actions" href="Actions.html" />
     <link rel="prev" title="3.1. Nodes and Topics" href="Nodes_and_Topics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -240,21 +240,29 @@
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../03_Basic_ROS2_Concepts.html">3. Basic ROS2 Concepts</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Nodes_and_Topics.html">3.1. Nodes and Topics</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.2. Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Actions.html">3.3. Actions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Parameters.html">3.4. Parameters</a></li>
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.3. Services</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Actions.html">3.5. Actions</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Parameters.html">3.7. Parameters</a></li>
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="Launch_Files.html">3.8. Launch Files</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="PublisherSubscriber.html">3.10. How to write a Publisher and Subscriber</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="ROSBuildPkg.html">3.13. Building a Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Launch_Files.html">3.12. Launch Files</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="ROSPackageTutorial.html">3.16. How to Develop a Package in ROS2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PublisherSubscriber.html">3.15. How to write a Publisher and Subscriber</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="ROSBuildPkg.html">3.19. Building a Package</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="ROSPackageTutorial.html">3.23. How to Develop a Package in ROS2</a></li>
+
 
 
 
@@ -264,11 +272,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../04_Command_Line_Tools/Commands.html">4. ROS2 Command-Line Tools</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../06_Writing_Nodes/WritingNodes.html">5. Writing Nodes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Packages.html">5.1. Creating Packages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/PackageCommands.html">5.2. Package Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/BasicNodes.html">5.3. Basic ROS Nodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Services.html">5.4. Services</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Actions.html">5.6. Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/PackageCommands.html">5.3. Package Commands</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/BasicNodes.html">5.5. Basic ROS Nodes</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Services.html">5.7. Services</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Actions.html">5.10. Actions</a></li>
 </ul>
 </details></li>
 </ul>
@@ -544,8 +556,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-of-a-service">3.2.1. An Example of a Service</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.3. Services</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-of-a-service">3.3.1. An Example of a Service</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">3.4. Review Quiz</a></li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -557,16 +574,20 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="services">
-<h1><span class="section-number">3.2. </span>Services<a class="headerlink" href="#services" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3.3. </span>Services<a class="headerlink" href="#services" title="Link to this heading">#</a></h1>
 <p>In the section covering nodes, topics, and messages, we looked at the publisher-subscriber model of communication between nodes. nodes can receive a constant stream of data and updates. Services offer a different method of communication through a call-response mode. Instead of getting constant data, services only provide data when it is called by a client.</p>
 <p>Nodes can contain <strong>service clients and servers</strong>. The client provides a <strong>call</strong> through a service, and the server then sends out a <strong>response</strong>. For each individual service, there can be multiple clients and only one server.</p>
 <p><img alt="ROS2 Program Service" src="../../../../_images/Services_Diagram.gif" />
 <strong>ROS2 Service Example (Courtesy of ROS2 Documentation)</strong></p>
 <section id="an-example-of-a-service">
-<h2><span class="section-number">3.2.1. </span>An Example of a Service<a class="headerlink" href="#an-example-of-a-service" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.3.1. </span>An Example of a Service<a class="headerlink" href="#an-example-of-a-service" title="Link to this heading">#</a></h2>
 <p>Further on in this tutorial, you will be learning about <strong>turtlesim</strong>, a program that uses ROS2 to simulate turtles. There are many services in this program, but very simple one is <strong>/spawn</strong>.</p>
 <p>Simply put, you select this service from a list and fill in settings for where you would like to put your turtle. Once you’re done filling out the settings, there is a button that says <strong>call</strong>. This call button initiates the same “call” that was mentioned in this introduction to this Services chapter above. Once you press this button, a call for a service will be initiated and a message will be sent to the <strong>service server</strong>. Finally, the server will send out a <strong>response</strong> in the form of actually making your turtle appear!</p>
 <p>Once again, more details will be given about these services when you start learning about turtlesim later on in this tutorial. However, for now, this is a good example of a service and how the call/response function works.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="review-quiz">
+<h1><span class="section-number">3.4. </span>Review Quiz<a class="headerlink" href="#review-quiz" title="Link to this heading">#</a></h1>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><div id="vnQLMmMTDmFv" data-shufflequestions="False"
@@ -1627,7 +1648,6 @@ if (typeof version == 'undefined') {
         </script></div>
 </div>
 </section>
-</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1673,7 +1693,7 @@ if (typeof version == 'undefined') {
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.3. </span>Actions</p>
+        <p class="prev-next-title"><span class="section-number">3.5. </span>Actions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1693,8 +1713,13 @@ if (typeof version == 'undefined') {
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-of-a-service">3.2.1. An Example of a Service</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.3. Services</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-of-a-service">3.3.1. An Example of a Service</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">3.4. Review Quiz</a></li>
+</ul>
+
   </nav></div>
 
 </div></div>

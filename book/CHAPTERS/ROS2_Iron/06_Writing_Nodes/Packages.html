@@ -62,7 +62,7 @@
     <link rel="icon" href="../../../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="5.2. Package Commands" href="PackageCommands.html" />
+    <link rel="next" title="5.3. Package Commands" href="PackageCommands.html" />
     <link rel="prev" title="5. Writing Nodes" href="WritingNodes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -240,21 +240,29 @@
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../03_Basic_ROS2_Concepts.html">3. Basic ROS2 Concepts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/Nodes_and_Topics.html">3.1. Nodes and Topics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/ServicesBasicConcept.html">3.2. Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/Actions.html">3.3. Actions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/Parameters.html">3.4. Parameters</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/ServicesBasicConcept.html">3.3. Services</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/Actions.html">3.5. Actions</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/Parameters.html">3.7. Parameters</a></li>
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/Launch_Files.html">3.8. Launch Files</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/PublisherSubscriber.html">3.10. How to write a Publisher and Subscriber</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/ROSBuildPkg.html">3.13. Building a Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/Launch_Files.html">3.12. Launch Files</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/ROSPackageTutorial.html">3.16. How to Develop a Package in ROS2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/PublisherSubscriber.html">3.15. How to write a Publisher and Subscriber</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/ROSBuildPkg.html">3.19. Building a Package</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/ROSPackageTutorial.html">3.23. How to Develop a Package in ROS2</a></li>
+
 
 
 
@@ -264,11 +272,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../04_Command_Line_Tools/Commands.html">4. ROS2 Command-Line Tools</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="WritingNodes.html">5. Writing Nodes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">5.1. Creating Packages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PackageCommands.html">5.2. Package Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="BasicNodes.html">5.3. Basic ROS Nodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Services.html">5.4. Services</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="Actions.html">5.6. Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PackageCommands.html">5.3. Package Commands</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="BasicNodes.html">5.5. Basic ROS Nodes</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Services.html">5.7. Services</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="Actions.html">5.10. Actions</a></li>
 </ul>
 </details></li>
 </ul>
@@ -544,8 +556,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">5.1. Creating Packages</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workspaces">5.1.1. Workspaces</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">5.2. Review Quiz</a></li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -614,6 +631,10 @@ ros2 run hello_package hello_node
 </div>
 </div>
 </div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="review-quiz">
+<h1><span class="section-number">5.2. </span>Review Quiz<a class="headerlink" href="#review-quiz" title="Link to this heading">#</a></h1>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><div id="QKveyjLplHMt" data-shufflequestions="False"
@@ -1694,7 +1715,6 @@ if (typeof version == 'undefined') {
         </script></div>
 </div>
 </section>
-</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1740,7 +1760,7 @@ if (typeof version == 'undefined') {
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.2. </span>Package Commands</p>
+        <p class="prev-next-title"><span class="section-number">5.3. </span>Package Commands</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1760,8 +1780,13 @@ if (typeof version == 'undefined') {
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">5.1. Creating Packages</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workspaces">5.1.1. Workspaces</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">5.2. Review Quiz</a></li>
+</ul>
+
   </nav></div>
 
 </div></div>

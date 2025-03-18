@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>3.4. Parameters &#8212; A Guide to ROS2</title>
+    <title>3.7. Parameters &#8212; A Guide to ROS2</title>
   
   
   
@@ -62,8 +62,8 @@
     <link rel="icon" href="../../../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="3.8. Launch Files" href="Launch_Files.html" />
-    <link rel="prev" title="3.3. Actions" href="Actions.html" />
+    <link rel="next" title="3.12. Launch Files" href="Launch_Files.html" />
+    <link rel="prev" title="3.5. Actions" href="Actions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -240,21 +240,29 @@
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../03_Basic_ROS2_Concepts.html">3. Basic ROS2 Concepts</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Nodes_and_Topics.html">3.1. Nodes and Topics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ServicesBasicConcept.html">3.2. Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Actions.html">3.3. Actions</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.4. Parameters</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="ServicesBasicConcept.html">3.3. Services</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Actions.html">3.5. Actions</a></li>
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.7. Parameters</a></li>
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="Launch_Files.html">3.8. Launch Files</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="PublisherSubscriber.html">3.10. How to write a Publisher and Subscriber</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="ROSBuildPkg.html">3.13. Building a Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Launch_Files.html">3.12. Launch Files</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="ROSPackageTutorial.html">3.16. How to Develop a Package in ROS2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PublisherSubscriber.html">3.15. How to write a Publisher and Subscriber</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="ROSBuildPkg.html">3.19. Building a Package</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="ROSPackageTutorial.html">3.23. How to Develop a Package in ROS2</a></li>
+
 
 
 
@@ -264,11 +272,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../04_Command_Line_Tools/Commands.html">4. ROS2 Command-Line Tools</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../06_Writing_Nodes/WritingNodes.html">5. Writing Nodes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Packages.html">5.1. Creating Packages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/PackageCommands.html">5.2. Package Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/BasicNodes.html">5.3. Basic ROS Nodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Services.html">5.4. Services</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Actions.html">5.6. Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/PackageCommands.html">5.3. Package Commands</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/BasicNodes.html">5.5. Basic ROS Nodes</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Services.html">5.7. Services</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Actions.html">5.10. Actions</a></li>
 </ul>
 </details></li>
 </ul>
@@ -544,10 +556,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.4. Parameters</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#how-parameters-work">3.5. How Parameters Work</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#turtlesim-example">3.6. TurtleSim Example</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-reconfiguration">3.7. Dynamic Reconfiguration</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.7. Parameters</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#how-parameters-work">3.8. How Parameters Work</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#turtlesim-example">3.9. TurtleSim Example</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-reconfiguration">3.10. Dynamic Reconfiguration</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">3.11. Review Quiz</a></li>
 </ul>
 
             </nav>
@@ -561,7 +574,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="parameters">
-<h1><span class="section-number">3.4. </span>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3.7. </span>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">#</a></h1>
 <p>Parameters are something different to what we have been discussing thus far. They have to do with the information that nodes <em>themselves</em> store. Parameters can be thought of as a node’s settings. They have different types: integers, floats, booleans, strings, lists, and more. You have most likely seen these types from prior programming. However, if you have not heard of these types before, here is a quick rundown:</p>
 <p><strong>Integers:</strong> You standard integer on the number line (… -3, -2, -1, 0, 1, 2, 3 …)</p>
 <p><strong>Floats:</strong> Decimal values, used to represent more accurate values (1.00, 1.1, 2.53, -9.84, 6.7 …)</p>
@@ -573,20 +586,23 @@ document.write(`
 <strong>ROS2 Service Example (Courtesy of Foxglove)</strong></p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="how-parameters-work">
-<h1><span class="section-number">3.5. </span>How Parameters Work<a class="headerlink" href="#how-parameters-work" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3.8. </span>How Parameters Work<a class="headerlink" href="#how-parameters-work" title="Link to this heading">#</a></h1>
 <p>To actually make parameters, you first have to declare them through code. Then, values are passed in to these parameters through whatever command line you use or some other configuration file. Once you run the program, the simulation will then use and express the different unique paramaters provided. We will go into this more later on in this guide.</p>
 <p>Parameters are incredibly important when you have two very similar robots that have the same general responsibilities, but need to go about their jobs in distinct ways. Parameters such as speed and waypoints are used to make these robots work properly, and of course we must give them different names too!</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="turtlesim-example">
-<h1><span class="section-number">3.6. </span>TurtleSim Example<a class="headerlink" href="#turtlesim-example" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3.9. </span>TurtleSim Example<a class="headerlink" href="#turtlesim-example" title="Link to this heading">#</a></h1>
 <p>Below, you can see the parameters that exist in the <strong>SetPen</strong> node and their corresponding types in TurtleSim. r, g, b set color of the turtle’s trail, and the width parameter, surely enough, changes the width of said trail. <strong>uint8</strong> is another parameter type, you will find that there are more types that exist other than the ones mentioned above.</p>
 <p><img alt="ROS2 Program Service" src="../../../../_images/Turtle_Params.png" /></p>
 <p><strong>Example of parameters in SetPen</strong></p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="dynamic-reconfiguration">
-<h1><span class="section-number">3.7. </span>Dynamic Reconfiguration<a class="headerlink" href="#dynamic-reconfiguration" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3.10. </span>Dynamic Reconfiguration<a class="headerlink" href="#dynamic-reconfiguration" title="Link to this heading">#</a></h1>
 <p>In ROS2, parameters have this interesting property called <strong>dynamic reconfiguration</strong>. This is the ability for a node to change its parameters while it is running, essentially “on the fly”. You can change the value of any parameter mid-run and it would not cause a crash or error of any kind. For example, using the speed parameter mentioned from before, you can change the speed of a robot at any time while it is running and the system will dynamically adapt to that change. It is an incredibly useful feature in ROS2!</p>
 <p>You will later find out that dynamic reconfiguration can be used to change the values of the parameters of the image above. As you are running TurtleSim, you can change of these values and see the changes in real time.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="review-quiz">
+<h1><span class="section-number">3.11. </span>Review Quiz<a class="headerlink" href="#review-quiz" title="Link to this heading">#</a></h1>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><div id="CcZJKWwLbehH" data-shufflequestions="False"
@@ -1694,7 +1710,7 @@ if (typeof version == 'undefined') {
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3.3. </span>Actions</p>
+        <p class="prev-next-title"><span class="section-number">3.5. </span>Actions</p>
       </div>
     </a>
     <a class="right-next"
@@ -1702,7 +1718,7 @@ if (typeof version == 'undefined') {
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.8. </span>Launch Files</p>
+        <p class="prev-next-title"><span class="section-number">3.12. </span>Launch Files</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1722,10 +1738,11 @@ if (typeof version == 'undefined') {
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.4. Parameters</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#how-parameters-work">3.5. How Parameters Work</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#turtlesim-example">3.6. TurtleSim Example</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-reconfiguration">3.7. Dynamic Reconfiguration</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.7. Parameters</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#how-parameters-work">3.8. How Parameters Work</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#turtlesim-example">3.9. TurtleSim Example</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-reconfiguration">3.10. Dynamic Reconfiguration</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">3.11. Review Quiz</a></li>
 </ul>
 
   </nav></div>

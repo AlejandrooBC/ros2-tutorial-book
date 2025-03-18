@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>3.16. How to Develop a Package in ROS2 &#8212; A Guide to ROS2</title>
+    <title>3.23. How to Develop a Package in ROS2 &#8212; A Guide to ROS2</title>
   
   
   
@@ -63,7 +63,7 @@
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="4. ROS2 Command-Line Tools" href="../04_Command_Line_Tools/Commands.html" />
-    <link rel="prev" title="3.13. Building a Package" href="ROSBuildPkg.html" />
+    <link rel="prev" title="3.19. Building a Package" href="ROSBuildPkg.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -240,21 +240,29 @@
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../03_Basic_ROS2_Concepts.html">3. Basic ROS2 Concepts</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Nodes_and_Topics.html">3.1. Nodes and Topics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ServicesBasicConcept.html">3.2. Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Actions.html">3.3. Actions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Parameters.html">3.4. Parameters</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="ServicesBasicConcept.html">3.3. Services</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Actions.html">3.5. Actions</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Parameters.html">3.7. Parameters</a></li>
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="Launch_Files.html">3.8. Launch Files</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="PublisherSubscriber.html">3.10. How to write a Publisher and Subscriber</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="ROSBuildPkg.html">3.13. Building a Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Launch_Files.html">3.12. Launch Files</a></li>
 
 
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.16. How to Develop a Package in ROS2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PublisherSubscriber.html">3.15. How to write a Publisher and Subscriber</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="ROSBuildPkg.html">3.19. Building a Package</a></li>
+
+
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.23. How to Develop a Package in ROS2</a></li>
+
 
 
 
@@ -264,11 +272,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../04_Command_Line_Tools/Commands.html">4. ROS2 Command-Line Tools</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../06_Writing_Nodes/WritingNodes.html">5. Writing Nodes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Packages.html">5.1. Creating Packages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/PackageCommands.html">5.2. Package Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/BasicNodes.html">5.3. Basic ROS Nodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Services.html">5.4. Services</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Actions.html">5.6. Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/PackageCommands.html">5.3. Package Commands</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/BasicNodes.html">5.5. Basic ROS Nodes</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Services.html">5.7. Services</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Actions.html">5.10. Actions</a></li>
 </ul>
 </details></li>
 </ul>
@@ -544,11 +556,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.16. How to Develop a Package in ROS2</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-package">3.17. What is a package?</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">3.18. Prerequisites</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-package-in-c-cmake">3.19. Creating a package in C++ (CMake)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-package-in-python">3.20. Creating a package in Python</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.23. How to Develop a Package in ROS2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-package">3.24. What is a package?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">3.25. Prerequisites</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-package-in-c-cmake">3.26. Creating a package in C++ (CMake)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-package-in-python">3.27. Creating a package in Python</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">3.28. Review Quiz</a></li>
 </ul>
 
             </nav>
@@ -562,14 +575,14 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="how-to-develop-a-package-in-ros2">
-<h1><span class="section-number">3.16. </span>How to Develop a Package in ROS2<a class="headerlink" href="#how-to-develop-a-package-in-ros2" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3.23. </span>How to Develop a Package in ROS2<a class="headerlink" href="#how-to-develop-a-package-in-ros2" title="Link to this heading">#</a></h1>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="what-is-a-package">
-<h1><span class="section-number">3.17. </span>What is a package?<a class="headerlink" href="#what-is-a-package" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3.24. </span>What is a package?<a class="headerlink" href="#what-is-a-package" title="Link to this heading">#</a></h1>
 <p>A package is basically the easiest way for you to share your code with others.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="prerequisites">
-<h1><span class="section-number">3.18. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3.25. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h1>
 <p>By this point in your ROS journey, you should have set up your ROS2 installation, properly installed and used Colcon, and be able to set up your ROS environment by calling <code class="docutils literal notranslate"><span class="pre">setup.bash</span></code></p>
 <p>If you have reached this point, you can now develop ROS Packages in both C++ and Python, this guide will go over both.</p>
 <p>To begin creating any ROS2 Package, use the following command:</p>
@@ -579,7 +592,7 @@ document.write(`
 <p>In the following steps, we will be following a basic tutorial format, so the usage of the above command will also include the <code class="docutils literal notranslate"><span class="pre">--node-name</span></code> and <code class="docutils literal notranslate"><span class="pre">--license</span></code> arguments.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="creating-a-package-in-c-cmake">
-<h1><span class="section-number">3.19. </span>Creating a package in C++ (CMake)<a class="headerlink" href="#creating-a-package-in-c-cmake" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3.26. </span>Creating a package in C++ (CMake)<a class="headerlink" href="#creating-a-package-in-c-cmake" title="Link to this heading">#</a></h1>
 <p>Start by navigating to your workspace, in the case of our guides, it would be <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~/ros2_ws/src</span></code> on Linux and Mac, or <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">\ros2_ws\src</span></code> on Windows</p>
 <p>After reaching your workspace, enter the following command to create the package:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">pkg</span> <span class="n">create</span> <span class="o">--</span><span class="n">build</span><span class="o">-</span><span class="nb">type</span> <span class="n">ament_cmake</span> <span class="o">--</span><span class="n">license</span> <span class="n">Apache</span><span class="o">-</span><span class="mf">2.0</span> <span class="o">--</span><span class="n">node</span><span class="o">-</span><span class="n">name</span> <span class="n">my_node</span> <span class="n">my_package</span>
@@ -609,7 +622,7 @@ document.write(`
 <p>And you should see a folder in the <code class="docutils literal notranslate"><span class="pre">src</span></code> directory with the name <code class="docutils literal notranslate"><span class="pre">my_package</span></code>, so you have successfully created your package in C++!</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="creating-a-package-in-python">
-<h1><span class="section-number">3.20. </span>Creating a package in Python<a class="headerlink" href="#creating-a-package-in-python" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3.27. </span>Creating a package in Python<a class="headerlink" href="#creating-a-package-in-python" title="Link to this heading">#</a></h1>
 <p>Start by navigating to your workspace, in the case of our guides, it would be <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~/ros2_ws/src</span></code> on Linux and Mac, or <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">\ros2_ws\src</span></code> on Windows</p>
 <p>After reaching your workspace, enter the following command to create the package:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">pkg</span> <span class="n">create</span> <span class="o">--</span><span class="n">build</span><span class="o">-</span><span class="nb">type</span> <span class="n">ament_python</span> <span class="o">--</span><span class="n">license</span> <span class="n">Apache</span><span class="o">-</span><span class="mf">2.0</span> <span class="o">--</span><span class="n">node</span><span class="o">-</span><span class="n">name</span> <span class="n">my_node</span> <span class="n">my_package</span>
@@ -644,6 +657,9 @@ document.write(`
 </pre></div>
 </div>
 <p>And you should see a folder in the <code class="docutils literal notranslate"><span class="pre">src</span></code> directory with the name <code class="docutils literal notranslate"><span class="pre">my_package</span></code>, so you have successfully created your package in python!</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="review-quiz">
+<h1><span class="section-number">3.28. </span>Review Quiz<a class="headerlink" href="#review-quiz" title="Link to this heading">#</a></h1>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><div id="aSsKJJEatcsj" data-shufflequestions="False"
@@ -1740,7 +1756,7 @@ if (typeof version == 'undefined') {
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3.13. </span>Building a Package</p>
+        <p class="prev-next-title"><span class="section-number">3.19. </span>Building a Package</p>
       </div>
     </a>
     <a class="right-next"
@@ -1768,11 +1784,12 @@ if (typeof version == 'undefined') {
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.16. How to Develop a Package in ROS2</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-package">3.17. What is a package?</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">3.18. Prerequisites</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-package-in-c-cmake">3.19. Creating a package in C++ (CMake)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-package-in-python">3.20. Creating a package in Python</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.23. How to Develop a Package in ROS2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-package">3.24. What is a package?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">3.25. Prerequisites</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-package-in-c-cmake">3.26. Creating a package in C++ (CMake)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-package-in-python">3.27. Creating a package in Python</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">3.28. Review Quiz</a></li>
 </ul>
 
   </nav></div>
