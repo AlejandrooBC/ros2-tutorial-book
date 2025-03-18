@@ -15,14 +15,14 @@ parts:
     maxdepth: 2
     chapters:
       - file: book/CHAPTERS/ROS2_Iron/01_Introduction_to_ROS2/01_Introduction_to_ROS2
-      - file: book/CHAPTERS/ROS2_Iron/02_Setting_Up_a_ROS2_Environment/02_Setting_Up_a_ROS2_Environment
+      - file: book/CHAPTERS/ROS2_Iron/02_Setting_Up_an_Environment/02_Setting_Up_a_ROS2_Environment
         sections:
         - file: book/CHAPTERS/ROS2_Iron/02_Setting_Up_an_Environment/ROS2IronInstallationWindows
         - file: book/CHAPTERS/ROS2_Iron/02_Setting_Up_an_Environment/ROS2VMInstall
         - file: book/CHAPTERS/ROS2_Iron/02_Setting_Up_an_Environment/ROS2IronInstallationMacOS
         - file: book/CHAPTERS/ROS2_Iron/02_Setting_Up_an_Environment/ROS2IronInstallationUbuntu
         - file: book/CHAPTERS/ROS2_Iron/02_Setting_Up_an_Environment/DockerInstallation
-      - file: book/CHAPTERS/ROS2_Iron/03_Basic_ROS2_Concepts
+      - file: book/CHAPTERS/ROS2_Iron/03_Basic_Concepts/03_Basic_ROS2_Concepts
         sections:
           - file: book/CHAPTERS/ROS2_Iron/03_Basic_Concepts/Nodes_and_Topics
           - file: book/CHAPTERS/ROS2_Iron/03_Basic_Concepts/ServicesBasicConcept
@@ -40,6 +40,7 @@ parts:
           - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/BasicNodes
           - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/Services
           - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/Actions
+      - file: book/CHAPTERS/ROS2_Iron/07_Launch_Files/Launch_Files
 
   - caption: ROS1 Noetic
     numbered: false
