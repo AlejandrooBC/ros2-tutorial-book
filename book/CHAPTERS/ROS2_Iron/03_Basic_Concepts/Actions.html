@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Actions &#8212; A Guide to ROS2</title>
+    <title>3.5. Actions &#8212; A Guide to ROS2</title>
   
   
   
@@ -62,6 +62,8 @@
     <link rel="icon" href="../../../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="3.7. Parameters" href="Parameters.html" />
+    <link rel="prev" title="3.3. Services" href="ServicesBasicConcept.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -124,8 +126,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -180,22 +180,110 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../INTRODUCTION/Table_of_Contents.html">Table of Contents</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ROS2 Iron</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../01_Introduction_to_ROS2/01_Introduction_to_ROS2.html">1. Introduction to ROS2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../04_Command_Line_Tools/Commands.html">2. ROS2 Command-Line Tools</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../06_Writing_Nodes/WritingNodes.html">3. Writing Nodes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Packages.html">3.1. Creating Packages</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/PackageCommands.html">3.3. Package Commands</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/BasicNodes.html">3.5. Basic ROS Nodes</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Services.html">3.7. Services</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02_Setting_Up_an_Environment/02_Setting_Up_a_ROS2_Environment.html">2. Setting Up a ROS2 Environment</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2IronInstallationWindows.html">2.6. Step 1: System Setup for Installing ROS2 Iron (Windows 10/11)</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Actions.html">3.10. Actions</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2VMInstall.html">2.29. Windows 10/11 VM Instructions</a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2IronInstallationMacOS.html">2.41. Step 1: System Setup for ROS2 Iron on macOS</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2IronInstallationUbuntu.html">2.47. Step 1: System Setup for Installing ROS2 Iron (Ubuntu 22)</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/DockerInstallation.html">2.56. First Time Installation</a></li>
+
+
 </ul>
 </details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="03_Basic_ROS2_Concepts.html">3. Basic ROS2 Concepts</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Nodes_and_Topics.html">3.1. Nodes and Topics</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="ServicesBasicConcept.html">3.3. Services</a></li>
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.5. Actions</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Parameters.html">3.7. Parameters</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="Launch_Files.html">3.12. Launch Files</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="PublisherSubscriber.html">3.15. How to write a Publisher and Subscriber</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="ROSBuildPkg.html">3.19. Building a Package</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="ROSPackageTutorial.html">3.23. How to Develop a Package in ROS2</a></li>
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../04_Command_Line_Tools/Commands.html">4. ROS2 Command-Line Tools</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../06_Writing_Nodes/WritingNodes.html">5. Writing Nodes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Packages.html">5.1. Creating Packages</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/PackageCommands.html">5.3. Package Commands</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/BasicNodes.html">5.5. Basic ROS Nodes</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Services.html">5.7. Services</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Actions.html">5.10. Actions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../07_Launch_Files/Launch_Files.html">6. Launch Files</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ROS1 Noetic</span></p>
 <ul class="nav bd-sidenav">
@@ -469,8 +557,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Actions</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">Review Quiz</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.5. Actions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">3.6. Review Quiz</a></li>
 </ul>
 
             </nav>
@@ -484,7 +572,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="actions">
-<h1>Actions<a class="headerlink" href="#actions" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3.5. </span>Actions<a class="headerlink" href="#actions" title="Link to this heading">#</a></h1>
 <p>Actions are yet another form of messaging between nodes. It is primarily intended for running large tasks with different moving parts. They also utilize a lot of the features we have already covered in this section beforehand!</p>
 <p>Actions are very similar to services, and they are, in fact, built on topics and services too. The difference between actions and services are that actions come with the benefit of being <strong>preemptable</strong>, meaning you can cancel them while they are executing. They also provide a steady feedback loop, which services do not with their call-response model.</p>
 <p>Although it seems like it may be complicated at first glance, actions are actually straightforward. They have three phases:</p>
@@ -495,7 +583,7 @@ document.write(`
 <strong>ROS2 Action Example (Courtesy of ROS2 Documentation)</strong></p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="review-quiz">
-<h1>Review Quiz<a class="headerlink" href="#review-quiz" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3.6. </span>Review Quiz<a class="headerlink" href="#review-quiz" title="Link to this heading">#</a></h1>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><div id="lJEFLABJpImf" data-shufflequestions="False"
@@ -1607,6 +1695,24 @@ if (typeof version == 'undefined') {
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="ServicesBasicConcept.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">3.3. </span>Services</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Parameters.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3.7. </span>Parameters</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -1623,8 +1729,8 @@ if (typeof version == 'undefined') {
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Actions</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">Review Quiz</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.5. Actions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">3.6. Review Quiz</a></li>
 </ul>
 
   </nav></div>

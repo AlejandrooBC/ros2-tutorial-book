@@ -1,0 +1,914 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>6. Launch Files &#8212; A Guide to ROS2</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/CHAPTERS/ROS2_Iron/07_Launch_Files/Launch_Files';</script>
+    <link rel="canonical" href="https://AlejandrooBC.github.io/ros2-tutorial-book/book/CHAPTERS/ROS2_Iron/07_Launch_Files/Launch_Files.html" />
+    <link rel="icon" href="../../../../_static/fav.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Temp" href="../../ROS1_Noetic/temp.html" />
+    <link rel="prev" title="5.10. Actions" href="../06_Writing_Nodes/Actions.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/A_Guide_to_ROS2_Transparent_Logo.png" class="logo__image only-light" alt="A Guide to ROS2 - Home"/>
+    <script>document.write(`<img src="../../../../_static/A_Guide_to_ROS2_Transparent_Logo.png" class="logo__image only-dark" alt="A Guide to ROS2 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction and Overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../INTRODUCTION/About_the_Authors.html">About the Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../INTRODUCTION/Preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../INTRODUCTION/Table_of_Contents.html">Table of Contents</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ROS2 Iron</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01_Introduction_to_ROS2/01_Introduction_to_ROS2.html">1. Introduction to ROS2</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02_Setting_Up_an_Environment/02_Setting_Up_a_ROS2_Environment.html">2. Setting Up a ROS2 Environment</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2IronInstallationWindows.html">2.6. Step 1: System Setup for Installing ROS2 Iron (Windows 10/11)</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2VMInstall.html">2.29. Windows 10/11 VM Instructions</a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2IronInstallationMacOS.html">2.41. Step 1: System Setup for ROS2 Iron on macOS</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2IronInstallationUbuntu.html">2.47. Step 1: System Setup for Installing ROS2 Iron (Ubuntu 22)</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/DockerInstallation.html">2.56. First Time Installation</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../03_Basic_Concepts/03_Basic_ROS2_Concepts.html">3. Basic ROS2 Concepts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/Nodes_and_Topics.html">3.1. Nodes and Topics</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/ServicesBasicConcept.html">3.3. Services</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/Actions.html">3.5. Actions</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/Parameters.html">3.7. Parameters</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/Launch_Files.html">3.12. Launch Files</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/PublisherSubscriber.html">3.15. How to write a Publisher and Subscriber</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/ROSBuildPkg.html">3.19. Building a Package</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/ROSPackageTutorial.html">3.23. How to Develop a Package in ROS2</a></li>
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../04_Command_Line_Tools/Commands.html">4. ROS2 Command-Line Tools</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../06_Writing_Nodes/WritingNodes.html">5. Writing Nodes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Packages.html">5.1. Creating Packages</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/PackageCommands.html">5.3. Package Commands</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/BasicNodes.html">5.5. Basic ROS Nodes</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Services.html">5.7. Services</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Actions.html">5.10. Actions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Launch Files</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ROS1 Noetic</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../ROS1_Noetic/temp.html">Temp</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ROS1 Melodic</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../ROS1_Melodic/temp.html">Temp</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../APPENDICES/Bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/AlejandrooBC/ros2-tutorial-book/master?urlpath=tree/book/CHAPTERS/ROS2_Iron/07_Launch_Files/Launch_Files.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/AlejandrooBC/ros2-tutorial-book/blob/master/book/CHAPTERS/ROS2_Iron/07_Launch_Files/Launch_Files.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/AlejandrooBC/ros2-tutorial-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/AlejandrooBC/ros2-tutorial-book/edit/main/book/CHAPTERS/ROS2_Iron/07_Launch_Files/Launch_Files.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/AlejandrooBC/ros2-tutorial-book/issues/new?title=Issue%20on%20page%20%2Fbook/CHAPTERS/ROS2_Iron/07_Launch_Files/Launch_Files.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/book/CHAPTERS/ROS2_Iron/07_Launch_Files/Launch_Files.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Launch Files</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">6.1. Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-basic-launch-file">6.2. Creating a Basic Launch File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expanding-the-complexity-of-the-launch-file">6.3. Expanding the Complexity of the Launch File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-parameters-in-launch-files">6.4. Using Parameters in Launch Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-arguments-in-launch-files">6.5. Using Arguments in Launch Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-execution">6.6. Conditional Execution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#handling-events">6.7. Handling Events</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="launch-files">
+<h1><span class="section-number">6. </span>Launch Files<a class="headerlink" href="#launch-files" title="Link to this heading">#</a></h1>
+<section id="introduction">
+<h2><span class="section-number">6.1. </span>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>Launch files are an important tool in ROS2. You can think of them as fulfilling the role of a conductor in an orchestra. Each musician (or instrument section) represents an individual ROS2 node, such as a sensor node, a motor controller, or a navigation module. Instead of having each musician start playing randomly, the conductor (launch file) ensures a few things:</p>
+<ol class="arabic simple">
+<li><p><strong>Everyone starts together</strong>. The launch file starts multiple ROS nodes at the same time, just like a conductor cues musicians to begin playing together.<br><br></p></li>
+<li><p><strong>Each musician follows a sheet of instructions</strong>. The launch file defines parameters, like volume (sensor sensitivity) or tempo (publish rate), so each node knows how to behave.<br><br></p></li>
+<li><p><strong>Sections communicate with each other</strong>. Just like strings, brass, and percussion need to coordinate, ROS nodes need to publish and subscribe to correct topics.<br><br></p></li>
+<li><p><strong>A rehearsal plan is followed</strong>. The launch file can include other launch files, similar to how an orchestra follows a structured program with multiple movements.<br><br></p></li>
+<li><p><strong>The conductor can adjust the performance dynamically</strong>. Using arguments and parameters, the launch file allows changes (tempo adjustments) without rewriting the entire script.<br><br></p></li>
+</ol>
+<p>From the analogy, we see that launch files allow users to start multiple nodes simultaneously, configure parameters, and pass arguments dynamically. Essentially, they provide a structured way to manage complex robotic applications. Therefore, just as an orchestra would not function as well without a conductor, a complex ROS system would not efficiently start and manage its nodes without a launch file.</p>
+</section>
+<section id="creating-a-basic-launch-file">
+<h2><span class="section-number">6.2. </span>Creating a Basic Launch File<a class="headerlink" href="#creating-a-basic-launch-file" title="Link to this heading">#</a></h2>
+<p>A launch file in ROS 2 allows us to start multiple nodes, configure parameters, and manage execution in an organized way. In this section, we will break down the Python launch file provided below and explain its components.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">launch</span> <span class="c1"># Brings in the core launch module, which allows defining a launch file in Python</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">launch_ros.actions</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span> <span class="c1"># Imports the Node action, used to start ROS2 nodes within the launch file</span>
+
+<span class="c1"># Every launch file in ROS2 requires a function called generate_launch_description()</span>
+<span class="c1"># This function returns a LaunchDescription object that defines what will be executed when the launch file is run</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_launch_description</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">launch</span><span class="o">.</span><span class="n">LaunchDescription</span><span class="p">([</span>
+        <span class="n">Node</span><span class="p">(</span>
+            <span class="n">package</span><span class="o">=</span><span class="s1">&#39;demo_nodes_cpp&#39;</span><span class="p">,</span> <span class="c1"># Defines package containing node</span>
+            <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;talker&#39;</span><span class="p">,</span> <span class="c1"># Defines executable name of node to launch</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;my_talker&#39;</span><span class="p">,</span> <span class="c1"># Assigns a custom name to the node</span>
+            <span class="n">output</span><span class="o">=</span><span class="s1">&#39;screen&#39;</span> <span class="c1"># Prints the node los and output to the terminal screen</span>
+        <span class="p">),</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Once the launch file is created, it can be executed using: <strong>ros2 launch name_of_package name_of_launch_file.py</strong></p>
+<p>For example, if the file is named <strong>talker_launch.py</strong>, you would run: <strong>ros2 launch demo_nodes_cpp talker_launch.py</strong><br><br>This will start the “talker” node, which continuously publishes messages on the /chatter topic.</p>
+</section>
+<section id="expanding-the-complexity-of-the-launch-file">
+<h2><span class="section-number">6.3. </span>Expanding the Complexity of the Launch File<a class="headerlink" href="#expanding-the-complexity-of-the-launch-file" title="Link to this heading">#</a></h2>
+<p>In the example above, we saw a launch file that launches one node, “talker”. Now we will expand the functionality of the launch file by having it launch multiple nodes simultaneously. A simple addition will allow the launch file to execute both “talker” and “listener” nodes at once.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">launch</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">launch_ros.actions</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_launch_description</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">launch</span><span class="o">.</span><span class="n">LaunchDescription</span><span class="p">([</span>
+        <span class="n">Node</span><span class="p">(</span> <span class="c1"># Talker node</span>
+            <span class="n">package</span><span class="o">=</span><span class="s1">&#39;demo_nodes_cpp&#39;</span><span class="p">,</span>
+            <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;talker&#39;</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;my_talker&#39;</span><span class="p">,</span>
+            <span class="n">output</span><span class="o">=</span><span class="s1">&#39;screen&#39;</span>
+        <span class="p">),</span>
+        <span class="n">Node</span><span class="p">(</span> <span class="c1"># Listener node</span>
+            <span class="n">package</span><span class="o">=</span><span class="s1">&#39;demo_nodes_cpp&#39;</span><span class="p">,</span>
+            <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;listener&#39;</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;my_listener&#39;</span><span class="p">,</span>
+            <span class="n">output</span><span class="o">=</span><span class="s1">&#39;screen&#39;</span>
+        <span class="p">),</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The example above shows how launch files can orchestrate multiple ROS nodes at the same time.</p>
+</section>
+<section id="using-parameters-in-launch-files">
+<h2><span class="section-number">6.4. </span>Using Parameters in Launch Files<a class="headerlink" href="#using-parameters-in-launch-files" title="Link to this heading">#</a></h2>
+<p>In the introduction section to this chapter, we mentioned how nodes, like musicians, can follow a “sheet” of instructions during their execution. ROS 2 nodes often use parameters to configure their behavior, such as changing publishing rate, enabling debugging, etc. We will now modify the “talker” node to accept parameters.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">launch</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">launch_ros.actions</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">launch_ros.descriptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">ParameterValue</span> <span class="c1"># Import to use parameters</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_launch_description</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">launch</span><span class="o">.</span><span class="n">LaunchDescription</span><span class="p">([</span>
+        <span class="n">Node</span><span class="p">(</span>
+            <span class="n">package</span><span class="o">=</span><span class="s1">&#39;demo_nodes_cpp&#39;</span><span class="p">,</span>
+            <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;talker&#39;</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;my_talker&#39;</span><span class="p">,</span>
+            <span class="n">output</span><span class="o">=</span><span class="s1">&#39;screen&#39;</span><span class="p">,</span>
+            <span class="n">parameters</span><span class="o">=</span><span class="p">[{</span><span class="s1">&#39;publish_rate&#39;</span><span class="p">:</span> <span class="n">ParameterValue</span><span class="p">(</span><span class="mf">5.0</span><span class="p">)}]</span> <span class="c1"># Set publish rate to 5 Hz</span>
+        <span class="p">),</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you can see, we modified the “talker” node to accept parameters, and configured its behavior by changing its publishing rate.</p>
+</section>
+<section id="using-arguments-in-launch-files">
+<h2><span class="section-number">6.5. </span>Using Arguments in Launch Files<a class="headerlink" href="#using-arguments-in-launch-files" title="Link to this heading">#</a></h2>
+<p>Arguments allow for dynamic configurations without modifying the launch file. In our analogy, just as an orchestra might interpret a piece of music differently depending on the venue (different audience, acoustics, etc.), launch arguments allow us to adjust node behavior dynamically without changing the launch file itself. In this case, the conductor (launch file), can instruct the musicians (nodes) to play in different styles based on the sheet music interpretation (launch arguments).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">launch</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">launch</span><span class="w"> </span><span class="kn">import</span> <span class="n">LaunchDescription</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">launch.actions</span><span class="w"> </span><span class="kn">import</span> <span class="n">DeclareLaunchArgument</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">launch.substitutions</span><span class="w"> </span><span class="kn">import</span> <span class="n">LaunchConfiguration</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">launch_ros.actions</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_launch_description</span><span class="p">():</span>
+    <span class="n">use_sim_time</span> <span class="o">=</span> <span class="n">LaunchConfiguration</span><span class="p">(</span><span class="s1">&#39;use_sim_time&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">LaunchDescription</span><span class="p">([</span>
+        <span class="c1"># Declare an argument for &#39;use_sim_time&#39; (default: False)</span>
+        <span class="n">DeclareLaunchArgument</span><span class="p">(</span>
+            <span class="s1">&#39;use_sim_time&#39;</span><span class="p">,</span>
+            <span class="n">default_value</span><span class="o">=</span><span class="s1">&#39;false&#39;</span><span class="p">,</span>
+            <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Use simulated time&#39;</span>
+        <span class="p">),</span>
+
+        <span class="c1"># The musician (node) plays the piece (executes with parameters)</span>
+        <span class="n">Node</span><span class="p">(</span>
+            <span class="n">package</span><span class="o">=</span><span class="s1">&#39;demo_nodes_cpp&#39;</span><span class="p">,</span>
+            <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;talker&#39;</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;my_talker&#39;</span><span class="p">,</span>
+            <span class="n">output</span><span class="o">=</span><span class="s1">&#39;screen&#39;</span><span class="p">,</span>
+            <span class="n">parameters</span><span class="o">=</span><span class="p">[{</span><span class="s1">&#39;use_sim_time&#39;</span><span class="p">:</span> <span class="n">use_sim_time</span><span class="p">}]</span>
+        <span class="p">),</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To execute with simulated time, we can run the command:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">my_package</span> <span class="n">my_launch_file</span><span class="o">.</span><span class="n">py</span> <span class="n">use_sim_time</span><span class="o">:=</span><span class="n">true</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="conditional-execution">
+<h2><span class="section-number">6.6. </span>Conditional Execution<a class="headerlink" href="#conditional-execution" title="Link to this heading">#</a></h2>
+<p>In an orchestra, not every instrument plays in every piece. Some musicians wait for the conductor’s cue. Similarly, we can enable or disable nodes based on conditions. Just like in general programming, <strong>IfCondition</strong> and <strong>UnlessCondition</strong> can be used to determine if a node should be launched.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">launch.conditions</span><span class="w"> </span><span class="kn">import</span> <span class="n">IfCondition</span><span class="p">,</span> <span class="n">UnlessCondition</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_launch_description</span><span class="p">():</span>
+    <span class="n">enable_listener</span> <span class="o">=</span> <span class="n">LaunchConfiguration</span><span class="p">(</span><span class="s1">&#39;enable_listener&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">LaunchDescription</span><span class="p">([</span>
+        <span class="n">DeclareLaunchArgument</span><span class="p">(</span>
+            <span class="s1">&#39;enable_listener&#39;</span><span class="p">,</span>
+            <span class="n">default_value</span><span class="o">=</span><span class="s1">&#39;false&#39;</span><span class="p">,</span>
+            <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Whether to launch the listener node&#39;</span>
+        <span class="p">),</span>
+
+        <span class="c1"># The listener joins only if &#39;enable_listener&#39; is set to true</span>
+        <span class="n">Node</span><span class="p">(</span>
+            <span class="n">package</span><span class="o">=</span><span class="s1">&#39;demo_nodes_cpp&#39;</span><span class="p">,</span>
+            <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;listener&#39;</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;my_listener&#39;</span><span class="p">,</span>
+            <span class="n">output</span><span class="o">=</span><span class="s1">&#39;screen&#39;</span><span class="p">,</span>
+            <span class="n">condition</span><span class="o">=</span><span class="n">IfCondition</span><span class="p">(</span><span class="n">enable_listener</span><span class="p">),</span>
+        <span class="p">),</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To enable the listener node when launching:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">my_package</span> <span class="n">my_launch_file</span><span class="o">.</span><span class="n">py</span> <span class="n">enable_listener</span><span class="o">:=</span><span class="n">true</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="handling-events">
+<h2><span class="section-number">6.7. </span>Handling Events<a class="headerlink" href="#handling-events" title="Link to this heading">#</a></h2>
+<p>This next functionality is quite basic. If a node crashes, we can restart it. However, just like a conductor might signal a musician to rejoin, using <strong>event handlers</strong>, we can ensure that a node automatically restarts if it exists.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">launch.event_handlers</span><span class="w"> </span><span class="kn">import</span> <span class="n">OnProcessExit</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">launch.actions</span><span class="w"> </span><span class="kn">import</span> <span class="n">RegisterEventHandler</span><span class="p">,</span> <span class="n">LogInfo</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_launch_description</span><span class="p">():</span>
+    <span class="n">listener_node</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span>
+        <span class="n">package</span><span class="o">=</span><span class="s1">&#39;demo_nodes_cpp&#39;</span><span class="p">,</span>
+        <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;listener&#39;</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s1">&#39;my_listener&#39;</span><span class="p">,</span>
+        <span class="n">output</span><span class="o">=</span><span class="s1">&#39;screen&#39;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">restart_listener</span> <span class="o">=</span> <span class="n">RegisterEventHandler</span><span class="p">(</span>
+        <span class="n">event_handler</span><span class="o">=</span><span class="n">OnProcessExit</span><span class="p">(</span>
+            <span class="n">target_action</span><span class="o">=</span><span class="n">listener_node</span><span class="p">,</span>
+            <span class="n">on_exit</span><span class="o">=</span><span class="p">[</span><span class="n">LogInfo</span><span class="p">(</span><span class="n">msg</span><span class="o">=</span><span class="s1">&#39;Listener node exited, restarting...&#39;</span><span class="p">),</span> <span class="n">listener_node</span><span class="p">],</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">LaunchDescription</span><span class="p">([</span>
+        <span class="n">listener_node</span><span class="p">,</span>
+        <span class="n">restart_listener</span><span class="p">,</span> <span class="c1"># Automatically restart listener if it stops</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./book/CHAPTERS/ROS2_Iron/07_Launch_Files"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../06_Writing_Nodes/Actions.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">5.10. </span>Actions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../ROS1_Noetic/temp.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Temp</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">6.1. Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-basic-launch-file">6.2. Creating a Basic Launch File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expanding-the-complexity-of-the-launch-file">6.3. Expanding the Complexity of the Launch File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-parameters-in-launch-files">6.4. Using Parameters in Launch Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-arguments-in-launch-files">6.5. Using Arguments in Launch Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-execution">6.6. Conditional Execution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#handling-events">6.7. Handling Events</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By <br>Advisor - Dr. Kimberly Oakes<br>Semester - RCOS Fall 2024<br>Team - Learn ROS Through Python Turtle<br> Alejandro Begara Criado<br>Luca Vitti<br>Niko Baletin<br>Jeremy Goldberger
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
