@@ -14,8 +14,8 @@ parts:
     numbered: true
     maxdepth: 2
     chapters:
-      - file: book/CHAPTERS/ROS2_Iron/01_Introduction_to_ROS2
-      - file: book/CHAPTERS/ROS2_Iron/02_Setting_Up_a_ROS2_Environment
+      - file: book/CHAPTERS/ROS2_Iron/01_Introduction_to_ROS2/01_Introduction_to_ROS2
+      - file: book/CHAPTERS/ROS2_Iron/02_Setting_Up_a_ROS2_Environment/02_Setting_Up_a_ROS2_Environment
         sections:
         - file: book/CHAPTERS/ROS2_Iron/02_Setting_Up_an_Environment/ROS2IronInstallationWindows
         - file: book/CHAPTERS/ROS2_Iron/02_Setting_Up_an_Environment/ROS2VMInstall
