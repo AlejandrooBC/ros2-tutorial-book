@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>5.5. Basic ROS Nodes &#8212; A Guide to ROS2</title>
+    <title>5.1. Creating Packages &#8212; A Guide to ROS2</title>
   
   
   
@@ -57,13 +57,13 @@
     <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/BasicNodes';</script>
-    <link rel="canonical" href="https://AlejandrooBC.github.io/ros2-tutorial-book/book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/BasicNodes.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/CHAPTERS/ROS2_Iron/06_Writing_ROS2_Nodes/Packages';</script>
+    <link rel="canonical" href="https://AlejandrooBC.github.io/ros2-tutorial-book/book/CHAPTERS/ROS2_Iron/06_Writing_ROS2_Nodes/Packages.html" />
     <link rel="icon" href="../../../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="5.7. Services" href="Services.html" />
-    <link rel="prev" title="5.3. Package Commands" href="PackageCommands.html" />
+    <link rel="next" title="5.3. Package Commands" href="PackageCommands.html" />
+    <link rel="prev" title="5. Writing Nodes" href="06_Writing_Nodes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -270,12 +270,12 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../04_Command_Line_Tools/Commands.html">4. ROS2 Command-Line Tools</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="WritingNodes.html">5. Writing Nodes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Packages.html">5.1. Creating Packages</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="06_Writing_Nodes.html">5. Writing Nodes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.1. Creating Packages</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="PackageCommands.html">5.3. Package Commands</a></li>
 
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.5. Basic ROS Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BasicNodes.html">5.5. Basic ROS Nodes</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="Services.html">5.7. Services</a></li>
 
@@ -350,7 +350,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/AlejandrooBC/ros2-tutorial-book/master?urlpath=tree/book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/BasicNodes.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/AlejandrooBC/ros2-tutorial-book/master?urlpath=tree/book/CHAPTERS/ROS2_Iron/06_Writing_ROS2_Nodes/Packages.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -368,7 +368,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/AlejandrooBC/ros2-tutorial-book/blob/master/book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/BasicNodes.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/AlejandrooBC/ros2-tutorial-book/blob/master/book/CHAPTERS/ROS2_Iron/06_Writing_ROS2_Nodes/Packages.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -416,7 +416,7 @@
       
       
       
-      <li><a href="https://github.com/AlejandrooBC/ros2-tutorial-book/edit/main/book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/BasicNodes.ipynb" target="_blank"
+      <li><a href="https://github.com/AlejandrooBC/ros2-tutorial-book/edit/main/book/CHAPTERS/ROS2_Iron/06_Writing_ROS2_Nodes/Packages.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -433,7 +433,7 @@
       
       
       
-      <li><a href="https://github.com/AlejandrooBC/ros2-tutorial-book/issues/new?title=Issue%20on%20page%20%2Fbook/CHAPTERS/ROS2_Iron/06_Writing_Nodes/BasicNodes.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/AlejandrooBC/ros2-tutorial-book/issues/new?title=Issue%20on%20page%20%2Fbook/CHAPTERS/ROS2_Iron/06_Writing_ROS2_Nodes/Packages.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -463,7 +463,7 @@
       
       
       
-      <li><a href="../../../../_sources/book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/BasicNodes.ipynb" target="_blank"
+      <li><a href="../../../../_sources/book/CHAPTERS/ROS2_Iron/06_Writing_ROS2_Nodes/Packages.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -547,7 +547,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Basic ROS Nodes</h1>
+    <h1>Creating Packages</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -557,16 +557,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">5.5. Basic ROS Nodes</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.5.1. </a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-connections">5.5.2. Types of Connections</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-a-node">5.5.3. Writing A Node</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subscribers">5.5.4. Subscribers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publishers">5.5.5. Publishers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#activity">5.5.6. Activity</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">5.1. Creating Packages</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workspaces">5.1.1. Workspaces</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">5.6. Review Quiz</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">5.2. Review Quiz</a></li>
 </ul>
 
             </nav>
@@ -579,406 +574,60 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="basic-ros-nodes">
-<h1><span class="section-number">5.5. </span>Basic ROS Nodes<a class="headerlink" href="#basic-ros-nodes" title="Link to this heading">#</a></h1>
-<p>You are already familiar with ROS nodes from the Turtlesim exercises. Nodes are simply modular programs that can act on data, and pass information between each other. See the diagram on the <a class="reference external" href="https://docs.ros.org/en/jazzy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Offical ROS2 Docs</a> for a visual animation of information being passed between nodes.</p>
-<p>In the Turtlesim exercise, you worked with two nodes: the turtlesim itself, and the teleop keyboard controller. In that system, the Turtlesim keeps track of all the turtles, and moves them according to data it recieves from the keyboard controller.</p>
-<p><img alt="TurtleNode.png" src="../../../../_images/TurtleNode.png" /></p>
-<p>As you can see, <code class="docutils literal notranslate"><span class="pre">teleop_turtle</span></code> (the keyboard node) sends data to <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> about the speed that it wants turtle1 to move at (<code class="docutils literal notranslate"><span class="pre">turtle1/cmd_vel</span></code>).</p>
-<p>Then, <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> sends data back about the status of <code class="docutils literal notranslate"><span class="pre">rotate_absolute</span></code> actions. Try it out now! Launch the turtlesim and turtle_teleop_key nodes, and monitor info passed between them with <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">echo</span> <span class="pre">/turtle1/cmd_vel</span></code>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="creating-packages">
+<h1><span class="section-number">5.1. </span>Creating Packages<a class="headerlink" href="#creating-packages" title="Link to this heading">#</a></h1>
+<p>This guide will walk you through creating packages for your nodes. It will also teach you how to use Jupyter notebooks to execute commands that are written for you.</p>
+<section id="workspaces">
+<h2><span class="section-number">5.1.1. </span>Workspaces<a class="headerlink" href="#workspaces" title="Link to this heading">#</a></h2>
+<p>All packages exist within a workspace.</p>
+<p>If you are using our docker container, a workspace has already been created for you at <code class="docutils literal notranslate"><span class="pre">/home/ubuntu/learn_ros_ws</span></code>!</p>
+<p>If you are not in our docker container, create a folder where you would like your workspace to be located. Then, update the <code class="docutils literal notranslate"><span class="pre">workspace_location</span></code> variable below to match your folder location.</p>
+<p>Note!
+You will see a similar block of code at the start of every tutorial notebook that initializes your workspace variables! Don’t forget to run it!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ros2<span class="w"> </span>run<span class="w"> </span>turtlesim<span class="w"> </span>turtlesim_node
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">workspace_location</span> <span class="o">=</span> <span class="s1">&#39;/home/ubuntu/learn_ros_ws&#39;</span> <span class="c1"># NOT your package location!</span>
+<span class="o">%</span><span class="k">cd</span> $workspace_location
 </pre></div>
 </div>
 </div>
 </div>
-<p>Run this in a separate terminal, not in Jupyter! You will not be able to input keypresses.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>turtlesim<span class="w"> </span>turtle_teleop_key
-</pre></div>
-</div>
+<p>Now, we’re going to create a package to put inside the workspace. Create a folder inside your workspace called <code class="docutils literal notranslate"><span class="pre">src</span></code>. This is where all the source code for your package will go.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/turtle1/cmd_vel
-<span class="c1"># You may also want to run this in a separate terminal, so you can see all your latest output</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">src</span>
 </pre></div>
 </div>
 </div>
 </div>
-<section id="id1">
-<h2><span class="section-number">5.5.1. </span><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-</section>
-<section id="types-of-connections">
-<h2><span class="section-number">5.5.2. </span>Types of Connections<a class="headerlink" href="#types-of-connections" title="Link to this heading">#</a></h2>
-<p>As we saw in the node graph, nodes are connected together to show how they transfer information together. In this tutorial, we’ll be covering 3 types of connections.</p>
-<ol class="arabic simple">
-<li><p><a class="reference external" href="https://docs.ros.org/en/jazzy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Topics</a> (Publisher/Subscribers)</p></li>
-<li><p><a class="reference external" href="https://docs.ros.org/en/jazzy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services.html">Services</a> (Server/Client)</p></li>
-<li><p><a class="reference external" href="https://docs.ros.org/en/jazzy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions.html">Actions</a> (Action Server/Client)</p></li>
-</ol>
-<p>Now that we know what nodes are and how they interact with each other, lets write our own!</p>
-</section>
-<section id="writing-a-node">
-<h2><span class="section-number">5.5.3. </span>Writing A Node<a class="headerlink" href="#writing-a-node" title="Link to this heading">#</a></h2>
-<p>To write ROS2 Nodes in python, we will be using the <a class="reference external" href="https://github.com/ros2/rclpy">rclpy</a> python library.</p>
-<p>The first thing we need to do, as always, is enter our workspace and make a package.</p>
+<p>Inside your package, we’re going to initialize a default package using <code class="docutils literal notranslate"><span class="pre">ament</span></code>, ros2’s build system. Everytime you make a new package, you will set it up like this.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize your workspace variables</span>
-<span class="n">workspace</span> <span class="o">=</span> <span class="s1">&#39;/home/ubuntu/learn_ros_ws&#39;</span>
-<span class="o">%</span><span class="k">cd</span> $workspace
-<span class="n">package_name</span> <span class="o">=</span> <span class="s1">&#39;basic_nodes&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> src
+<span class="o">!</span>ros2<span class="w"> </span>pkg<span class="w"> </span>create<span class="w"> </span>--build-type<span class="w"> </span>ament_python<span class="w"> </span>--node-name<span class="w"> </span>hello_node<span class="w"> </span>hello_package
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span> --no-raise-error -s &quot;$package_name&quot;
-cd src
-
-# Create a package
-ros2 pkg create --build-type ament_python $1 --node-name subscriber_node
-</pre></div>
-</div>
-</div>
-</div>
-<p>Great! Now we have a package for you to work in. Let’s look at default the node it autofilled with, the <code class="docutils literal notranslate"><span class="pre">orphan_node</span></code>.</p>
+<p>Now, you’ve created a package called <code class="docutils literal notranslate"><span class="pre">hello_package</span></code> with a single node called <code class="docutils literal notranslate"><span class="pre">hello_node</span></code>. You can inspect the code in <code class="docutils literal notranslate"><span class="pre">hello_package/hello_node.py</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi from basic_nodes.&#39;</span><span class="p">)</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi from hello_package.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>It’s just a main function with a print statement! Remember, each node is simply a program, and the ROS2 part is how it talks to other programs.</p>
-<p>You can build and run this node with the following commands:</p>
+<p>It’s just a simple print statement! Now, we need to build our package. We can do that using ROS2’s build system, <code class="docutils literal notranslate"><span class="pre">colcon</span></code>.</p>
+<p>Run the command below to build your package.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span> --no-raise-error
-
-colcon build --packages-select basic_nodes
-source install/local_setup.bash
-ros2 run basic_nodes subscriber_node
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>colcon<span class="w"> </span>build<span class="w"> </span>--packages-select<span class="w"> </span>hello_package
 </pre></div>
 </div>
 </div>
 </div>
-<p>Now that we have a basic node setup, lets make it take some information!</p>
-</section>
-<section id="subscribers">
-<h2><span class="section-number">5.5.4. </span>Subscribers<a class="headerlink" href="#subscribers" title="Link to this heading">#</a></h2>
-<p>A subscriber subscribes to a topic. Whenever data is sent over that topic, all subscribers who are listening will recieve the data. See the graphics on <a class="reference external" href="https://docs.ros.org/en/jazzy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html#id1">the official ROS2 docs</a> for more info.</p>
-<p>Let’s modify our basic node to subscribe to a topic. We’re going to make it so that whenever a string is sent to that topic, our base node will add an exclaimation point!</p>
+<p>And run the package:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/basic_nodes/basic_nodes/subscriber_node.py
-
-<span class="c1"># Import everything we need: the rclpy library, rclpy nodes, and ros2 strings.</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">std_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">String</span>
-
-
-<span class="k">class</span><span class="w"> </span><span class="nc">MySubscriber</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;subscriber_node&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="s1">&#39;boring_strings&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">subscriber_callback</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-    
-    <span class="k">def</span><span class="w"> </span><span class="nf">subscriber_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">data</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
-        
-    
-
-<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
-    <span class="n">subscriber</span> <span class="o">=</span> <span class="n">MySubscriber</span><span class="p">()</span>
-    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">subscriber</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi from basic_nodes.&#39;</span><span class="p">)</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Notice how we used a callback function to subscribe to the function. Everytime we recieve some data, the callback function runs. Try running it! When we run the node, it won’t finish since its always listening for messages. Send a message in your terminal using the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>/boring_strings<span class="w"> </span>std_msgs/msg/String<span class="w"> </span><span class="s1">&#39;data: Hello, world&#39;</span><span class="w"> </span>-1
-</pre></div>
-</div>
-<p>Its general form is: <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">pub</span> <span class="pre">&lt;topic&gt;</span> <span class="pre">&lt;msg_type&gt;</span> <span class="pre">&lt;data&gt;</span> <span class="pre">-1</span></code></p>
-<p>The <code class="docutils literal notranslate"><span class="pre">-1</span></code> means to publish once, instead of in a loop.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span> --no-raise-error
-
-colcon build --packages-select basic_nodes
-source install/local_setup.bash
-ros2 run basic_nodes subscriber_node
-</pre></div>
-</div>
-</div>
-</div>
-<p>You should see <code class="docutils literal notranslate"><span class="pre">Hello,</span> <span class="pre">world</span></code> printed every time you publish to the topic!</p>
-<p>You can subscribe to a topic with multiple nodes at once. Let’s modify our <code class="docutils literal notranslate"><span class="pre">subscriber_node</span></code> to take a parameter.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/basic_nodes/basic_nodes/subscriber_node.py
-
-<span class="c1"># Import everything we need: the rclpy library, rclpy nodes, and ros2 strings.</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">std_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">String</span>
-
-
-<span class="k">class</span><span class="w"> </span><span class="nc">MySubscriber</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;subscriber_node&#39;</span><span class="p">)</span>
-        
-        <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="s1">&#39;boring_strings&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">subscriber_callback</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s1">&#39;punctuation&#39;</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span>
-    
-    <span class="k">def</span><span class="w"> </span><span class="nf">subscriber_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">data</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s1">&#39;punctuation&#39;</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
-        
-    
-
-<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
-    <span class="n">subscriber</span> <span class="o">=</span> <span class="n">MySubscriber</span><span class="p">()</span>
-    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">subscriber</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi from basic_nodes.&#39;</span><span class="p">)</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span> --no-raise-error
-
-colcon build --packages-select basic_nodes
-source install/local_setup.bash
-ros2 run basic_nodes subscriber_node --ros-args -p punctuation:=\&quot;\!\&quot;
-# We need to escape the exclaimation mark and its quotes; don&#39;t worry too much about the backslashes.
-</pre></div>
-</div>
-</div>
-</div>
-<p>Try running a second node, with a question mark as punctuation instead! (Remember to surround it with escaped quotation marks.) Then, run the same command as earlier to send a message to the <code class="docutils literal notranslate"><span class="pre">/boring_strings</span></code> topic and see what happens at each node.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>/boring_strings<span class="w"> </span>std_msgs/msg/String<span class="w"> </span><span class="s1">&#39;data: Hello, world&#39;</span><span class="w"> </span>-1
-</pre></div>
-</div>
-</section>
-<section id="publishers">
-<h2><span class="section-number">5.5.5. </span>Publishers<a class="headerlink" href="#publishers" title="Link to this heading">#</a></h2>
-<p>If we had to sit around all day and type in messages to publish to our nodes, ROS wouldn’t be very useful. We can make a publisher node to do this for us!</p>
-<p>Now, let’s create something to send messages. Create a new file in your <code class="docutils literal notranslate"><span class="pre">basic_nodes</span></code> package, and put in similar code to the <code class="docutils literal notranslate"><span class="pre">basic_node</span></code>. Call it <code class="docutils literal notranslate"><span class="pre">publisher_node.py</span></code>, and put the following code into it:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import everything we need: the rclpy library, rclpy nodes, and ros2 strings.</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">std_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">String</span>
-
-
-<span class="k">class</span><span class="w"> </span><span class="nc">MyPublisher</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;publisher_node&#39;</span><span class="p">)</span>
-        
-        <span class="bp">self</span><span class="o">.</span><span class="n">my_publisher</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="s1">&#39;boring_strings&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">create_timer</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">timer_callback</span><span class="p">)</span>
-        
-    <span class="k">def</span><span class="w"> </span><span class="nf">timer_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">msg</span> <span class="o">=</span> <span class="n">String</span><span class="p">()</span>
-        <span class="n">msg</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;Hello, world&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">my_publisher</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-        
-    
-
-<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Starting publisher node...&#39;</span><span class="p">)</span>
-    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
-    <span class="n">publisher</span> <span class="o">=</span> <span class="n">MyPublisher</span><span class="p">()</span>
-    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">publisher</span><span class="p">)</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Every time we add a new node, we also need to tell ROS2 that it exists and how to start it! We can do that by adding it to the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/basic_nodes/setup.py
-
-<span class="kn">from</span><span class="w"> </span><span class="nn">setuptools</span><span class="w"> </span><span class="kn">import</span> <span class="n">find_packages</span><span class="p">,</span> <span class="n">setup</span>
-
-<span class="n">package_name</span> <span class="o">=</span> <span class="s1">&#39;basic_nodes&#39;</span>
-
-<span class="n">setup</span><span class="p">(</span>
-    <span class="n">name</span><span class="o">=</span><span class="n">package_name</span><span class="p">,</span>
-    <span class="n">version</span><span class="o">=</span><span class="s1">&#39;0.0.0&#39;</span><span class="p">,</span>
-    <span class="n">packages</span><span class="o">=</span><span class="n">find_packages</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;test&#39;</span><span class="p">]),</span>
-    <span class="n">data_files</span><span class="o">=</span><span class="p">[</span>
-        <span class="p">(</span><span class="s1">&#39;share/ament_index/resource_index/packages&#39;</span><span class="p">,</span>
-            <span class="p">[</span><span class="s1">&#39;resource/&#39;</span> <span class="o">+</span> <span class="n">package_name</span><span class="p">]),</span>
-        <span class="p">(</span><span class="s1">&#39;share/&#39;</span> <span class="o">+</span> <span class="n">package_name</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;package.xml&#39;</span><span class="p">]),</span>
-    <span class="p">],</span>
-    <span class="n">install_requires</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;setuptools&#39;</span><span class="p">],</span>
-    <span class="n">zip_safe</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">maintainer</span><span class="o">=</span><span class="s1">&#39;root&#39;</span><span class="p">,</span>
-    <span class="n">maintainer_email</span><span class="o">=</span><span class="s1">&#39;your_email_here@example.com&#39;</span><span class="p">,</span>
-    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;TODO: Package description&#39;</span><span class="p">,</span>
-    <span class="n">license</span><span class="o">=</span><span class="s1">&#39;TODO: License declaration&#39;</span><span class="p">,</span>
-    <span class="n">tests_require</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;pytest&#39;</span><span class="p">],</span>
-    <span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
-        <span class="s1">&#39;console_scripts&#39;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="s1">&#39;subscriber_node = basic_nodes.subscriber_node:main&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;publisher_node = basic_nodes.publisher_node:main&#39;</span> <span class="c1"># This line! Don&#39;t forget the comma.</span>
-        <span class="p">],</span>
-    <span class="p">},</span>
-<span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>And run it…</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span> --no-raise-error
-
-colcon build --packages-select basic_nodes
-source install/local_setup.bash
-ros2 run basic_nodes publisher_node
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now, in another terminal, listen to your publisher node using:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/boring_strings
-</pre></div>
-</div>
-<p>Where <code class="docutils literal notranslate"><span class="pre">/boring_strings</span></code> is the topic you want to “echo,” or print into the terminal.</p>
-<p>You should see your data being printed!</p>
-<p>Then, instead of echoing the topic, you can run your subscriber node. Run the command from before to start your subscriber node:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>basic_nodes<span class="w"> </span>subscriber_node<span class="w"> </span>--ros-args<span class="w"> </span>-p<span class="w"> </span>punctuation:<span class="o">=</span><span class="se">\&quot;\!\&quot;</span>
-</pre></div>
-</div>
-</section>
-<section id="activity">
-<h2><span class="section-number">5.5.6. </span>Activity<a class="headerlink" href="#activity" title="Link to this heading">#</a></h2>
-<p>Now that you can write scripts using topics, we can write to the same topics that turtlesim uses to control a turtle automatically!</p>
-<p>The goal of this activity will be to move the turtle back and forth from one end of the screen to the other. TODO add gif showing that</p>
-<p>By running <code class="docutils literal notranslate"><span class="pre">rqt</span></code>, we can see the topics that are part of <code class="docutils literal notranslate"><span class="pre">turtle1</span></code>.</p>
-<p><img alt="Topics" src="../../../../_images/TurtleTopics.png" /></p>
-<p>Specifically, we are interested in <code class="docutils literal notranslate"><span class="pre">/turtle1/cmd_vel</span></code> and <code class="docutils literal notranslate"><span class="pre">/turtle1/pose</span></code>. We can control the turtle by publishing to <code class="docutils literal notranslate"><span class="pre">cmd_vel</span></code> and get information about by subscribing to <code class="docutils literal notranslate"><span class="pre">pose</span></code>.</p>
-<p>Let’s make a new package to work in:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize your workspace variables</span>
-<span class="n">workspace</span> <span class="o">=</span> <span class="s1">&#39;/home/ubuntu/learn_ros_ws&#39;</span>
-<span class="o">%</span><span class="k">cd</span> $workspace
-<span class="n">package_name</span> <span class="o">=</span> <span class="s1">&#39;learn_ros_activities&#39;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span> --no-raise-error -s &quot;$package_name&quot;
-cd src
-
-# Create a package
-ros2 pkg create --build-type ament_python $1
-</pre></div>
-</div>
-</div>
-</div>
-<p>And here’s a template for a node with both a subscriber and a publisher.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">geometry_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">Twist</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">turtlesim.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pose</span>
-
-
-<span class="k">class</span><span class="w"> </span><span class="nc">RightLeftNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;right_left_node&#39;</span><span class="p">)</span>
-        
-        <span class="bp">self</span><span class="o">.</span><span class="n">x_position</span> <span class="o">=</span> <span class="mf">0.0</span> <span class="c1"># Set this in the pose_callback. Make sure it&#39;s a float by</span>
-                              <span class="c1"># adding the decimal point, otherwise you&#39;ll run into type errors.</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">going_right</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># Use this for your velocity logic</span>
-        
-        <span class="c1"># Edit this line: What topic do you want to subscribe to?</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">pose_subscriber</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">Pose</span><span class="p">,</span> <span class="s1">&#39;/turtle1/topic_to_subscribe_to&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pose_callback</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-        
-        <span class="c1"># Edit this line: What topic do you want to publish to?</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">velocity_publisher</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">Twist</span><span class="p">,</span> <span class="s1">&#39;/turtle1/topic_to_publish_to&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-        
-        <span class="bp">self</span><span class="o">.</span><span class="n">create_timer</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">publish_velocity</span><span class="p">)</span>
-        
-    <span class="k">def</span><span class="w"> </span><span class="nf">pose_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">:</span> <span class="n">Pose</span><span class="p">):</span>
-        <span class="c1"># The type of `msg` is a turtlesim Pose. To get the x position of pose, do:</span>
-        <span class="c1"># `msg.x` Store it into self.x_position.</span>
-        <span class="k">pass</span> <span class="c1"># your code here</span>
-        
-    
-    <span class="k">def</span><span class="w"> </span><span class="nf">publish_velocity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># cmdvel accepts a Twist: A message with both a linear and angular component.</span>
-        <span class="c1"># For this activity, we only care about linear motion in the x axis.</span>
-        <span class="c1"># You can set that like: `msg.linear.x = 1`</span>
-        <span class="n">msg</span> <span class="o">=</span> <span class="n">Twist</span><span class="p">()</span>
-        
-        <span class="c1"># Put your logic here. How can you access the current position of the turtle?</span>
-        <span class="c1"># Switch to going right (bigger x) when x is less than 1, and switch to going</span>
-        <span class="c1"># left (smaller x) when x is greater than 10</span>
-        <span class="k">pass</span>
-            
-        <span class="c1"># publish your node</span>
-        <span class="k">pass</span>
-        
-    
-
-<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Starting right-left node...&#39;</span><span class="p">)</span>
-    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
-    <span class="n">publisher</span> <span class="o">=</span> <span class="n">RightLeftNode</span><span class="p">()</span>
-    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">publisher</span><span class="p">)</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Fill out the template! When you’re done, run <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code> and your <code class="docutils literal notranslate"><span class="pre">rightleft</span></code> node.</p>
-<p>Don’t forget to add an entry point to your <a class="reference external" href="http://setup.py">setup.py</a>!</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="c1"># ...</span>
-    <span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
-        <span class="s1">&#39;console_scripts&#39;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="s1">&#39;right_left_node = learn_ros_activities.rightleft_node:main&#39;</span><span class="p">,</span>
-        <span class="p">],</span>
-    <span class="p">},</span>
-</pre></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span> --no-raise-error -s &quot;$package_name&quot;
-
-colcon build --packages-select $1
-source install/local_setup.bash
-ros2 run learn_ros_activities right_left_node &amp; ros2 run turtlesim turtlesim_node
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span> --no
+ros2 run hello_package hello_node
 </pre></div>
 </div>
 </div>
@@ -986,16 +635,16 @@ ros2 run learn_ros_activities right_left_node &amp; ros2 run turtlesim turtlesim
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="review-quiz">
-<h1><span class="section-number">5.6. </span>Review Quiz<a class="headerlink" href="#review-quiz" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">5.2. </span>Review Quiz<a class="headerlink" href="#review-quiz" title="Link to this heading">#</a></h1>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="fEgLyiWaSdtf" data-shufflequestions="False"
+<div class="output text_html"><div id="QKveyjLplHMt" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#fEgLyiWaSdtf {
+#QKveyjLplHMt {
    --jq-multiple-choice-bg: #345995;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -1196,115 +845,49 @@ ros2 run learn_ros_activities right_left_node &amp; ros2 run turtlesim turtlesim
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsfEgLyiWaSdtf=[
+</style></div><script type="application/javascript">var questionsQKveyjLplHMt=[    
     {
-        "question": "What topic did you subscribe to?",
+        "question": "Where does 'mkdir moo' create 'moo' directory?",
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "/turtle1/cmd_vel",
-                "correct": false,
-                "feedback": "cmd_vel is where we send messages to make the turtle move. Subscribers can only read data, so this doesn't make sense."
-            },
-            {
-                "code": "/turtle1/color_sensor",
-                "correct": false,
-                "feedback": "color_sensor is an output, but we aren't using it for this activity. It can't tell you anything about the position of the turtle."
-            },
-            {
-                "code": "/turtle1/pose",
+                "code": "Inside your current directory.",
                 "correct": true,
-                "feedback": "Turtlesim will constantly publish the pose of all of its turtles over this topic, so we use the subscriber to listen in!"
+            },
+            {
+                "code": "In the root directory.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "code": "On the desktop.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "code": "In the applications folder.",
+                "correct": false,
+                "feedback": "Incorrect."
             }
         ]
     },
     {
-        "question": "What message type did the subscription receive?",
+        "question": "What does the 'ros2 run' command in this section do?",
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "geometry_msgs/msg/Point",
-                "correct": false,
-                "feedback": "The Point message doesn't contain any information about the rotation of our turtle. Look carefully at the `create_subscription` line. What is the first parameter?"
-            },
-            {
-                "code": "geometry_msg/msg/Pose",
-                "correct": false,
-                "feedback": "Look carefully at the import statements at the top of the file. Where do we import Pose from?"
-            },
-            {
-                "code": "geometry_msgs/msg/Transform",
-                "correct": false,
-                "feedback": "The Transform message is often used for representing a distance between two points. Look carefully at the `create_subscription` line. What is the first parameter?"
-            },
-            {
-                "code": "turtlesim/msg/Pose",
+                "code": "Starts hello_node from the hello_package package.",
                 "correct": true,
-                "feedback": "This is the type that we imported and used in our `create_subscription` line. Often, you will use the basic messages in geometry_msgs/msg because they are general and ensure compatibility between nodes from different places, but turtlesim uses its own Pose to simplify things. You can always check what message a topic has by running `ros2 topic type full_topic_path`, and you can see more info about a message by running `ros2 interface show <full_msg_name>`."
-            }
-        ]
-    },
-    {
-        "question": "What topic did you publish to?",
-        "type": "multiple_choice",
-        "answers": [
-            {
-                "code": "/turtle1/cmd_vel",
-                "correct": true,
-                "feedback": "cmd_vel is where we send messages, or velocity commands, to make the turtle move."
             },
             {
-                "code": "/turtle1/color_sensor",
-                "correct": false
-            },
-            {
-                "code": "/turtle1/pose",
-                "correct": false
-            }
-        ]
-    },
-    {
-        "question": "What message type did the publisher send out?",
-        "type": "multiple_choice",
-        "answers": [
-            {
-                "code": "turtlesim/msg/Pose",
+                "code": "Runs the entire hello_package package.",
                 "correct": false,
-                "feedback": "Turtlesim doesn't accept Poses as an input. Look carefully at the `create_publisher` line. What is the first parameter?"
+                "feedback": "Incorrect. hello_node is specified."
             },
             {
-                "code": "geometry_msgs/msg/Accel",
+                "code": "Runs hello_package using the launch file hello_node.",
                 "correct": false,
-                "feedback": "Look carefully at the `create_publisher` line. What is the first parameter?"
-            },
-            {
-                "code": "geometry_msgs/msg/Twist",
-                "correct": true,
-                "feedback": "A Twist is the standard way of representing velocity, including both linear and angular velocity."
-            },
-            {
-                "code": "geometry_msgs/msg/Transform",
-                "correct": false,
-                "feedback": "Look carefully at the `create_publisher` line. What is the first parameter?"
-            }
-        ]
-    },
-    {
-        "question": "What does the `create_timer` function do?",
-        "type": "multiple_choice",
-        "answers": [
-            {
-                "answer": "After 1 second, run the `publish_velocity` callback",
-                "correct": false
-            },
-            {
-                "answer": "Every 1 second, run the `publish_velocity` callback",
-                "correct": true
-            },
-            {
-                "answer": "Nothing; the node will finish running and quit before the timer runs",
-                "correct": false,
-                "feedback": "The `spin` function you see in the main function will keep the node running until we tell it to stop! Callbacks like `pose_callback` and `publish_velocity` are used so that we can run them after specific events, like the timer going off, without using an infinite loop."
+                "feedback": "Incorrect."
             }
         ]
     }
@@ -2115,8 +1698,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("fEgLyiWaSdtf")) {
-            show_questions(questionsfEgLyiWaSdtf,  fEgLyiWaSdtf); 
+          if(document.getElementById("QKveyjLplHMt")) {
+            show_questions(questionsQKveyjLplHMt,  QKveyjLplHMt); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -2125,8 +1708,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("fEgLyiWaSdtf");
-        // console.log(document.getElementById("fEgLyiWaSdtf"));
+        //console.log("QKveyjLplHMt");
+        // console.log(document.getElementById("QKveyjLplHMt"));
 
         try_show();
         }
@@ -2147,7 +1730,7 @@ if (typeof version == 'undefined') {
         },
         kernelOptions: {
             name: "python3",
-            path: "./book/CHAPTERS/ROS2_Iron/06_Writing_Nodes"
+            path: "./book/CHAPTERS/ROS2_Iron/06_Writing_ROS2_Nodes"
         },
         predefinedOutput: true
     }
@@ -2165,20 +1748,20 @@ if (typeof version == 'undefined') {
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="PackageCommands.html"
+       href="06_Writing_Nodes.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">5.3. </span>Package Commands</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Writing Nodes</p>
       </div>
     </a>
     <a class="right-next"
-       href="Services.html"
+       href="PackageCommands.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.7. </span>Services</p>
+        <p class="prev-next-title"><span class="section-number">5.3. </span>Package Commands</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -2198,16 +1781,11 @@ if (typeof version == 'undefined') {
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">5.5. Basic ROS Nodes</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.5.1. </a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-connections">5.5.2. Types of Connections</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-a-node">5.5.3. Writing A Node</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subscribers">5.5.4. Subscribers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publishers">5.5.5. Publishers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#activity">5.5.6. Activity</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">5.1. Creating Packages</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workspaces">5.1.1. Workspaces</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">5.6. Review Quiz</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">5.2. Review Quiz</a></li>
 </ul>
 
   </nav></div>

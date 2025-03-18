@@ -63,7 +63,7 @@
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Temp" href="../../ROS1_Noetic/temp.html" />
-    <link rel="prev" title="5.10. Actions" href="../06_Writing_Nodes/Actions.html" />
+    <link rel="prev" title="5.10. Actions" href="../06_Writing_ROS2_Nodes/Actions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -270,17 +270,17 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../04_Command_Line_Tools/Commands.html">4. ROS2 Command-Line Tools</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../06_Writing_Nodes/WritingNodes.html">5. Writing Nodes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Packages.html">5.1. Creating Packages</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../06_Writing_ROS2_Nodes/06_Writing_Nodes.html">5. Writing Nodes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_ROS2_Nodes/Packages.html">5.1. Creating Packages</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/PackageCommands.html">5.3. Package Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_ROS2_Nodes/PackageCommands.html">5.3. Package Commands</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/BasicNodes.html">5.5. Basic ROS Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_ROS2_Nodes/BasicNodes.html">5.5. Basic ROS Nodes</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Services.html">5.7. Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_ROS2_Nodes/Services.html">5.7. Services</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Actions.html">5.10. Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_ROS2_Nodes/Actions.html">5.10. Actions</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Launch Files</a></li>
@@ -591,7 +591,7 @@ document.write(`
 </section>
 <section id="creating-a-basic-launch-file">
 <h2><span class="section-number">6.2. </span>Creating a Basic Launch File<a class="headerlink" href="#creating-a-basic-launch-file" title="Link to this heading">#</a></h2>
-<p>A launch file in ROS 2 allows us to start multiple nodes, configure parameters, and manage execution in an organized way. In this section, we will break down the Python launch file provided below and explain its components.</p>
+<p>A launch file in ROS2 allows us to start multiple nodes, configure parameters, and manage execution in an organized way. In this section, we will break down the Python launch file provided below and explain its components.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">launch</span> <span class="c1"># Brings in the core launch module, which allows defining a launch file in Python</span>
@@ -646,7 +646,7 @@ document.write(`
 </section>
 <section id="using-parameters-in-launch-files">
 <h2><span class="section-number">6.4. </span>Using Parameters in Launch Files<a class="headerlink" href="#using-parameters-in-launch-files" title="Link to this heading">#</a></h2>
-<p>In the introduction section to this chapter, we mentioned how nodes, like musicians, can follow a “sheet” of instructions during their execution. ROS 2 nodes often use parameters to configure their behavior, such as changing publishing rate, enabling debugging, etc. We will now modify the “talker” node to accept parameters.</p>
+<p>In the introduction section to this chapter, we mentioned how nodes, like musicians, can follow a “sheet” of instructions during their execution. ROS2 nodes often use parameters to configure their behavior, such as changing publishing rate, enabling debugging, etc. We will now modify the “talker” node to accept parameters.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">launch</span>
@@ -817,7 +817,7 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../06_Writing_Nodes/Actions.html"
+       href="../06_Writing_ROS2_Nodes/Actions.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
