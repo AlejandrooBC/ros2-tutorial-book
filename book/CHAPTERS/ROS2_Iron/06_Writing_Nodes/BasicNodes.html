@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>5.5. Basic ROS Nodes &#8212; A Guide to ROS2</title>
+    <title>3.5. Basic ROS Nodes &#8212; A Guide to ROS2</title>
   
   
   
@@ -62,8 +62,8 @@
     <link rel="icon" href="../../../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="5.7. Services" href="Services.html" />
-    <link rel="prev" title="5.3. Package Commands" href="PackageCommands.html" />
+    <link rel="next" title="3.7. Services" href="Services.html" />
+    <link rel="prev" title="3.3. Package Commands" href="PackageCommands.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,106 +181,19 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ROS2 Iron</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../01_Introduction_to_ROS2.html">1. Introduction to ROS2</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../02_Setting_Up_a_ROS2_Environment.html">2. Setting Up a ROS2 Environment</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2IronInstallationWindows.html">2.6. Step 1: System Setup for Installing ROS2 Iron (Windows 10/11)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_Introduction_to_ROS2/01_Introduction_to_ROS2.html">1. Introduction to ROS2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04_Command_Line_Tools/Commands.html">2. ROS2 Command-Line Tools</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="WritingNodes.html">3. Writing Nodes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Packages.html">3.1. Creating Packages</a></li>
 
+<li class="toctree-l2"><a class="reference internal" href="PackageCommands.html">3.3. Package Commands</a></li>
 
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.5. Basic ROS Nodes</a></li>
 
+<li class="toctree-l2"><a class="reference internal" href="Services.html">3.7. Services</a></li>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2VMInstall.html">2.29. Windows 10/11 VM Instructions</a></li>
-
-
-
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2IronInstallationMacOS.html">2.41. Step 1: System Setup for ROS2 Iron on macOS</a></li>
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2IronInstallationUbuntu.html">2.47. Step 1: System Setup for Installing ROS2 Iron (Ubuntu 22)</a></li>
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/DockerInstallation.html">2.56. First Time Installation</a></li>
-
-
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../03_Basic_ROS2_Concepts.html">3. Basic ROS2 Concepts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/Nodes_and_Topics.html">3.1. Nodes and Topics</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/ServicesBasicConcept.html">3.3. Services</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/Actions.html">3.5. Actions</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/Parameters.html">3.7. Parameters</a></li>
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/Launch_Files.html">3.12. Launch Files</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/PublisherSubscriber.html">3.15. How to write a Publisher and Subscriber</a></li>
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/ROSBuildPkg.html">3.19. Building a Package</a></li>
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/ROSPackageTutorial.html">3.23. How to Develop a Package in ROS2</a></li>
-
-
-
-
-
-</ul>
-</details></li>
-<li class="toctree-l1"><a class="reference internal" href="../04_Command_Line_Tools/Commands.html">4. ROS2 Command-Line Tools</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="WritingNodes.html">5. Writing Nodes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Packages.html">5.1. Creating Packages</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="PackageCommands.html">5.3. Package Commands</a></li>
-
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.5. Basic ROS Nodes</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="Services.html">5.7. Services</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="Actions.html">5.10. Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Actions.html">3.10. Actions</a></li>
 </ul>
 </details></li>
 </ul>
@@ -556,16 +469,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">5.5. Basic ROS Nodes</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.5.1. </a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-connections">5.5.2. Types of Connections</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-a-node">5.5.3. Writing A Node</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subscribers">5.5.4. Subscribers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publishers">5.5.5. Publishers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#activity">5.5.6. Activity</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.5. Basic ROS Nodes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.5.1. </a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-connections">3.5.2. Types of Connections</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-a-node">3.5.3. Writing A Node</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subscribers">3.5.4. Subscribers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publishers">3.5.5. Publishers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#activity">3.5.6. Activity</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">5.6. Review Quiz</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">3.6. Review Quiz</a></li>
 </ul>
 
             </nav>
@@ -579,7 +492,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="basic-ros-nodes">
-<h1><span class="section-number">5.5. </span>Basic ROS Nodes<a class="headerlink" href="#basic-ros-nodes" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3.5. </span>Basic ROS Nodes<a class="headerlink" href="#basic-ros-nodes" title="Link to this heading">#</a></h1>
 <p>You are already familiar with ROS nodes from the Turtlesim exercises. Nodes are simply modular programs that can act on data, and pass information between each other. See the diagram on the <a class="reference external" href="https://docs.ros.org/en/jazzy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Offical ROS2 Docs</a> for a visual animation of information being passed between nodes.</p>
 <p>In the Turtlesim exercise, you worked with two nodes: the turtlesim itself, and the teleop keyboard controller. In that system, the Turtlesim keeps track of all the turtles, and moves them according to data it recieves from the keyboard controller.</p>
 <p><img alt="TurtleNode.png" src="../../../../_images/TurtleNode.png" /></p>
@@ -605,10 +518,10 @@ document.write(`
 </div>
 </div>
 <section id="id1">
-<h2><span class="section-number">5.5.1. </span><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.5.1. </span><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 </section>
 <section id="types-of-connections">
-<h2><span class="section-number">5.5.2. </span>Types of Connections<a class="headerlink" href="#types-of-connections" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.5.2. </span>Types of Connections<a class="headerlink" href="#types-of-connections" title="Link to this heading">#</a></h2>
 <p>As we saw in the node graph, nodes are connected together to show how they transfer information together. In this tutorial, we’ll be covering 3 types of connections.</p>
 <ol class="arabic simple">
 <li><p><a class="reference external" href="https://docs.ros.org/en/jazzy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Topics</a> (Publisher/Subscribers)</p></li>
@@ -618,7 +531,7 @@ document.write(`
 <p>Now that we know what nodes are and how they interact with each other, lets write our own!</p>
 </section>
 <section id="writing-a-node">
-<h2><span class="section-number">5.5.3. </span>Writing A Node<a class="headerlink" href="#writing-a-node" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.5.3. </span>Writing A Node<a class="headerlink" href="#writing-a-node" title="Link to this heading">#</a></h2>
 <p>To write ROS2 Nodes in python, we will be using the <a class="reference external" href="https://github.com/ros2/rclpy">rclpy</a> python library.</p>
 <p>The first thing we need to do, as always, is enter our workspace and make a package.</p>
 <div class="cell docutils container">
@@ -667,7 +580,7 @@ ros2 run basic_nodes subscriber_node
 <p>Now that we have a basic node setup, lets make it take some information!</p>
 </section>
 <section id="subscribers">
-<h2><span class="section-number">5.5.4. </span>Subscribers<a class="headerlink" href="#subscribers" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.5.4. </span>Subscribers<a class="headerlink" href="#subscribers" title="Link to this heading">#</a></h2>
 <p>A subscriber subscribes to a topic. Whenever data is sent over that topic, all subscribers who are listening will recieve the data. See the graphics on <a class="reference external" href="https://docs.ros.org/en/jazzy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html#id1">the official ROS2 docs</a> for more info.</p>
 <p>Let’s modify our basic node to subscribe to a topic. We’re going to make it so that whenever a string is sent to that topic, our base node will add an exclaimation point!</p>
 <div class="cell docutils container">
@@ -775,7 +688,7 @@ ros2 run basic_nodes subscriber_node --ros-args -p punctuation:=\&quot;\!\&quot;
 </div>
 </section>
 <section id="publishers">
-<h2><span class="section-number">5.5.5. </span>Publishers<a class="headerlink" href="#publishers" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.5.5. </span>Publishers<a class="headerlink" href="#publishers" title="Link to this heading">#</a></h2>
 <p>If we had to sit around all day and type in messages to publish to our nodes, ROS wouldn’t be very useful. We can make a publisher node to do this for us!</p>
 <p>Now, let’s create something to send messages. Create a new file in your <code class="docutils literal notranslate"><span class="pre">basic_nodes</span></code> package, and put in similar code to the <code class="docutils literal notranslate"><span class="pre">basic_node</span></code>. Call it <code class="docutils literal notranslate"><span class="pre">publisher_node.py</span></code>, and put the following code into it:</p>
 <div class="cell docutils container">
@@ -873,7 +786,7 @@ ros2 run basic_nodes publisher_node
 </div>
 </section>
 <section id="activity">
-<h2><span class="section-number">5.5.6. </span>Activity<a class="headerlink" href="#activity" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.5.6. </span>Activity<a class="headerlink" href="#activity" title="Link to this heading">#</a></h2>
 <p>Now that you can write scripts using topics, we can write to the same topics that turtlesim uses to control a turtle automatically!</p>
 <p>The goal of this activity will be to move the turtle back and forth from one end of the screen to the other. TODO add gif showing that</p>
 <p>By running <code class="docutils literal notranslate"><span class="pre">rqt</span></code>, we can see the topics that are part of <code class="docutils literal notranslate"><span class="pre">turtle1</span></code>.</p>
@@ -985,7 +898,7 @@ ros2 run learn_ros_activities right_left_node &amp; ros2 run turtlesim turtlesim
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="review-quiz">
-<h1><span class="section-number">5.6. </span>Review Quiz<a class="headerlink" href="#review-quiz" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3.6. </span>Review Quiz<a class="headerlink" href="#review-quiz" title="Link to this heading">#</a></h1>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><div id="fEgLyiWaSdtf" data-shufflequestions="False"
@@ -2169,7 +2082,7 @@ if (typeof version == 'undefined') {
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">5.3. </span>Package Commands</p>
+        <p class="prev-next-title"><span class="section-number">3.3. </span>Package Commands</p>
       </div>
     </a>
     <a class="right-next"
@@ -2177,7 +2090,7 @@ if (typeof version == 'undefined') {
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.7. </span>Services</p>
+        <p class="prev-next-title"><span class="section-number">3.7. </span>Services</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -2197,16 +2110,16 @@ if (typeof version == 'undefined') {
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">5.5. Basic ROS Nodes</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.5.1. </a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-connections">5.5.2. Types of Connections</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-a-node">5.5.3. Writing A Node</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subscribers">5.5.4. Subscribers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publishers">5.5.5. Publishers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#activity">5.5.6. Activity</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.5. Basic ROS Nodes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.5.1. </a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-connections">3.5.2. Types of Connections</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-a-node">3.5.3. Writing A Node</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subscribers">3.5.4. Subscribers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publishers">3.5.5. Publishers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#activity">3.5.6. Activity</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">5.6. Review Quiz</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">3.6. Review Quiz</a></li>
 </ul>
 
   </nav></div>

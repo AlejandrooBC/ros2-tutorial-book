@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>4. ROS2 Command-Line Tools &#8212; A Guide to ROS2</title>
+    <title>2. ROS2 Command-Line Tools &#8212; A Guide to ROS2</title>
   
   
   
@@ -62,8 +62,8 @@
     <link rel="icon" href="../../../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="5. Writing Nodes" href="../06_Writing_Nodes/WritingNodes.html" />
-    <link rel="prev" title="3.23. How to Develop a Package in ROS2" href="../03_Basic_Concepts/ROSPackageTutorial.html" />
+    <link rel="next" title="3. Writing Nodes" href="../06_Writing_Nodes/WritingNodes.html" />
+    <link rel="prev" title="1. Introduction to ROS2" href="../01_Introduction_to_ROS2/01_Introduction_to_ROS2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,106 +181,19 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ROS2 Iron</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../01_Introduction_to_ROS2.html">1. Introduction to ROS2</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../02_Setting_Up_a_ROS2_Environment.html">2. Setting Up a ROS2 Environment</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2IronInstallationWindows.html">2.6. Step 1: System Setup for Installing ROS2 Iron (Windows 10/11)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_Introduction_to_ROS2/01_Introduction_to_ROS2.html">1. Introduction to ROS2</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. ROS2 Command-Line Tools</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../06_Writing_Nodes/WritingNodes.html">3. Writing Nodes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Packages.html">3.1. Creating Packages</a></li>
 
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/PackageCommands.html">3.3. Package Commands</a></li>
 
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/BasicNodes.html">3.5. Basic ROS Nodes</a></li>
 
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Services.html">3.7. Services</a></li>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2VMInstall.html">2.29. Windows 10/11 VM Instructions</a></li>
-
-
-
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2IronInstallationMacOS.html">2.41. Step 1: System Setup for ROS2 Iron on macOS</a></li>
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2IronInstallationUbuntu.html">2.47. Step 1: System Setup for Installing ROS2 Iron (Ubuntu 22)</a></li>
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/DockerInstallation.html">2.56. First Time Installation</a></li>
-
-
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../03_Basic_ROS2_Concepts.html">3. Basic ROS2 Concepts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/Nodes_and_Topics.html">3.1. Nodes and Topics</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/ServicesBasicConcept.html">3.3. Services</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/Actions.html">3.5. Actions</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/Parameters.html">3.7. Parameters</a></li>
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/Launch_Files.html">3.12. Launch Files</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/PublisherSubscriber.html">3.15. How to write a Publisher and Subscriber</a></li>
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/ROSBuildPkg.html">3.19. Building a Package</a></li>
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../03_Basic_Concepts/ROSPackageTutorial.html">3.23. How to Develop a Package in ROS2</a></li>
-
-
-
-
-
-</ul>
-</details></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. ROS2 Command-Line Tools</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../06_Writing_Nodes/WritingNodes.html">5. Writing Nodes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Packages.html">5.1. Creating Packages</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/PackageCommands.html">5.3. Package Commands</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/BasicNodes.html">5.5. Basic ROS Nodes</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Services.html">5.7. Services</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Actions.html">5.10. Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Actions.html">3.10. Actions</a></li>
 </ul>
 </details></li>
 </ul>
@@ -556,53 +469,53 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-run">4.1. ROS2 Run</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-topic">4.2. ROS2 Topic</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subcommands">4.2.1. Subcommands</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">4.2.2. Examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-run">2.1. ROS2 Run</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-topic">2.2. ROS2 Topic</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subcommands">2.2.1. Subcommands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">2.2.2. Examples</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-service">4.3. ROS2 Service</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4.3.1. Subcommands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-service">2.3. ROS2 Service</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.3.1. Subcommands</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-node">4.4. ROS2 Node</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4.4.1. Subcommands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-node">2.4. ROS2 Node</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.4.1. Subcommands</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-param">4.5. ROS2 Param</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">4.5.1. Subcommands</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">4.5.2. Examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-param">2.5. ROS2 Param</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.5.1. Subcommands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.5.2. Examples</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-launch">4.6. ROS2 Launch</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">4.6.1. Examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-launch">2.6. ROS2 Launch</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.6.1. Examples</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-bag">4.7. ROS2 Bag</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">4.7.1. Subcommands</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">4.7.2. Examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-bag">2.7. ROS2 Bag</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2.7.1. Subcommands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">2.7.2. Examples</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-action">4.8. ROS2 Action</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">4.8.1. Subcommands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-action">2.8. ROS2 Action</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">2.8.1. Subcommands</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-interface">4.9. ROS2 Interface</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">4.9.1. Subcommands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-interface">2.9. ROS2 Interface</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">2.9.1. Subcommands</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-pkg">4.10. ROS2 Pkg</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">4.10.1. Subcommands</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">4.10.2. Examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-pkg">2.10. ROS2 Pkg</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">2.10.1. Subcommands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">2.10.2. Examples</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-doctor">4.11. ROS2 Doctor</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">4.11.1. Subcommands</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">4.11.2. Examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-doctor">2.11. ROS2 Doctor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">2.11.1. Subcommands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">2.11.2. Examples</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz">4.12. Quiz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz">2.12. Quiz</a></li>
 </ul>
             </nav>
         </div>
@@ -615,10 +528,10 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="ros2-command-line-tools">
-<h1><span class="section-number">4. </span>ROS2 Command-Line Tools<a class="headerlink" href="#ros2-command-line-tools" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">2. </span>ROS2 Command-Line Tools<a class="headerlink" href="#ros2-command-line-tools" title="Link to this heading">#</a></h1>
 <p>Now that we have looked at a few fundamental ROS2 concepts and functionalities, we will learn about essential ROS2 command-line tools to interact with your robotics applications. These tools allow you to run nodes, inspect topics, call services, and manage parameters directly from the terminal.</p>
 <section id="ros2-run">
-<h2><span class="section-number">4.1. </span>ROS2 Run<a class="headerlink" href="#ros2-run" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.1. </span>ROS2 Run<a class="headerlink" href="#ros2-run" title="Link to this heading">#</a></h2>
 <p>This command is used to run a node from a specific package.</p>
 <p><strong>Purpose</strong>: Launches a ROS2 node without needing a launch file.<br>
 <strong>Syntax</strong>: ros2 run package_name executable_name<br>
@@ -626,17 +539,17 @@ document.write(`
 <p>The above command starts the Turtlesim simulation.</p>
 </section>
 <section id="ros2-topic">
-<h2><span class="section-number">4.2. </span>ROS2 Topic<a class="headerlink" href="#ros2-topic" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.2. </span>ROS2 Topic<a class="headerlink" href="#ros2-topic" title="Link to this heading">#</a></h2>
 <p>Views, echoes, or publishes to topics.</p>
 <p><strong>Purpose</strong>: Inspects the data flow between nodes via topics.</p>
 <section id="subcommands">
-<h3><span class="section-number">4.2.1. </span>Subcommands<a class="headerlink" href="#subcommands" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.2.1. </span>Subcommands<a class="headerlink" href="#subcommands" title="Link to this heading">#</a></h3>
 <p><strong>ros2 topic list</strong>: List all active topics.<br>
 <strong>ros2 topic echo topic_name</strong>: Displays messages published to a topic.<br>
 <strong>ros2 topic pub topic_name message_type message</strong>: Publishes messages to a topic.</p>
 </section>
 <section id="examples">
-<h3><span class="section-number">4.2.2. </span>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.2.2. </span>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h3>
 <p><strong>Example 1 - List Active Topics</strong><br>
 ros2 topic list<br><br>
 <strong>Example 2 - Display Position Updates From Turtlesim</strong><br>
@@ -644,11 +557,11 @@ ros2 topic echo /turtle1/pose</p>
 </section>
 </section>
 <section id="ros2-service">
-<h2><span class="section-number">4.3. </span>ROS2 Service<a class="headerlink" href="#ros2-service" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.3. </span>ROS2 Service<a class="headerlink" href="#ros2-service" title="Link to this heading">#</a></h2>
 <p>Calls or lists available services.</p>
 <p><strong>Purpose</strong>: Interacts with ROS2 services for specific node operations.</p>
 <section id="id1">
-<h3><span class="section-number">4.3.1. </span>Subcommands<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.3.1. </span>Subcommands<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p><strong>ros2 service list</strong>: Lists all available services.<br>
 <strong>ros2 service call service_name service type ‘{request}’</strong>: Calls a service with a request.</p>
 <p><strong>Example</strong>: ros2 service call /clear std_srvs/srv/Empty<br><br>
@@ -656,11 +569,11 @@ The above command clears the Turtlesim screen.</p>
 </section>
 </section>
 <section id="ros2-node">
-<h2><span class="section-number">4.4. </span>ROS2 Node<a class="headerlink" href="#ros2-node" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.4. </span>ROS2 Node<a class="headerlink" href="#ros2-node" title="Link to this heading">#</a></h2>
 <p>Lists the nodes running in the system.</p>
 <p><strong>Purpose</strong>: Provides information about active nodes.</p>
 <section id="id2">
-<h3><span class="section-number">4.4.1. </span>Subcommands<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.4.1. </span>Subcommands<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p><strong>ros2 node list</strong>: Lists all active nodes.<br>
 <strong>ros2 node info node_name</strong>: Displays details above a specific node.</p>
 <p><strong>Example</strong>: ros2 node info /turtlesim<br><br>
@@ -668,17 +581,17 @@ The above command gets information about the Turtlesim node.</p>
 </section>
 </section>
 <section id="ros2-param">
-<h2><span class="section-number">4.5. </span>ROS2 Param<a class="headerlink" href="#ros2-param" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.5. </span>ROS2 Param<a class="headerlink" href="#ros2-param" title="Link to this heading">#</a></h2>
 <p>Gets, sets, and lists node parameters. Keep in mind that node parameters are configuration options that allow the user to customize and control the behavior of nodes without needing to modify the code. Parameters are stored within a node and can be dynamically set, retrieved, or modified during runtime, enabling flexibility and reusability of code.</p>
 <p><strong>Purpose</strong>: Manages parameters for nodes dynamically.</p>
 <section id="id3">
-<h3><span class="section-number">4.5.1. </span>Subcommands<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.5.1. </span>Subcommands<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p><strong>ros2 param list</strong>: Lists all parameters of a node.<br>
 <strong>ros 2 param get node_name parameter_name</strong>: Retrieves the value of a parameter.<br>
 <strong>ros2 param set node_name parameter_name value</strong>: Sets a parameter value.</p>
 </section>
 <section id="id4">
-<h3><span class="section-number">4.5.2. </span>Examples<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.5.2. </span>Examples<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <p><strong>Example 1 - List Parameters for the Turtlesim Node</strong><br>
 ros2 param list /turtlesim<br><br>
 <strong>Example 2 - Change the Background Color of the Turtlesim Screen</strong><br>
@@ -686,11 +599,11 @@ ros2 param set /turtlesim background_r 255</p>
 </section>
 </section>
 <section id="ros2-launch">
-<h2><span class="section-number">4.6. </span>ROS2 Launch<a class="headerlink" href="#ros2-launch" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.6. </span>ROS2 Launch<a class="headerlink" href="#ros2-launch" title="Link to this heading">#</a></h2>
 <p>Launches multiple nodes using a launch file.</p>
 <p><strong>Purpose</strong>: Runs multiple nodes simultaneously and allows configuration of parameters.<br></p>
 <section id="id5">
-<h3><span class="section-number">4.6.1. </span>Examples<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.6.1. </span>Examples<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p><strong>Example 1 - Launch the Nodes in a Package</strong><br>
 ros2 launch package_name launch_file<br><br>
 <strong>Example 2 - Launch Multiple Instances of the Turtlesim Node</strong><br>
@@ -698,17 +611,17 @@ ros2 launch turtlesim <a class="reference external" href="http://multisim.launch
 </section>
 </section>
 <section id="ros2-bag">
-<h2><span class="section-number">4.7. </span>ROS2 Bag<a class="headerlink" href="#ros2-bag" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.7. </span>ROS2 Bag<a class="headerlink" href="#ros2-bag" title="Link to this heading">#</a></h2>
 <p>Records and replays data from topics.</p>
 <p><strong>Purpose</strong>: Captures data from topics for debugging and analysis, or replays data to simulate a scenario.</p>
 <section id="id6">
-<h3><span class="section-number">4.7.1. </span>Subcommands<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.7.1. </span>Subcommands<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <p><strong>ros2 bag record name_of_topics</strong>: Records data from specified topics.<br>
 <strong>ros 2 bag play bag_file</strong>: Replays data from a recorded bag file.<br>
 <strong>ros2 bag info bag_file</strong>: Provides information about a bag file.</p>
 </section>
 <section id="id7">
-<h3><span class="section-number">4.7.2. </span>Examples<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.7.2. </span>Examples<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <p><strong>Example 1 - Record Data from /turtle1/cmd_vel</strong><br>
 ros2 bag record /turtle1/cmd_vel<br><br>
 <strong>Example 2 - Replay the Data (from some named bag file)</strong><br>
@@ -716,11 +629,11 @@ ros2 bag play rosbag2_2025_02_06</p>
 </section>
 </section>
 <section id="ros2-action">
-<h2><span class="section-number">4.8. </span>ROS2 Action<a class="headerlink" href="#ros2-action" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.8. </span>ROS2 Action<a class="headerlink" href="#ros2-action" title="Link to this heading">#</a></h2>
 <p>Interacts with ROS2 action servers.</p>
 <p><strong>Purpose</strong>: Inspects and calls actions in the system.</p>
 <section id="id8">
-<h3><span class="section-number">4.8.1. </span>Subcommands<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.8.1. </span>Subcommands<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <p><strong>ros2 action list</strong>: Lists all active actions.<br>
 <strong>ros2 action send_goal name_of_action type_of_action “{goal_request}”</strong>: Sends a goal request to an action.<br>
 <strong>ros2 action info name_of_action</strong>: Provides details about an action.</p>
@@ -729,11 +642,11 @@ ros2 action send_goal /move_arm /control_msgs/action/FollowJointTrajectory “{t
 </section>
 </section>
 <section id="ros2-interface">
-<h2><span class="section-number">4.9. </span>ROS2 Interface<a class="headerlink" href="#ros2-interface" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.9. </span>ROS2 Interface<a class="headerlink" href="#ros2-interface" title="Link to this heading">#</a></h2>
 <p>Displays information about message, service, or action interfaces.</p>
 <p><strong>Purpose</strong>: Helps understand the structure of ROS2 interfaces.</p>
 <section id="id9">
-<h3><span class="section-number">4.9.1. </span>Subcommands<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.9.1. </span>Subcommands<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <p><strong>ros2 interface show name_of_interface</strong>: Displays the details of an interface.<br>
 <strong>ros2 interface list</strong>: Lists all available interfaces.</p>
 <p><strong>Example - Show Details of a Message Type</strong><br>
@@ -741,16 +654,16 @@ ros2 interface show geometry_msgs/msg/Twist</p>
 </section>
 </section>
 <section id="ros2-pkg">
-<h2><span class="section-number">4.10. </span>ROS2 Pkg<a class="headerlink" href="#ros2-pkg" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.10. </span>ROS2 Pkg<a class="headerlink" href="#ros2-pkg" title="Link to this heading">#</a></h2>
 <p>Manages ROS2 packages. The purpose is to provide tools to find and interact with ROS2 packages.</p>
 <section id="id10">
-<h3><span class="section-number">4.10.1. </span>Subcommands<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.10.1. </span>Subcommands<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
 <p><strong>ros2 pkg list</strong>: Lists all installed packages.<br>
 <strong>ros2 pkg prefix name_of_package</strong>: Displays the installation location of a package.<br>
 <strong>ros2 pkg create name_of_package</strong>: Creates a new package.</p>
 </section>
 <section id="id11">
-<h3><span class="section-number">4.10.2. </span>Examples<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.10.2. </span>Examples<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 <p><strong>Example 1 - List Installed Packages</strong><br>
 ros2 pkg list<br><br>
 <strong>Example 2 - Find the Installation Location of the Turtlesim Package</strong><br>
@@ -758,15 +671,15 @@ ros2 pkg prefix turtlesim</p>
 </section>
 </section>
 <section id="ros2-doctor">
-<h2><span class="section-number">4.11. </span>ROS2 Doctor<a class="headerlink" href="#ros2-doctor" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.11. </span>ROS2 Doctor<a class="headerlink" href="#ros2-doctor" title="Link to this heading">#</a></h2>
 <p>Provides a detailed diagnostic report of the ROS2 environment.</p>
 <section id="id12">
-<h3><span class="section-number">4.11.1. </span>Subcommands<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.11.1. </span>Subcommands<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <p><strong>ros2 doctor</strong>: Runs a basic diagnostic check on the ROS2 system.<br>
 <strong>ros2 doctor –report</strong>: Provides a detailed diagnostic report, including environment variables, installed packages, and system configurations.<br></p>
 </section>
 <section id="id13">
-<h3><span class="section-number">4.11.2. </span>Examples<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.11.2. </span>Examples<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
 <p><strong>Example 1 - Run a Quick ROS2 System Check</strong><br>
 ros2 doctor<br><br>
 <strong>Example 2 - Generate a Detailed Diagnostic Report</strong><br>
@@ -774,7 +687,7 @@ ros2 doctor –report</p>
 </section>
 </section>
 <section id="quiz">
-<h2><span class="section-number">4.12. </span>Quiz<a class="headerlink" href="#quiz" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.12. </span>Quiz<a class="headerlink" href="#quiz" title="Link to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><div id="MzXUrsxObIVI" data-shufflequestions="False"
@@ -1974,12 +1887,12 @@ if (typeof version == 'undefined') {
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../03_Basic_Concepts/ROSPackageTutorial.html"
+       href="../01_Introduction_to_ROS2/01_Introduction_to_ROS2.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3.23. </span>How to Develop a Package in ROS2</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Introduction to ROS2</p>
       </div>
     </a>
     <a class="right-next"
@@ -1987,7 +1900,7 @@ if (typeof version == 'undefined') {
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Writing Nodes</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Writing Nodes</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -2007,53 +1920,53 @@ if (typeof version == 'undefined') {
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-run">4.1. ROS2 Run</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-topic">4.2. ROS2 Topic</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subcommands">4.2.1. Subcommands</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">4.2.2. Examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-run">2.1. ROS2 Run</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-topic">2.2. ROS2 Topic</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subcommands">2.2.1. Subcommands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">2.2.2. Examples</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-service">4.3. ROS2 Service</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4.3.1. Subcommands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-service">2.3. ROS2 Service</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.3.1. Subcommands</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-node">4.4. ROS2 Node</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4.4.1. Subcommands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-node">2.4. ROS2 Node</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.4.1. Subcommands</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-param">4.5. ROS2 Param</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">4.5.1. Subcommands</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">4.5.2. Examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-param">2.5. ROS2 Param</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.5.1. Subcommands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.5.2. Examples</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-launch">4.6. ROS2 Launch</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">4.6.1. Examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-launch">2.6. ROS2 Launch</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.6.1. Examples</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-bag">4.7. ROS2 Bag</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">4.7.1. Subcommands</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">4.7.2. Examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-bag">2.7. ROS2 Bag</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2.7.1. Subcommands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">2.7.2. Examples</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-action">4.8. ROS2 Action</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">4.8.1. Subcommands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-action">2.8. ROS2 Action</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">2.8.1. Subcommands</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-interface">4.9. ROS2 Interface</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">4.9.1. Subcommands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-interface">2.9. ROS2 Interface</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">2.9.1. Subcommands</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-pkg">4.10. ROS2 Pkg</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">4.10.1. Subcommands</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">4.10.2. Examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-pkg">2.10. ROS2 Pkg</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">2.10.1. Subcommands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">2.10.2. Examples</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-doctor">4.11. ROS2 Doctor</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">4.11.1. Subcommands</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">4.11.2. Examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ros2-doctor">2.11. ROS2 Doctor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">2.11.1. Subcommands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">2.11.2. Examples</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz">4.12. Quiz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz">2.12. Quiz</a></li>
 </ul>
   </nav></div>
 

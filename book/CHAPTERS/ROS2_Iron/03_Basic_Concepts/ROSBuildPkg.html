@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>3.19. Building a Package &#8212; A Guide to ROS2</title>
+    <title>Building a Package &#8212; A Guide to ROS2</title>
   
   
   
@@ -62,8 +62,6 @@
     <link rel="icon" href="../../../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="3.23. How to Develop a Package in ROS2" href="ROSPackageTutorial.html" />
-    <link rel="prev" title="3.15. How to write a Publisher and Subscriber" href="PublisherSubscriber.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -126,6 +124,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -180,107 +180,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../INTRODUCTION/Table_of_Contents.html">Table of Contents</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ROS2 Iron</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../01_Introduction_to_ROS2.html">1. Introduction to ROS2</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../02_Setting_Up_a_ROS2_Environment.html">2. Setting Up a ROS2 Environment</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2IronInstallationWindows.html">2.6. Step 1: System Setup for Installing ROS2 Iron (Windows 10/11)</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01_Introduction_to_ROS2/01_Introduction_to_ROS2.html">1. Introduction to ROS2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04_Command_Line_Tools/Commands.html">2. ROS2 Command-Line Tools</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../06_Writing_Nodes/WritingNodes.html">3. Writing Nodes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Packages.html">3.1. Creating Packages</a></li>
 
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/PackageCommands.html">3.3. Package Commands</a></li>
 
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/BasicNodes.html">3.5. Basic ROS Nodes</a></li>
 
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Services.html">3.7. Services</a></li>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2VMInstall.html">2.29. Windows 10/11 VM Instructions</a></li>
-
-
-
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2IronInstallationMacOS.html">2.41. Step 1: System Setup for ROS2 Iron on macOS</a></li>
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/ROS2IronInstallationUbuntu.html">2.47. Step 1: System Setup for Installing ROS2 Iron (Ubuntu 22)</a></li>
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../02_Setting_Up_an_Environment/DockerInstallation.html">2.56. First Time Installation</a></li>
-
-
-</ul>
-</details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../03_Basic_ROS2_Concepts.html">3. Basic ROS2 Concepts</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Nodes_and_Topics.html">3.1. Nodes and Topics</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="ServicesBasicConcept.html">3.3. Services</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="Actions.html">3.5. Actions</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="Parameters.html">3.7. Parameters</a></li>
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="Launch_Files.html">3.12. Launch Files</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="PublisherSubscriber.html">3.15. How to write a Publisher and Subscriber</a></li>
-
-
-
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.19. Building a Package</a></li>
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="ROSPackageTutorial.html">3.23. How to Develop a Package in ROS2</a></li>
-
-
-
-
-
-</ul>
-</details></li>
-<li class="toctree-l1"><a class="reference internal" href="../04_Command_Line_Tools/Commands.html">4. ROS2 Command-Line Tools</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../06_Writing_Nodes/WritingNodes.html">5. Writing Nodes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Packages.html">5.1. Creating Packages</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/PackageCommands.html">5.3. Package Commands</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/BasicNodes.html">5.5. Basic ROS Nodes</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Services.html">5.7. Services</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Actions.html">5.10. Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_Writing_Nodes/Actions.html">3.10. Actions</a></li>
 </ul>
 </details></li>
 </ul>
@@ -556,10 +469,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.19. Building a Package</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#source-your-setup-file">3.20. Source your setup file</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#using-your-ros2-package">3.21. Using your ROS2 package</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">3.22. Review Quiz</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Building a Package</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#source-your-setup-file">Source your setup file</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#using-your-ros2-package">Using your ROS2 package</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">Review Quiz</a></li>
 </ul>
 
             </nav>
@@ -573,7 +486,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="building-a-package">
-<h1><span class="section-number">3.19. </span>Building a Package<a class="headerlink" href="#building-a-package" title="Link to this heading">#</a></h1>
+<h1>Building a Package<a class="headerlink" href="#building-a-package" title="Link to this heading">#</a></h1>
 <p>To get the most out of this step, refer to the “Creating a package” guide</p>
 <p>You can actually build multiple packages at a time by running the <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code> command in your workspace directory. If you want to build each package individually, separate them into different directories, and build each one at a time.</p>
 <p>For our purposes, place all of the packages you want to build within the same workspace, usually <code class="docutils literal notranslate"><span class="pre">src</span></code>. If you are following our guide from before, it should be in your <code class="docutils literal notranslate"><span class="pre">ros2_ws</span></code> directory, so on Linux, navigate to it via <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~/ros2_ws</span></code>, and on Windows, navigate to it via <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">\ros2_ws</span></code></p>
@@ -588,7 +501,7 @@ document.write(`
 <p>Note: if you have a high number of packages, this command can take a while to run.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="source-your-setup-file">
-<h1><span class="section-number">3.20. </span>Source your setup file<a class="headerlink" href="#source-your-setup-file" title="Link to this heading">#</a></h1>
+<h1>Source your setup file<a class="headerlink" href="#source-your-setup-file" title="Link to this heading">#</a></h1>
 <p>Remember from our general installation and testing tutorial that we always have to source the ROS2 installation in order to get ROS2 to run.</p>
 <p>On Linux, run the following command within your <code class="docutils literal notranslate"><span class="pre">ros2_ws</span></code> directory:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">install</span><span class="o">/</span><span class="n">local_setup</span><span class="o">.</span><span class="n">bash</span>
@@ -601,7 +514,7 @@ document.write(`
 <p>This will allow you to use anything within your packages.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="using-your-ros2-package">
-<h1><span class="section-number">3.21. </span>Using your ROS2 package<a class="headerlink" href="#using-your-ros2-package" title="Link to this heading">#</a></h1>
+<h1>Using your ROS2 package<a class="headerlink" href="#using-your-ros2-package" title="Link to this heading">#</a></h1>
 <p>Lastly, if you want to run your ROS2 package, you can do so using the following format, where you enter the package name and node name (if applicable):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">run</span> <span class="n">pkg_name</span> <span class="n">node_name</span>
 </pre></div>
@@ -613,7 +526,7 @@ document.write(`
 <p>And then the executeable in your ROS2 package should run without any issues.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="review-quiz">
-<h1><span class="section-number">3.22. </span>Review Quiz<a class="headerlink" href="#review-quiz" title="Link to this heading">#</a></h1>
+<h1>Review Quiz<a class="headerlink" href="#review-quiz" title="Link to this heading">#</a></h1>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><div id="FcKHCEVybYmf" data-shufflequestions="False"
@@ -1766,24 +1679,6 @@ if (typeof version == 'undefined') {
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="PublisherSubscriber.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3.15. </span>How to write a Publisher and Subscriber</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="ROSPackageTutorial.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.23. </span>How to Develop a Package in ROS2</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -1800,10 +1695,10 @@ if (typeof version == 'undefined') {
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.19. Building a Package</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#source-your-setup-file">3.20. Source your setup file</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#using-your-ros2-package">3.21. Using your ROS2 package</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">3.22. Review Quiz</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Building a Package</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#source-your-setup-file">Source your setup file</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#using-your-ros2-package">Using your ROS2 package</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-quiz">Review Quiz</a></li>
 </ul>
 
   </nav></div>
