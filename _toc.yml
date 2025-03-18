@@ -44,13 +44,13 @@ parts:
       # Chapter 5: Using Turtlesim - Practical Applications
 
       # Chapter 6: Writing ROS2 Nodes
-      - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/WritingNodes
+      - file: book/CHAPTERS/ROS2_Iron/06_Writing_ROS2_Nodes/06_Writing_Nodes
         sections:
-          - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/Packages
-          - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/PackageCommands
-          - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/BasicNodes
-          - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/Services
-          - file: book/CHAPTERS/ROS2_Iron/06_Writing_Nodes/Actions
+          - file: book/CHAPTERS/ROS2_Iron/06_Writing_ROS2_Nodes/Packages
+          - file: book/CHAPTERS/ROS2_Iron/06_Writing_ROS2_Nodes/PackageCommands
+          - file: book/CHAPTERS/ROS2_Iron/06_Writing_ROS2_Nodes/BasicNodes
+          - file: book/CHAPTERS/ROS2_Iron/06_Writing_ROS2_Nodes/Services
+          - file: book/CHAPTERS/ROS2_Iron/06_Writing_ROS2_Nodes/Actions
 
       # Chapter 7: Launch Files
       - file: book/CHAPTERS/ROS2_Iron/07_Launch_Files/Launch_Files
