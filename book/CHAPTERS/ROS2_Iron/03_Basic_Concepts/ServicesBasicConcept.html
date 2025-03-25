@@ -591,13 +591,13 @@ document.write(`
 <h1><span class="section-number">3.4. </span>Review Quiz<a class="headerlink" href="#review-quiz" title="Link to this heading">#</a></h1>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="vnQLMmMTDmFv" data-shufflequestions="False"
+<div class="output text_html"><div id="FYQZBImsZvEm" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#vnQLMmMTDmFv {
+#FYQZBImsZvEm {
    --jq-multiple-choice-bg: #345995;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -798,32 +798,33 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsvnQLMmMTDmFv=[
-	{
-		"question": "A service client sends a call to a service server through a service. What happens next?",
-		"type": "multiple_choice",
-		"answers": [
-			{
-				"code": "The service server sends a response to the service client directly.",
-				"correct": false,
-				"feedback": "Incorrect."
-			},
-			{
-				"code": "The service server sends a response to the service client through a service.",
-				"correct": true,
-			},
-			{
-				"code": "The service server sends a response to the service client through a topic.",
-				"correct": false,
-				"feedback": "Incorrect."
-			},
-			{
-				"code": "The service server sends a response to the service client through another client.",
-				"correct": false,
-				"feedback": "Incorrect."
-			}
-		]
-	}
+</style></div><script type="application/javascript">var questionsFYQZBImsZvEm=[
+    {
+        "question": "A service client sends a call to a service server through a service. What happens next?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "The service server sends a response to the service client directly.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "The service server sends a response to the service client through a service.",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "The service server sends a response to the service client through a topic.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "The service server sends a response to the service client through another client.",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    }
 ];
     // Make a random ID
 function makeid(length) {
@@ -1631,8 +1632,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("vnQLMmMTDmFv")) {
-            show_questions(questionsvnQLMmMTDmFv,  vnQLMmMTDmFv); 
+          if(document.getElementById("FYQZBImsZvEm")) {
+            show_questions(questionsFYQZBImsZvEm,  FYQZBImsZvEm); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1641,8 +1642,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("vnQLMmMTDmFv");
-        // console.log(document.getElementById("vnQLMmMTDmFv"));
+        //console.log("FYQZBImsZvEm");
+        // console.log(document.getElementById("FYQZBImsZvEm"));
 
         try_show();
         }

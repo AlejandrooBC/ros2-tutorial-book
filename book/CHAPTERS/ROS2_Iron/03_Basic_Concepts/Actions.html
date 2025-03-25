@@ -586,13 +586,13 @@ document.write(`
 <h1><span class="section-number">3.6. </span>Review Quiz<a class="headerlink" href="#review-quiz" title="Link to this heading">#</a></h1>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="lJEFLABJpImf" data-shufflequestions="False"
+<div class="output text_html"><div id="ViEYfuGiNkSw" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#lJEFLABJpImf {
+#ViEYfuGiNkSw {
    --jq-multiple-choice-bg: #345995;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -793,22 +793,23 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionslJEFLABJpImf=[
+</style></div><script type="application/javascript">var questionsViEYfuGiNkSw=[
     {
         "question": "Of the three phases listed above, during which phase does the action server execute the goal?",
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "Goal",
+                "answer": "Goal",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "Feedback",
+                "answer": "Feedback",
                 "correct": true,
+                "feedback": "Correct."
             },
             {
-                "code": "Result",
+                "answer": "Result",
                 "correct": false,
                 "feedback": "Incorrect."
             }
@@ -819,21 +820,22 @@ document.write(`
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "The action server begins publishing messages to the feedback topic.",
+                "answer": "The action server begins publishing messages to the feedback topic.",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "Nothing",
+                "answer": "Nothing",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "The action client's result service sends a call to the action server's result service.",
+                "answer": "The action client's result service sends a call to the action server's result service.",
                 "correct": true,
+                "feedback": "Correct."
             },
             {
-                "code": "The action server creates a new feedback topic for this goal.",
+                "answer": "The action server creates a new feedback topic for this goal.",
                 "correct": false,
                 "feedback": "Incorrect."
             }
@@ -1646,8 +1648,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("lJEFLABJpImf")) {
-            show_questions(questionslJEFLABJpImf,  lJEFLABJpImf); 
+          if(document.getElementById("ViEYfuGiNkSw")) {
+            show_questions(questionsViEYfuGiNkSw,  ViEYfuGiNkSw); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1656,8 +1658,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("lJEFLABJpImf");
-        // console.log(document.getElementById("lJEFLABJpImf"));
+        //console.log("ViEYfuGiNkSw");
+        // console.log(document.getElementById("ViEYfuGiNkSw"));
 
         try_show();
         }

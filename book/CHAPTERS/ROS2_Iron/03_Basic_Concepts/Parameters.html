@@ -606,13 +606,13 @@ document.write(`
 <h1><span class="section-number">3.11. </span>Review Quiz<a class="headerlink" href="#review-quiz" title="Link to this heading">#</a></h1>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="CcZJKWwLbehH" data-shufflequestions="False"
+<div class="output text_html"><div id="hQZGWPiaddeB" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#CcZJKWwLbehH {
+#hQZGWPiaddeB {
    --jq-multiple-choice-bg: #345995;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -813,17 +813,18 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsCcZJKWwLbehH=[
+</style></div><script type="application/javascript">var questionshQZGWPiaddeB=[
     {
         "question": "True or False: The answer to this question is a boolean value.",
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "True",
+                "answer": "True",
                 "correct": true,
+                "feedback": "Correct."
             },
             {
-                "code": "False",
+                "answer": "False",
                 "correct": false,
                 "feedback": "Incorrect."
             }
@@ -834,16 +835,17 @@ document.write(`
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "Upon and/or while running",
+                "answer": "Upon and/or while running",
                 "correct": true,
+                "feedback": "Correct."
             },
             {
-                "code": "Upon compiling.",
+                "answer": "Upon compiling.",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "Never.",
+                "answer": "Never.",
                 "correct": false,
                 "feedback": "Incorrect."
             }
@@ -1656,8 +1658,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("CcZJKWwLbehH")) {
-            show_questions(questionsCcZJKWwLbehH,  CcZJKWwLbehH); 
+          if(document.getElementById("hQZGWPiaddeB")) {
+            show_questions(questionshQZGWPiaddeB,  hQZGWPiaddeB); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1666,8 +1668,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("CcZJKWwLbehH");
-        // console.log(document.getElementById("CcZJKWwLbehH"));
+        //console.log("hQZGWPiaddeB");
+        // console.log(document.getElementById("hQZGWPiaddeB"));
 
         try_show();
         }

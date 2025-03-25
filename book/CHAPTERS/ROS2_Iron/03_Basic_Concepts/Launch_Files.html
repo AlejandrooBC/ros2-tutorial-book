@@ -630,13 +630,13 @@ document.write(`
 <h1><span class="section-number">3.14. </span>Review Quiz<a class="headerlink" href="#review-quiz" title="Link to this heading">#</a></h1>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="jgnHjNzogJan" data-shufflequestions="False"
+<div class="output text_html"><div id="wDwtFhfDuflt" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#jgnHjNzogJan {
+#wDwtFhfDuflt {
    --jq-multiple-choice-bg: #345995;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -837,56 +837,60 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsjgnHjNzogJan=[
-	{
-		"question": "Which of the following should launch files do?",
-		"type": "multiple_choice",
-		"answers": [
+</style></div><script type="application/javascript">var questionswDwtFhfDuflt=[
+    {
+        "question": "Which of the following should launch files do?",
+        "type": "multiple_choice",
+        "answers": [
 
-			{
-				"code": "Monitor processes.",
-				"correct": true,
-			},
-			{
-				"code": "Run programs.",
-				"correct": true,
-			},
-			{
-				"code": "Store the programs' code.",
-				"correct": false,
-				"feedback": "Incorrect."
-			},
-			{
-				"code": "Pass parameters to nodes.",
-				"correct": true,
-			}
-		]
-	},
-	{
-		"question": "In generate_launch_description, what is the data type of the 'remappings' parameter in the third node?",
-		"type": "multiple_choice",
-		"answers": [
-			{
-				"code": "int",
-				"correct": false,
-				"feedback": "Incorrect."
-			},
-			{
-				"code": "List",
-				"correct": true,
-			},
-			{
-				"code": "String",
-				"correct": false,
-				"feedback": "Incorrect."
-			},
-			{
-				"code": "float64",
-				"correct": false,
-				"feedback": "Incorrect."
-			}
-		]
-	}
+            {
+                "answer": "Monitor processes.",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "Run programs.",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "Store the programs' code.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "Pass parameters to nodes.",
+                "correct": true,
+                "feedback": "Correct."
+            }
+        ]
+    },
+    {
+        "question": "In generate_launch_description, what is the data type of the 'remappings' parameter in the third node?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "int",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "List",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "String",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "float64",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    }
 ];
     // Make a random ID
 function makeid(length) {
@@ -1694,8 +1698,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("jgnHjNzogJan")) {
-            show_questions(questionsjgnHjNzogJan,  jgnHjNzogJan); 
+          if(document.getElementById("wDwtFhfDuflt")) {
+            show_questions(questionswDwtFhfDuflt,  wDwtFhfDuflt); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1704,8 +1708,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("jgnHjNzogJan");
-        // console.log(document.getElementById("jgnHjNzogJan"));
+        //console.log("wDwtFhfDuflt");
+        // console.log(document.getElementById("wDwtFhfDuflt"));
 
         try_show();
         }
