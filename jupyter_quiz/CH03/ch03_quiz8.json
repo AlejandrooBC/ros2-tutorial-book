@@ -4,22 +4,22 @@
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "A structured container that holds all necessary code, configuration files, and metadata to accomplish the intended function.",
+                "answer": "A structured container that holds all necessary code, configuration files, and metadata to accomplish the intended function.",
                 "correct": true,
                 "feedback": "Correct."
             },
             {
-                "code": "A container that makes code easy to share and use.",
+                "answer": "A container that makes code easy to share and use.",
                 "correct": true,
                 "feedback": "Correct."
             },
             {
-                "code": "A normal folder with code and configuration files.",
+                "answer": "A normal folder with code and configuration files.",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "An unstructured container that holds all necessary code, configuration files, and metadata to accomplish the intended function.",
+                "answer": "An unstructured container that holds all necessary code, configuration files, and metadata to accomplish the intended function.",
                 "correct": false,
                 "feedback": "Incorrect."
             }

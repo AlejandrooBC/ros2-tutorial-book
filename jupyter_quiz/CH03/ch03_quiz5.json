@@ -5,22 +5,22 @@
         "answers": [
 
             {
-                "code": "Monitor processes.",
+                "answer": "Monitor processes.",
                 "correct": true,
                 "feedback": "Correct."
             },
             {
-                "code": "Run programs.",
+                "answer": "Run programs.",
                 "correct": true,
                 "feedback": "Correct."
             },
             {
-                "code": "Store the programs' code.",
+                "answer": "Store the programs' code.",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "Pass parameters to nodes.",
+                "answer": "Pass parameters to nodes.",
                 "correct": true,
                 "feedback": "Correct."
             }
@@ -31,22 +31,22 @@
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "int",
+                "answer": "int",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "List",
+                "answer": "List",
                 "correct": true,
                 "feedback": "Correct."
             },
             {
-                "code": "String",
+                "answer": "String",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "float64",
+                "answer": "float64",
                 "correct": false,
                 "feedback": "Incorrect."
             }

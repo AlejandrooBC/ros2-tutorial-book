@@ -4,21 +4,21 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "code": "Radio Operating System",
+        "answer": "Radio Operating System",
         "correct": false,
         "feedback": "Incorrect."
       },
       {
-        "code": "Resistive Ohmic Standard",
+        "answer": "Resistive Ohmic Standard",
         "correct": false,
         "feedback": "Incorrect."
       },
       {
-        "code": "Robot Operating System",
+        "answer": "Robot Operating System",
         "correct": true
       },
       {
-        "code": "Robotics Operating Simulation",
+        "answer": "Robotics Operating Simulation",
         "correct": false,
         "feedback": "Incorrect."
       }

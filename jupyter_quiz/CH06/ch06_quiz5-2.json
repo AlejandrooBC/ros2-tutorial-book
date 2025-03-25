@@ -29,16 +29,16 @@
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "Runs the install/setup.bash file.",
+                "answer": "Runs the install/setup.bash file.",
                 "correct": true,
             },
             {
-                "code": "Sets setup.bash as the source.",
+                "answer": "Sets setup.bash as the source.",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "Sets the install directory as the source.",
+                "answer": "Sets the install directory as the source.",
                 "correct": false,
                 "feedback": "Incorrect."
             }
