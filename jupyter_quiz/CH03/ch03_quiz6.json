@@ -4,22 +4,22 @@
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "To create a new website to run this code.",
+                "answer": "To create a new website to run this code.",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "To download content from web servers.",
+                "answer": "To download content from web servers.",
                 "correct": true,
                 "feedback": "Correct."
             },
             {
-                "code": "To publish a topic.",
+                "answer": "To publish a topic.",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "To create a new website to render the nodes.",
+                "answer": "To create a new website to render the nodes.",
                 "correct": false,
                 "feedback": "Incorrect."
             }
@@ -30,12 +30,12 @@
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "Defines an executable named 'talker' that is built from file 'src/publisher_member_function.cpp'.",
+                "answer": "Defines an executable named 'talker' that is built from file 'src/publisher_member_function.cpp'.",
                 "correct": true,
                 "feedback": "Correct."
             },
             {
-                "code": "Runs the code in the source file at 'src/publisher_member_function.cpp'.",
+                "answer": "Runs the code in the source file at 'src/publisher_member_function.cpp'.",
                 "correct": false,
                 "feedback": "Incorrect."
             }

@@ -4,22 +4,22 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "code": "ros2 launch",
+        "answer": "ros2 launch",
         "correct": false,
         "feedback": "Incorrect."
       },
       {
-        "code": "ros2 run",
+        "answer": "ros2 run",
         "correct": true,
         "feedback": "Correct."
       },
       {
-        "code": "ros2 topic",
+        "answer": "ros2 topic",
         "correct": false,
         "feedback": "Incorrect."
       },
       {
-        "code": "ros2 doctor",
+        "answer": "ros2 doctor",
         "correct": false,
         "feedback": "Incorrect."
       }
@@ -30,12 +30,12 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "code": "Calls or lists available services",
+        "answer": "Calls or lists available services",
         "correct": true,
         "feedback": "Correct."
       },
       {
-        "code": "Creates new services",
+        "answer": "Creates new services",
         "correct": false,
         "feedback": "Incorrect."
       }
@@ -46,21 +46,21 @@
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "It runs the \"quack\" node from the \"aabbbcc\" package.",
+                "answer": "It runs the \"quack\" node from the \"aabbbcc\" package.",
                 "correct": true,
             },
             {
-                "code": "It runs the \"aabbbcc\" node from the \"quack\" package.",
+                "answer": "It runs the \"aabbbcc\" node from the \"quack\" package.",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "It builds the package \"aabbbcc\" with dependencies listed in \"quack\".",
+                "answer": "It builds the package \"aabbbcc\" with dependencies listed in \"quack\".",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "It builds the package \"quack\" with dependencies listed in \"aabbbcc\".",
+                "answer": "It builds the package \"quack\" with dependencies listed in \"aabbbcc\".",
                 "correct": false,
                 "feedback": "Incorrect."
             }
@@ -71,11 +71,11 @@
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "The topic /say_hello/friends is created and the message \"hello friends\" is published to it.",
+                "answer": "The topic /say_hello/friends is created and the message \"hello friends\" is published to it.",
                 "correct": true,
             },
             {
-                "code": "The topic /say_hello/friends does not exist, so the message is not published.",
+                "answer": "The topic /say_hello/friends does not exist, so the message is not published.",
                 "correct": false,
                 "feedback": "Incorrect."
             }
@@ -86,21 +86,21 @@
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "It runs the launch file boom.py, which launches nodes in the package aabbbcc.",
+                "answer": "It runs the launch file boom.py, which launches nodes in the package aabbbcc.",
                 "correct": true
             },
             {
-                "code": "It launches the node boom.py in the package aabbbcc.",
+                "answer": "It launches the node boom.py in the package aabbbcc.",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "It uploads the package aabbbcc using the launch file boom.py.",
+                "answer": "It uploads the package aabbbcc using the launch file boom.py.",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "It runs the nodes in aabbbcc in sequence, for an amount of time specified by boom.py.",
+                "answer": "It runs the nodes in aabbbcc in sequence, for an amount of time specified by boom.py.",
                 "correct": false,
                 "feedback": "Incorrect."
             }
@@ -111,20 +111,20 @@
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "Whether or not your system passed all checks.",
+                "answer": "Whether or not your system passed all checks.",
                 "correct": true
             },
             {
-                "code": "Information on your network configuration, platform, information, RMW middleware, ROS2 Info, and topic list.",
+                "answer": "Information on your network configuration, platform, information, RMW middleware, ROS2 Info, and topic list.",
                 "correct": false,
                 "feedback": "This information is given for 'ros2 doctor --report'."
             },
             {
-                "code": "Warning and error information, if there are warnings and errors.",
+                "answer": "Warning and error information, if there are warnings and errors.",
                 "correct": true
             },
             {
-                "code": "A list of tests run on your system and their status (pass or error).",
+                "answer": "A list of tests run on your system and their status (pass or error).",
                 "correct": false,
                 "feedback": "It only outputs 'All checks passed' or a list of errors (both could come with warnings)."
             }

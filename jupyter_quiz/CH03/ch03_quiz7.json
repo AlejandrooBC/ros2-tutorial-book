@@ -4,22 +4,22 @@
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "Builds a set of packages",
+                "answer": "Builds a set of packages",
                 "correct": true,
                 "feedback": "Correct."
             },
             {
-                "code": "Sets a directory as the source directory",
+                "answer": "Sets a directory as the source directory",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "Makes a new project",
+                "answer": "Makes a new project",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "Uploads a set of packages to a web server",
+                "answer": "Uploads a set of packages to a web server",
                 "correct": false,
                 "feedback": "Incorrect."
             }
@@ -30,17 +30,17 @@
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "To compile all source files, resolve all dependencies, and then package everything into one container.",
+                "answer": "To compile all source files, resolve all dependencies, and then package everything into one container.",
                 "correct": true,
                 "feedback": "Correct."
             },
             {
-                "code": "To resolve all dependencies and package everything into one container.",
+                "answer": "To resolve all dependencies and package everything into one container.",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "To compile all source files and then package them into one container.",
+                "answer": "To compile all source files and then package them into one container.",
                 "correct": false,
                 "feedback": "Incorrect."
             }
@@ -51,12 +51,12 @@
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "To identify all project dependencies and then include them in the package somehow (i.e. list them in an XML file).",
+                "answer": "To identify all project dependencies and then include them in the package somehow (i.e. list them in an XML file).",
                 "correct": true,
                 "feedback": "Correct."
             },
             {
-                "code": "To solve an overdependency on a specific library or framework.",
+                "answer": "To solve an overdependency on a specific library or framework.",
                 "correct": false,
                 "feedback": "Incorrect."
             }
@@ -67,27 +67,27 @@
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "Library",
+                "answer": "Library",
                 "correct": true,
                 "feedback": "Correct."
             },
             {
-                "code": "API",
+                "answer": "API",
                 "correct": true,
                 "feedback": "Correct."
             },
             {
-                "code": "Framework",
+                "answer": "Framework",
                 "correct": true,
                 "feedback": "Correct."
             },
             {
-                "code": "Specific operating system",
+                "answer": "Specific operating system",
                 "correct": true,
                 "feedback": "Correct."
             },
             {
-                "code": "A class within the project",
+                "answer": "A class within the project",
                 "correct": true,
                 "feedback": "Correct."
             }

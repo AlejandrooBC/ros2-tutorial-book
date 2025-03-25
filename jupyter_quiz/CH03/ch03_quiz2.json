@@ -4,22 +4,22 @@
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "The service server sends a response to the service client directly.",
+                "answer": "The service server sends a response to the service client directly.",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "The service server sends a response to the service client through a service.",
+                "answer": "The service server sends a response to the service client through a service.",
                 "correct": true,
                 "feedback": "Correct."
             },
             {
-                "code": "The service server sends a response to the service client through a topic.",
+                "answer": "The service server sends a response to the service client through a topic.",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "The service server sends a response to the service client through another client.",
+                "answer": "The service server sends a response to the service client through another client.",
                 "correct": false,
                 "feedback": "Incorrect."
             }

@@ -4,12 +4,12 @@
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "True",
+                "answer": "True",
                 "correct": true,
                 "feedback": "Correct."
             },
             {
-                "code": "False",
+                "answer": "False",
                 "correct": false,
                 "feedback": "Incorrect."
             }
@@ -20,17 +20,17 @@
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "Upon and/or while running",
+                "answer": "Upon and/or while running",
                 "correct": true,
                 "feedback": "Correct."
             },
             {
-                "code": "Upon compiling.",
+                "answer": "Upon compiling.",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "Never.",
+                "answer": "Never.",
                 "correct": false,
                 "feedback": "Incorrect."
             }

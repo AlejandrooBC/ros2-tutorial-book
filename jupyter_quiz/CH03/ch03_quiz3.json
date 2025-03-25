@@ -4,17 +4,17 @@
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "Goal",
+                "answer": "Goal",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "Feedback",
+                "answer": "Feedback",
                 "correct": true,
                 "feedback": "Correct."
             },
             {
-                "code": "Result",
+                "answer": "Result",
                 "correct": false,
                 "feedback": "Incorrect."
             }
@@ -25,22 +25,22 @@
         "type": "multiple_choice",
         "answers": [
             {
-                "code": "The action server begins publishing messages to the feedback topic.",
+                "answer": "The action server begins publishing messages to the feedback topic.",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "Nothing",
+                "answer": "Nothing",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "code": "The action client's result service sends a call to the action server's result service.",
+                "answer": "The action client's result service sends a call to the action server's result service.",
                 "correct": true,
                 "feedback": "Correct."
             },
             {
-                "code": "The action server creates a new feedback topic for this goal.",
+                "answer": "The action server creates a new feedback topic for this goal.",
                 "correct": false,
                 "feedback": "Incorrect."
             }

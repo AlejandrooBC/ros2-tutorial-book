@@ -4,22 +4,22 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "code": "Nodes are independent processes",
+        "answer": "Nodes are independent processes",
         "correct": true,
         "feedback": "Correct."
       },
       {
-        "code": "Node messages can only contain simple variable types, such as int64",
+        "answer": "Node messages can only contain simple variable types, such as int64",
         "correct": false,
         "feedback": "Incorrect."
       },
       {
-        "code": "Nodes can send and receive messages",
+        "answer": "Nodes can send and receive messages",
         "correct": true,
         "feedback": "Correct."
       },
       {
-        "code": "Nodes should always have more than one purpose",
+        "answer": "Nodes should always have more than one purpose",
         "correct": false,
         "feedback": "Incorrect."
       }
@@ -30,12 +30,12 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "code": "True",
+        "answer": "True",
         "correct": true,
         "feedback": "Correct."
       },
       {
-        "code": "False",
+        "answer": "False",
         "correct": false,
         "feedback": "Incorrect."
       }
@@ -46,22 +46,22 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "code": "By sending a TCP SYN packet to the SLLIDAR NODE",
+        "answer": "By sending a TCP SYN packet to the SLLIDAR NODE",
         "correct": false,
         "feedback": "Incorrect."
       },
       {
-        "code": "Directly from the LiDAR sensor",
+        "answer": "Directly from the LiDAR sensor",
         "correct": false,
         "feedback": "Incorrect."
       },
       {
-        "code": "By subscribing to the /scan topic",
+        "answer": "By subscribing to the /scan topic",
         "correct": true,
         "feedback": "Correct."
       },
       {
-        "code": "By publishing to the /scan topic",
+        "answer": "By publishing to the /scan topic",
         "correct": false,
         "feedback": "Incorrect."
       }
