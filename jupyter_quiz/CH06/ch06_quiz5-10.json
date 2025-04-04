@@ -1,44 +1,132 @@
 [    
     {
-        "question": "Where does 'mkdir moo' create 'moo' directory?",
+        "question": "For what type of event should actions (A), services (S), and topics (T) be used?",
         "type": "multiple_choice",
         "answers": [
             {
-                "answer": "Inside your current directory.",
+                "answer": "A: Requested, not instantaneous",
                 "correct": true,
             },
             {
-                "answer": "In the root directory.",
+                "answer": "S: Requested, instantaneous",
+                "correct": true,
+            },
+            {
+                "answer": "T: Not requested, continuous",
+                "correct": true,
+            },
+            {
+                "answer": "A: Not requested, instantaneous",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "answer": "On the desktop.",
+                "answer": "S: Requested, not instantaneous",
                 "correct": false,
                 "feedback": "Incorrect."
             },
             {
-                "answer": "In the applications folder.",
+                "answer": "T: Requested, continuous",
                 "correct": false,
                 "feedback": "Incorrect."
             }
         ]
     },
     {
-        "question": "What does the 'ros2 run' command in this section do?",
+        "question": "What is the main difference between a synchronous call and an asynchronous call in ROS2?",
         "type": "multiple_choice",
         "answers": [
             {
-                "answer": "Starts hello_node from the hello_package package.",
+                "answer": "A synchronous call blocks the program until a response is received.",
                 "correct": true,
             },
             {
-                "answer": "Runs the entire hello_package package.",
+                "answer": "An asynchronous call blocks the program until a response is received.",
                 "correct": false,
-                "feedback": "Incorrect. hello_node is specified."
+                "feedback": "Incorrect."
             },
             {
-                "answer": "Runs hello_package using the launch file hello_node.",
+                "answer": "A synchronous call allows the program to continue executing other tasks while waiting for a response.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "An asynchronous call can only be used with services, not actions.",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "What is a Future in ROS2, and how does it help handle asynchronous operations?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "It allows checking the status of a task without blocking the program's execution.",
+                "correct": true,
+            },
+            {
+                "answer": "It immediately provides the result of an operation.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "It blocks the program until a task completes and returns the result.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "It is used to cancel the execution of an asynchronous task.",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "What are the 4 stages of action execution in ROS2?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Request, Accepted, Executing, Finished",
+                "correct": true,
+            },
+            {
+                "answer": "GoalReceived, InProgress, Done, ResultReturned",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "Request, Acknowledgment, Executing, Completion",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "Request, Processing, Feedback, Completion",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "Why is feedback important in action calls?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Feedback is used to update the client on the progress of the action during execution.",
+                "correct": true,
+            },
+            {
+                "answer": "Feedback is only used to confirm when the action has been successfully completed.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "Feedback is used for error handling during the execution of a service, not an action.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "Feedback is optional and not necessary for any action to complete.",
                 "correct": false,
                 "feedback": "Incorrect."
             }
